@@ -66,15 +66,20 @@ export const Top = (): JSX.Element => {
   return (
     <main className="w-full bg-[#f7e489] min-h-screen">
       {/* Header Navigation */}
-      <header className="sticky top-0 bg-[#f7e489] shadow-md z-50">
+      <header className="sticky top-0 bg-[#f7e489] z-50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center gap-4">
               <img
                 className="h-3 sm:h-4 w-auto"
                 alt="Cir title"
                 src="/figmaAssets/cir-title.svg"
+              />
+              <img
+                className="h-6 w-auto"
+                alt="Note"
+                src="@assets/note_1757653059730.png"
               />
             </div>
             
@@ -347,11 +352,16 @@ export const Top = (): JSX.Element => {
       <footer className="w-full bg-[#b63622] py-12">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center gap-4">
               <img
                 className="h-3 sm:h-4 w-auto"
                 alt="Cir title"
                 src="/figmaAssets/cir-title.svg"
+              />
+              <img
+                className="h-6 w-auto"
+                alt="Note"
+                src="@assets/note_1757653059730.png"
               />
             </div>
             
