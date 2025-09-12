@@ -31,16 +31,12 @@ export const Top = (): JSX.Element => {
 
   const newsItems = [
     {
-      date: "2025.08.28",
-      title: "タイトルが入ります。そのまま外リンクに飛びます。",
+      date: "2025.09.12",
+      title: "「The Relay Awards設立のお知らせ」をリリースしました",
     },
     {
-      date: "2025.08.28", 
-      title: "タイトルが入ります。そのまま外リンクに飛びます。",
-    },
-    {
-      date: "2025.08.28",
-      title: "タイトルが入ります。そのまま外リンクに飛びます。",
+      date: "2025.02.14", 
+      title: "一般社団法人日本シェフ・イン・レジデンス応援協会設立",
     },
   ];
 
@@ -128,12 +124,12 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[500px] md:min-h-[600px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '45%' }}>
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '45%' }}>
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
             <div className="text-center text-[#5a3729] px-4 mb-8">
-              <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-relaxed">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-relaxed">
                 シェフ・イン・レジデンスとは<br />
                 日本や世界を旅するシェフを地域に迎え入れ<br />
                 期間限定で展開されるレストラン活動です
@@ -176,9 +172,9 @@ export const Top = (): JSX.Element => {
             {missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-8 min-h-[600px]"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[650px] sm:min-h-[700px]"
               >
-                <CardContent className="flex flex-col items-center gap-6 p-0 h-full">
+                <CardContent className="flex flex-col items-center justify-between gap-4 p-0 h-full">
                   <div className="flex flex-col items-center gap-4">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
@@ -195,13 +191,15 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <img
-                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain flex-shrink-0 my-4"
-                    alt="Mission"
-                    src={card.image}
-                  />
+                  <div className="flex-grow flex items-center justify-center py-4">
+                    <img
+                      className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain"
+                      alt="Mission"
+                      src={card.image}
+                    />
+                  </div>
                   
-                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] flex-grow text-center">
+                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center">
                     {card.description}
                   </p>
                 </CardContent>
@@ -309,10 +307,10 @@ export const Top = (): JSX.Element => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
-                  タイトル
+                  応援協会も応援されたい
                 </h3>
                 <p className="text-[#5a3729] text-base leading-6">
-                  テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。テキストがここに入ります、テキストがここに入ります。
+                  一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
                 </p>
               </div>
             </div>
@@ -345,15 +343,7 @@ export const Top = (): JSX.Element => {
       {/* Footer */}
       <footer className="w-full bg-[#b63622] py-12">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex-shrink-0">
-              <img
-                className="h-3 sm:h-4 w-auto"
-                alt="Cir title"
-                src="/figmaAssets/cir-title.svg"
-              />
-            </div>
-            
+          <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-8">
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               {footerNavigationItems.map((item, index) => (
                 <a
