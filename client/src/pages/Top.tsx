@@ -122,20 +122,21 @@ export const Top = (): JSX.Element => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat mt-6">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat">
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '45%' }}>
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20" id="about" style={{ backgroundSize: '45%' }}>
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
             <div className="text-center text-[#5a3729] px-4 mb-8">
               <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-relaxed">
-                シェフ・イン・レジデンスとは<br />
-                日本や世界を旅するシェフを地域に迎え入れ<br />
-                期間限定で展開されるレストラン活動です
+                当協会は、旅するシェフを地域に迎え<br />
+                期間限定で展開されるレストラン活動である<br />
+                「シェフ・イン・レジデンス」を応援する<br />
+                非営利団体です
               </h1>
             </div>
             {/* ABOUT button below text */}
@@ -157,7 +158,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16" id="mission">
+      <section className="py-16 scroll-mt-16 md:scroll-mt-20" id="mission">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px] mb-8" data-testid="text-section-title">
@@ -194,15 +195,15 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center py-2">
+                  <div className="w-full flex items-center justify-center">
                     <img
-                      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain max-w-full max-h-[200px]"
+                      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain max-w-full max-h-[200px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px] xl:max-h-[360px]"
                       alt="Mission"
                       src={card.image}
                     />
                   </div>
                   
-                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center mt-auto pt-2">
+                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center mt-auto">
                     {card.description}
                   </p>
                 </CardContent>
@@ -213,7 +214,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* Award Section */}
-      <section className="py-16" id="award">
+      <section className="py-16 scroll-mt-16 md:scroll-mt-20" id="award">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
@@ -244,7 +245,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* News Section */}
-      <section className="w-full bg-[#f2edf0] py-16" id="news">
+      <section className="w-full bg-[#f2edf0] py-16 scroll-mt-16 md:scroll-mt-20" id="news">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
@@ -291,7 +292,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* Support Section */}
-      <section className="py-16" id="support-us">
+      <section className="py-16 scroll-mt-16 md:scroll-mt-20" id="support-us">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
@@ -302,7 +303,7 @@ export const Top = (): JSX.Element => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="flex justify-center">
               <img
-                className="w-72 sm:w-80 md:w-96 h-auto object-contain max-w-full"
+                className="w-96 sm:w-full md:w-full lg:w-full xl:w-full h-auto object-contain max-w-full"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
@@ -322,23 +323,29 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* Contact Section - Full Width Blue Background */}
-      <section className="w-full bg-[#71b0ff] py-16" id="contact">
+      <section className="w-full bg-[#71b0ff] py-16 scroll-mt-16 md:scroll-mt-20" id="contact">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-[2.40px] mb-8" data-testid="text-section-title">
               CONTACT
             </h2>
-            <Button 
-              className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
-              data-testid="button-google-form"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSddTII6LxsrnJNBWboTBvWRfaErkLBnqt6WYt3Z2oxTw_tzwQ/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              GOOGLE FORM
-              <img
-                className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
-                alt="Arrow"
-                src="/figmaAssets/vector-6.svg"
-              />
-            </Button>
+              <Button 
+                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                data-testid="button-google-form"
+              >
+                GOOGLE FORM
+                <img
+                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                  alt="Arrow"
+                  src="/figmaAssets/vector-6.svg"
+                />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
