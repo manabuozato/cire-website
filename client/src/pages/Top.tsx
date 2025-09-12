@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import noteImg from '@assets/note1_1757664796406.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { useLocation } from 'wouter';
+import { useLocation, Link } from 'wouter';
 
 export const Top = (): JSX.Element => {
   const { language } = useLanguage();
@@ -175,22 +175,22 @@ export const Top = (): JSX.Element => {
             <div className="hidden md:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  <a
-                    href={
-                      item === 'ABOUT' ? '/#/about' : 
-                      item === 'NEWS' ? '/#/news' :
-                      item === 'Privacy Policy' ? '/#/legal' : 
-                      item === 'MISSION' ? '/#/?section=mission' :
-                      item === 'AWARD' ? '/#/?section=award' :
-                      item === 'SUPPORT US' ? '/#/?section=support-us' :
-                      item === 'CONTACT' ? '/#/?section=contact' :
-                      `#${item.toLowerCase().replace(' ', '-')}`
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
                     {item}
-                  </a>
+                  </Link>
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
@@ -239,23 +239,23 @@ export const Top = (): JSX.Element => {
             <nav className="px-4 py-2">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  <a
-                    href={
-                      item === 'ABOUT' ? '/#/about' : 
-                      item === 'NEWS' ? '/#/news' :
-                      item === 'Privacy Policy' ? '/#/legal' : 
-                      item === 'MISSION' ? '/#/?section=mission' :
-                      item === 'AWARD' ? '/#/?section=award' :
-                      item === 'SUPPORT US' ? '/#/?section=support-us' :
-                      item === 'CONTACT' ? '/#/?section=contact' :
-                      `#${item.toLowerCase().replace(' ', '-')}`
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
                     onClick={() => setIsMobileMenuOpen(false)}
                     data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
                     {item}
-                  </a>
+                  </Link>
                   {item === 'CONTACT' && (
                     <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
@@ -533,22 +533,22 @@ export const Top = (): JSX.Element => {
           <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-8">
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               {footerNavigationItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={
-                    item === 'ABOUT' ? '/#/about' : 
-                    item === 'NEWS' ? '/#/news' :
-                    item === 'Privacy Policy' ? '/#/legal' : 
-                    item === 'MISSION' ? '/#/?section=mission' :
-                    item === 'AWARD' ? '/#/?section=award' :
-                    item === 'SUPPORT US' ? '/#/?section=support-us' :
-                    item === 'CONTACT' ? '/#/?section=contact' :
-                    `#${item.toLowerCase().replace(' ', '-')}`
+                  to={
+                    item === 'ABOUT' ? '/about' : 
+                    item === 'NEWS' ? '/news' :
+                    item === 'Privacy Policy' ? '/legal' : 
+                    item === 'MISSION' ? '/?section=mission' :
+                    item === 'AWARD' ? '/?section=award' :
+                    item === 'SUPPORT US' ? '/?section=support-us' :
+                    item === 'CONTACT' ? '/?section=contact' :
+                    `/${item.toLowerCase().replace(' ', '-')}`
                   }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

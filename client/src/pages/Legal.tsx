@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import noteImg from '@assets/note_1757659491855.png';
+import { Link } from 'wouter';
 
 export const Legal = (): JSX.Element => {
   const navigationItems = [
@@ -30,35 +31,35 @@ export const Legal = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/#/">
+              <Link to="/">
                 <img
                   className="h-3 sm:h-4 w-auto"
                   alt="Cir title"
                   src="/figmaAssets/cir-title.svg"
                 />
-              </a>
+              </Link>
             </div>
             
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  <a
-                    href={
-                      item === 'ABOUT' ? '/#/about' : 
-                      item === 'NEWS' ? '/#/news' :
-                      item === 'Privacy Policy' ? '/#/legal' : 
-                      item === 'MISSION' ? '/#/?section=mission' :
-                      item === 'AWARD' ? '/#/?section=award' :
-                      item === 'SUPPORT US' ? '/#/?section=support-us' :
-                      item === 'CONTACT' ? '/#/?section=contact' :
-                      `/#${item.toLowerCase().replace(' ', '-')}`
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
                     {item}
-                  </a>
+                  </Link>
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img

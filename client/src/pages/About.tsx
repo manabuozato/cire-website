@@ -4,6 +4,7 @@ import noteImg from '@assets/note1_1757664796406.png';
 import icModelImg from '@assets/icmodel_1757663210701.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Link } from 'wouter';
 
 export const About = (): JSX.Element => {
   const { language } = useLanguage();
@@ -161,35 +162,35 @@ export const About = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/#/">
+              <Link to="/">
                 <img
                   className="h-3 sm:h-4 w-auto"
                   alt="Cir title"
                   src="/figmaAssets/cir-title.svg"
                 />
-              </a>
+              </Link>
             </div>
             
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  <a
-                    href={
-                      item === 'ABOUT' ? '/#/about' : 
-                      item === 'NEWS' ? '/#/news' :
-                      item === 'Privacy Policy' ? '/#/legal' : 
-                      item === 'MISSION' ? '/#/?section=mission' :
-                      item === 'AWARD' ? '/#/?section=award' :
-                      item === 'SUPPORT US' ? '/#/?section=support-us' :
-                      item === 'CONTACT' ? '/#/?section=contact' :
-                      `/#${item.toLowerCase().replace(' ', '-')}`
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
                     {item}
-                  </a>
+                  </Link>
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
@@ -238,23 +239,23 @@ export const About = (): JSX.Element => {
             <nav className="px-4 py-2">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  <a
-                    href={
-                      item === 'ABOUT' ? '/#/about' : 
-                      item === 'NEWS' ? '/#/news' :
-                      item === 'Privacy Policy' ? '/#/legal' : 
-                      item === 'MISSION' ? '/#/?section=mission' :
-                      item === 'AWARD' ? '/#/?section=award' :
-                      item === 'SUPPORT US' ? '/#/?section=support-us' :
-                      item === 'CONTACT' ? '/#/?section=contact' :
-                      `/#${item.toLowerCase().replace(' ', '-')}`
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
                     onClick={() => setIsMobileMenuOpen(false)}
                     data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
                     {item}
-                  </a>
+                  </Link>
                   {item === 'CONTACT' && (
                     <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
