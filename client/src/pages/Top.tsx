@@ -125,16 +125,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] py-16 relative" id="about">
-        {/* Cloud Background Image */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img
-            className="w-full max-w-4xl h-auto object-contain"
-            alt="Vector Background"
-            src="/figmaAssets/vector.png"
-          />
-        </div>
-        
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center bg-contain py-24 md:py-28 lg:py-32 min-h-[420px] md:min-h-[520px] relative" id="about">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center gap-8 text-center">
             {/* Text and Button Group */}
