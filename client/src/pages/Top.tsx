@@ -49,7 +49,7 @@ export const Top = (): JSX.Element => {
       missionDescription: "「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards", 
-      awardDescription: "「**The Relay Awards**（ザ・リレー・アワード）」は、当協会が掲げる3条件を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）を表彰対象とし、順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\n\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n**The Relay Awards** エントリーフォーム\n\n授賞イベント「**The Relay Awards 2025**」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
+      awardDescription: "「**The Relay Awards**（ザ・リレー・アワード）」は、当協会が掲げる3条件を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）を表彰対象とし、順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\n\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n\n授賞イベント「**The Relay Awards 2025**」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
@@ -83,7 +83,7 @@ export const Top = (): JSX.Element => {
       missionDescription: "\"Chef-in-Residence\" is an initiative to invite chefs from outside the region to promote regional revitalization, serving as an important means to enhance regional creativity and vitality. In particular, we regard \"traveling chefs\" as key figures in regional revitalization, and we have established the following three conditions for the ideal form of \"Chef-in-Residence\" that we aim for.",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards",
-      awardDescription: "The Relay Awards is a recognition program that supports and celebrates Chef-in-Residence initiatives that meet—or are working to realize—our three conditions:\n1. continuous rotation of visiting chefs, 2) a design open to both local residents and tourists, and 3) mechanisms that naturally integrate chefs with the region.\nEligibility Eligible applicants are \"Kitchen-Residences\"—hosts that organize and operate Chef-in-Residence programs in their local areas (organizations, groups, or individuals). This is not a ranking contest; the aim is to surface exemplary practices and share learning.\n\nHow to Enter (Kitchen-Residences)\nEntries (self-nominations or third-party nominations) are accepted via the form below.\n**The Relay Awards Entry Form**\n\nAwards Event The Relay Awards 2025 is scheduled for Monday, December 1, 2025, from 17:00 (JST) at SHIBAURA HOUSE (Shibaura, Minato-ku, Tokyo). (Invitation-only; limited supporter allocations planned.)",
+      awardDescription: "The Relay Awards is a recognition program that supports and celebrates Chef-in-Residence initiatives that meet—or are working to realize—our three conditions:\n1. continuous rotation of visiting chefs, 2) a design open to both local residents and tourists, and 3) mechanisms that naturally integrate chefs with the region.\nEligibility Eligible applicants are \"Kitchen-Residences\"—hosts that organize and operate Chef-in-Residence programs in their local areas (organizations, groups, or individuals). This is not a ranking contest; the aim is to surface exemplary practices and share learning.\n\nHow to Enter (Kitchen-Residences)\nEntries (self-nominations or third-party nominations) are accepted via the form below.\n\nAwards Event The Relay Awards 2025 is scheduled for Monday, December 1, 2025, from 17:00 (JST) at SHIBAURA HOUSE (Shibaura, Minato-ku, Tokyo). (Invitation-only; limited support...)",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
@@ -454,16 +454,24 @@ export const Top = (): JSX.Element => {
                         </p>
                       );
                     }
+                    // Show form link after "エントリー（自薦・他薦）：下記フォームより受け付けます。" or "Entries (self-nominations or third-party nominations) are accepted via the form below."
+                    if (line === 'エントリー（自薦・他薦）：下記フォームより受け付けます。' || line === 'Entries (self-nominations or third-party nominations) are accepted via the form below.') {
+                      return (
+                        <div key={index}>
+                          <p>{line}</p>
+                          <a 
+                            href={content[language].awardFormLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block text-[#71b0ff] hover:underline font-bold mt-2"
+                          >
+                            {content[language].awardFormLinkText}
+                          </a>
+                        </div>
+                      );
+                    }
                     return <p key={index}>{line}</p>;
                   })}
-                  <a 
-                    href={content[language].awardFormLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-[#71b0ff] hover:underline font-bold"
-                  >
-                    {content[language].awardFormLinkText}
-                  </a>
                 </div>
               </div>
             </div>
