@@ -10,6 +10,24 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 export const Top = (): JSX.Element => {
   const { language } = useLanguage();
   
+  // Translation content
+  const content = {
+    ja: {
+      heroTitle: "シェフ・イン・レジデンス\n活動を応援する社団法人",
+      heroSubtitle: "地域と料理人をつなぐ、新たな食体験の創造",
+      missionTitle: "創造的地域風土を育む\n3つの仕組み",
+      newsTitle: "NEWS",
+      supportTitle: "SUPPORT US"
+    },
+    en: {
+      heroTitle: "Supporting Chef-in-Residence\nActivities Nationwide",
+      heroSubtitle: "Creating New Food Experiences Connecting Regions and Chefs",
+      missionTitle: "Three Mechanisms to Foster\nCreative Regional Culture",
+      newsTitle: "NEWS",
+      supportTitle: "SUPPORT US"
+    }
+  };
+  
   const missionCards = [
     {
       badge: "その１",
@@ -132,11 +150,16 @@ export const Top = (): JSX.Element => {
             {/* Text centered in cloud background */}
             <div className="text-center text-[#5a3729] px-4 mb-4">
               <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
-                当協会は、旅するシェフを地域に迎え<br />
-                期間限定で展開されるレストラン活動である<br />
-                「シェフ・イン・レジデンス」を応援する<br />
-                非営利団体です
+                {content[language].heroTitle.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    {index < content[language].heroTitle.split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
               </h1>
+              <p className="text-xs sm:text-sm md:text-base text-[#5a3729] mt-2">
+                {content[language].heroSubtitle}
+              </p>
             </div>
             {/* ABOUT button below text */}
             <div className="flex justify-center">

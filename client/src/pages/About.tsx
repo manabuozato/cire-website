@@ -7,6 +7,32 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export const About = (): JSX.Element => {
   const { language } = useLanguage();
+
+  // Translation content
+  const content = {
+    ja: {
+      pageTitle: "ABOUT",
+      pageSubtitle: "シェフ・イン・レジデンス\n活動を応援する社団法人",
+      mainDescription: "一般社団法人日本シェフ・イン・レジデンス応援協会は、「シェフ・イン・レジデンス」活動を応援する非営利型一般社団法人です。私たちは特に「継続型」「地元住民と観光客の両方に開かれた」「シェフと地域が自然に融合する仕組みを持つ」という3つの条件を満たした「シェフ・イン・レジデンス」の実現を目指す地域、シェフ、事業者等を応援します。そのようなかたちの「シェフ・イン・レジデンス」が日本各地に広がり、「創造的地域風土」を育む「日常と非日常の汽水域」となることで、地域がもっと面白く元気に、そして日本全体がもっと面白く豊かになることを目指しています。",
+      chefResidenceTitle: "「シェフ・イン・レジデンス」とは",
+      chefResidenceContent: "「シェフ・イン・レジデンス」とは、日本や世界を旅するシェフを地域に迎え入れ、期間限定で展開されるレストラン活動です。この活動は、地域に新たな出会いや創造性を生み出すことを目的としています。旅するシェフが地域の人々や地元食材、文化、風土と交流することで、地域の魅力を（再）発見し、地域の魅力がさらに高まり広がります。またシェフにとってはその地域ならではの経験が得られます。一般社団法人日本シェフ・イン・レジデンス応援協会は、全国各地でこうした活動が持続的に行われ、広がっていくよう応援しています。",
+      memberTitle: "MEMBER",
+      organizationTitle: "ORGANIZATION",
+      creativeTerritoryTitle: "「創造的地域風土」とは",
+      creativeTerritoryContent: "「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。\n※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。\n参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）"
+    },
+    en: {
+      pageTitle: "ABOUT",
+      pageSubtitle: "Supporting Chef-in-Residence\nActivities Nationwide",
+      mainDescription: "The Japan Chef-in-Residence Support Association is a non-profit general incorporated association that supports 'Chef-in-Residence' activities. We particularly support regions, chefs, business operators, and others who aim to realize 'Chef-in-Residence' that meets three conditions: 'continuous', 'open to both local residents and tourists', and 'having a mechanism for natural integration between chefs and the region'. By spreading such forms of 'Chef-in-Residence' throughout Japan and becoming a 'brackish zone between the everyday and extraordinary' that nurtures 'creative regional culture', we aim to make regions more interesting and energetic, and Japan as a whole more interesting and prosperous.",
+      chefResidenceTitle: "What is \"Chef-in-Residence\"?",
+      chefResidenceContent: "\"Chef-in-Residence\" is a restaurant activity that welcomes traveling chefs from Japan and around the world to regions for limited-time operations. This activity aims to create new encounters and creativity in regions. Through interactions between traveling chefs and local people, ingredients, culture, and climate, regions can (re)discover their charms, further enhancing and spreading their appeal. For chefs, this provides unique regional experiences. The Japan Chef-in-Residence Support Association supports the sustainable implementation and spread of such activities throughout Japan.",
+      memberTitle: "MEMBER",
+      organizationTitle: "ORGANIZATION", 
+      creativeTerritoryTitle: "What is \"Creative Regional Culture\"?",
+      creativeTerritoryContent: "\"Creative Regional Culture\" refers to the values, mindsets, and behavioral patterns commonly shared by the people who make up a region, and represents an environment where creativity naturally flourishes and new challenges and exchanges continuously emerge. By establishing such an environment, we can form communities where local people can easily participate in new endeavors and grow together while stimulating each other. We believe that Chef-in-Residence functions as a \"brackish zone between the everyday and the extraordinary,\" thereby enhancing creative regional culture.\n※Brackish zone: A water area formed where rivers and seas meet, referring to an environment where fresh and salt water mix. By extension, this term refers to places, spaces, opportunities, and environments where people, things, and matters of different natures come together.\nReference: Discussion Paper | iC Model (innumerable Cs Model) for Creating \"Creative Regional Culture\""
+    }
+  };
   
   const navigationItems = [
     "ABOUT",
@@ -138,27 +164,32 @@ export const About = (): JSX.Element => {
           {/* Main Title */}
           <div className="text-center mb-8 md:mb-12">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px] mb-4" data-testid="text-section-title">
-              ABOUT
+              {content[language].pageTitle}
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
-              シェフ・イン・レジデンス<br />活動を応援する社団法人
+              {content[language].pageSubtitle.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < content[language].pageSubtitle.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </h2>
           </div>
           
           {/* Main Description */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
             <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
-              一般社団法人日本シェフ・イン・レジデンス応援協会は、「シェフ・イン・レジデンス」活動を応援する非営利型一般社団法人です。私たちは特に「継続型」「地元住民と観光客の両方に開かれた」「シェフと地域が自然に融合する仕組みを持つ」という3つの条件を満たした「シェフ・イン・レジデンス」の実現を目指す地域、シェフ、事業者等を応援します。そのようなかたちの「シェフ・イン・レジデンス」が日本各地に広がり、「創造的地域風土」を育む「日常と非日常の汽水域」となることで、地域がもっと面白く元気に、そして日本全体がもっと面白く豊かになることを目指しています。
+              {content[language].mainDescription}
             </div>
           </div>
 
           {/* What is "Chef in Residence" Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
             <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-6 text-center">
-              「シェフ・イン・レジデンス」とは
+              {content[language].chefResidenceTitle}
             </h2>
             <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
-              「シェフ・イン・レジデンス」とは、日本や世界を旅するシェフを地域に迎え入れ、期間限定で展開されるレストラン活動です。この活動は、地域に新たな出会いや創造性を生み出すことを目的としています。旅するシェフが地域の人々や地元食材、文化、風土と交流することで、地域の魅力を（再）発見し、地域の魅力がさらに高まり広がります。またシェフにとってはその地域ならではの経験が得られます。一般社団法人日本シェフ・イン・レジデンス応援協会は、全国各地でこうした活動が持続的に行われ、広がっていくよう応援しています。
+              {content[language].chefResidenceContent}
             </div>
           </div>
 
@@ -175,19 +206,23 @@ export const About = (): JSX.Element => {
                 </div>
                 <div className="flex-1 flex items-start">
                   <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
-                    「創造的地域風土」とは
+                    {content[language].creativeTerritoryTitle}
                   </h2>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
-                  「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。
-                </div>
-                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] italic">
-                  ※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。
-                </div>
-                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px]">
-                  参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）
+                  {content[language].creativeTerritoryContent.split('\n').map((line, index) => (
+                    <React.Fragment key={index}>
+                      {line}
+                      {index < content[language].creativeTerritoryContent.split('\n').length - 1 && (
+                        <>
+                          <br />
+                          <br />
+                        </>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </div>
               </div>
             </div>
@@ -222,7 +257,7 @@ export const About = (): JSX.Element => {
           {/* Member Section */}
           <div className="max-w-6xl mx-auto mb-12 md:mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-12 text-center">
-              MEMBER
+              {content[language].memberTitle}
             </h2>
             
             {/* Responsive grid layout */}
@@ -232,7 +267,7 @@ export const About = (): JSX.Element => {
                 {memberData.slice(0, 3).map((member, index) => (
                   <div 
                     key={index} 
-                    className={`${index === 2 ? 'sm:col-span-2 lg:col-span-1 sm:justify-self-center lg:justify-self-auto' : ''} bg-[#e8dcc6]/30 rounded-3xl p-4 md:p-6 text-center`}
+                    className={`${index === 2 ? 'sm:col-span-2 lg:col-span-1 sm:justify-self-center lg:justify-self-auto' : ''} bg-[#F2EDF0] rounded-3xl p-4 md:p-6 text-center`}
                   >
                     <h3 className="text-base md:text-lg font-bold text-[#5a3729] mb-1">
                       {member.name}
@@ -253,7 +288,7 @@ export const About = (): JSX.Element => {
               {/* Second row - 大里 centered */}
               {memberData[3] && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                  <div className="bg-[#e8dcc6]/30 rounded-3xl p-4 md:p-6 text-center sm:col-start-1 lg:col-start-2">
+                  <div className="bg-[#F2EDF0] rounded-3xl p-4 md:p-6 text-center sm:col-start-1 lg:col-start-2">
                     <h3 className="text-base md:text-lg font-bold text-[#5a3729] mb-1">
                       {memberData[3].name}
                     </h3>
@@ -275,7 +310,7 @@ export const About = (): JSX.Element => {
           {/* Organization Section */}
           <div className="max-w-5xl mx-auto mb-12 md:mb-16 text-center bg-[#F2EDF0] rounded-3xl p-6 md:p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8">
-              ORGANIZATION
+              {content[language].organizationTitle}
             </h2>
             <div className="space-y-4 text-[10px] sm:text-xs md:text-sm text-[#5a3729]">
               <p className="font-bold text-sm sm:text-base md:text-lg">
