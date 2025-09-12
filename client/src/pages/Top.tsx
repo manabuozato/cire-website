@@ -42,14 +42,14 @@ export const Top = (): JSX.Element => {
   // Translation content
   const content = {
     ja: {
-      heroTitle: "わたしたちは、旅するシェフを地域に迎え\n期間限定で展開されるレストラン活動である\n「シェフ・イン・レジデンス」を応援する\n非営利団体です",
+      heroTitle: "わたしたちは、旅するシェフを地域に迎え\n期間限定で展開されるレストラン活動である\n「シェフ・イン・レジデンス」を応援する\n一般社団法人（非営利型）です",
       heroSubtitle: "",
       missionTitle: "MISSION",
       missionSubtitle: "理想のための３条件",
       missionDescription: "「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards", 
-      awardDescription: "「**The Relay Awards**（ザ・リレー・アワード）」は、当協会が掲げる3条件を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）を表彰対象とし、順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\n\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n**The Relay Awards** エントリーフォーム\n\n\n授賞イベント「**The Relay Awards 2025**」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
+      awardDescription: "「**The Relay Awards**（ザ・リレー・アワード）」は、当協会が掲げる3条件を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）を表彰対象とし、順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\n\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n\n\n授賞イベント「**The Relay Awards 2025**」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。\n**The Relay Awards** エントリーフォーム",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
