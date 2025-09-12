@@ -14,7 +14,7 @@ export const About = (): JSX.Element => {
   const content = {
     ja: {
       pageTitle: "ABOUT",
-      pageSubtitle: "シェフ・イン・レジデンス\n活動を応援する社団法人",
+      pageSubtitle: "シェフ・イン・レジデンス\n活動を応援する一般社団法人（非営利型）",
       mainDescription: "一般社団法人日本シェフ・イン・レジデンス応援協会は、「シェフ・イン・レジデンス」活動を応援する非営利型一般社団法人です。私たちは特に「継続型」「地元住民と観光客の両方に開かれた」「シェフと地域が自然に融合する仕組みを持つ」という3つの条件を満たした「シェフ・イン・レジデンス」の実現を目指す地域、シェフ、事業者等を応援します。そのようなかたちの「シェフ・イン・レジデンス」が日本各地に広がり、「創造的地域風土」を育む「日常と非日常の汽水域」となることで、地域がもっと面白く元気に、そして日本全体がもっと面白く豊かになることを目指しています。",
       chefResidenceTitle: "「シェフ・イン・レジデンス」とは",
       chefResidenceContent: "「シェフ・イン・レジデンス」とは、日本や世界を旅するシェフを地域に迎え入れ、期間限定で展開されるレストラン活動です。この活動は、地域に新たな出会いや創造性を生み出すことを目的としています。旅するシェフが地域の人々や地元食材、文化、風土と交流することで、地域の魅力を（再）発見し、地域の魅力がさらに高まり広がります。またシェフにとってはその地域ならではの経験が得られます。一般社団法人日本シェフ・イン・レジデンス応援協会は、全国各地でこうした活動が持続的に行われ、広がっていくよう応援しています。",
@@ -180,7 +180,7 @@ export const About = (): JSX.Element => {
                   <Link
                     to={
                       item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
+                      item === 'NEWS' ? '/?section=news' :
                       item === 'Privacy Policy' ? '/legal' : 
                       item === 'MISSION' ? '/?section=mission' :
                       item === 'AWARD' ? '/?section=award' :
@@ -244,7 +244,7 @@ export const About = (): JSX.Element => {
                   <Link
                     to={
                       item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
+                      item === 'NEWS' ? '/?section=news' :
                       item === 'Privacy Policy' ? '/legal' : 
                       item === 'MISSION' ? '/?section=mission' :
                       item === 'AWARD' ? '/?section=award' :
