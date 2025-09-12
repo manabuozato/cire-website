@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import noteImg from '@assets/note_1757659491855.png';
+import noteImg from '@assets/note1_1757664796406.png';
 import icModelImg from '@assets/icmodel_1757663210701.png';
 
 export const About = (): JSX.Element => {
@@ -169,13 +169,8 @@ export const About = (): JSX.Element => {
 
           {/* What is Creative Regional Culture Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-              <div className="md:flex-shrink-0 md:w-auto w-full">
-                <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-6 md:mb-0">
-                  「創造的地域風土」とは
-                </h2>
-              </div>
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-[#F2EDF0] rounded-3xl p-6 md:p-8 flex-1">
+            <div className="bg-[#F2EDF0] rounded-3xl p-6 md:p-8">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
                 <div className="flex-shrink-0">
                   <img
                     src={icModelImg}
@@ -183,16 +178,21 @@ export const About = (): JSX.Element => {
                     className="w-full md:w-80 lg:w-96 h-auto"
                   />
                 </div>
-                <div className="flex-1">
-                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify mb-4">
-                    「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。
-                  </div>
-                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] italic">
-                    ※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。
-                  </div>
-                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] mt-4">
-                    参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）
-                  </div>
+                <div className="flex-1 flex items-start">
+                  <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
+                    「創造的地域風土」とは
+                  </h2>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
+                  「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。
+                </div>
+                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] italic">
+                  ※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。
+                </div>
+                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px]">
+                  参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）
                 </div>
               </div>
             </div>

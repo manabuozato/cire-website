@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import noteImg from '@assets/note_1757659491855.png';
+import noteImg from '@assets/note1_1757664796406.png';
 
 export const Top = (): JSX.Element => {
   const missionCards = [
