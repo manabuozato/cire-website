@@ -202,3 +202,26 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+/* Responsive cloud background for ABOUT section */
+.about-cloud-bg {
+  background-size: 80%;
+}
+
+@media (min-width: 640px) {
+  .about-cloud-bg {
+    background-size: 65%;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-cloud-bg {
+    background-size: 55%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-cloud-bg {
+    background-size: 45%;
+  }
+}
