@@ -91,8 +91,8 @@ export const Top = (): JSX.Element => {
   const newsItems = {
     ja: [
       {
-        date: "2025.09.12",
-        title: "「The Relay Awards設立のお知らせ」をリリースしました",
+        date: "2025.09.17",
+        title: "「The Relay Awards創設のお知らせ」をリリースしました",
       },
       {
         date: "2025.02.14", 
@@ -101,7 +101,7 @@ export const Top = (): JSX.Element => {
     ],
     en: [
       {
-        date: "2025.09.12",
+        date: "2025.09.17",
         title: "Released 'Announcement of The Relay Awards Establishment'",
       },
       {
