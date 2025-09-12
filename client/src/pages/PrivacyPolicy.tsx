@@ -11,7 +11,7 @@ export const PrivacyPolicy = (): JSX.Element => {
   const content = {
     ja: {
       pageTitle: "プライバシーポリシー",
-      title: "一般社団法人日本シェフ・イン・レジデンス応援協会 ウェブサイト・プライバシーポリシー",
+      title: "一般社団法人日本シェフ・イン・レジデンス応援協会\nウェブサイト・プライバシーポリシー",
       effectiveDate: "施行日：2025年02月14日",
       lastUpdated: "最終改定日：2025年09月12日",
       introText: "一般社団法人日本シェフ・イン・レジデンス応援協会（以下「当協会」）は、日本の個人情報保護法に基づき、本サイトで取り扱う個人情報・個人関連情報を以下の方針で取り扱います。",
@@ -210,7 +210,7 @@ export const PrivacyPolicy = (): JSX.Element => {
             <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm">
               
               {/* Policy Title */}
-              <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] mb-4 text-center">
+              <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] mb-4 text-center whitespace-pre-line">
                 {content[language].title}
               </h2>
               
