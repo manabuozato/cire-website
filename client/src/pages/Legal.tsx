@@ -30,7 +30,7 @@ export const Legal = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/">
+              <a href="/#/">
                 <img
                   className="h-3 sm:h-4 w-auto"
                   alt="Cir title"
@@ -45,9 +45,13 @@ export const Legal = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
-                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#/?section=mission' :
+                      item === 'AWARD' ? '/#/?section=award' :
+                      item === 'SUPPORT US' ? '/#/?section=support-us' :
+                      item === 'CONTACT' ? '/#/?section=contact' :
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
@@ -224,7 +228,7 @@ export const Legal = (): JSX.Element => {
             </div>
 
             <div className="text-center">
-              <a href="/">
+              <a href="/#/">
                 <Button 
                   className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
                   data-testid="button-back-home"
@@ -246,9 +250,13 @@ export const Legal = (): JSX.Element => {
                 <a
                   key={index}
                   href={
-                    item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '/news' :
-                    item === 'Privacy Policy' ? '/legal' : 
+                    item === 'ABOUT' ? '/#/about' : 
+                    item === 'NEWS' ? '/#/news' :
+                    item === 'Privacy Policy' ? '/#/legal' : 
+                    item === 'MISSION' ? '/#/?section=mission' :
+                    item === 'AWARD' ? '/#/?section=award' :
+                    item === 'SUPPORT US' ? '/#/?section=support-us' :
+                    item === 'CONTACT' ? '/#/?section=contact' :
                     `/#${item.toLowerCase().replace(' ', '-')}`
                   }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"

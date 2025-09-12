@@ -145,7 +145,7 @@ export const PrivacyPolicy = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/">
+              <a href="/#/">
                 <img
                   className="h-3 sm:h-4 w-auto"
                   alt="Cir title"
@@ -160,9 +160,9 @@ export const PrivacyPolicy = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/#news' :
-                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
@@ -220,9 +220,9 @@ export const PrivacyPolicy = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/#news' :
-                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
@@ -300,7 +300,7 @@ export const PrivacyPolicy = (): JSX.Element => {
 
           {/* Back to Home Button */}
           <div className="text-center">
-            <a href="/">
+            <a href="/#/">
               <Button 
                 className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
                 data-testid="button-back-home"

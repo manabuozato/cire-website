@@ -1,7 +1,11 @@
 import React from "react";
 import noteImg from '@assets/note_1757659491855.png';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export const News = (): JSX.Element => {
+  const { language } = useLanguage();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const navigationItems = [
     "ABOUT",
     "MISSION", 
@@ -42,7 +46,7 @@ export const News = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="/">
+              <a href="/#/">
                 <img
                   className="h-3 sm:h-4 w-auto"
                   alt="Cir title"
@@ -57,9 +61,13 @@ export const News = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
-                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#/?section=mission' :
+                      item === 'AWARD' ? '/#/?section=award' :
+                      item === 'SUPPORT US' ? '/#/?section=support-us' :
+                      item === 'CONTACT' ? '/#/?section=contact' :
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
@@ -78,21 +86,16 @@ export const News = (): JSX.Element => {
                   )}
                 </React.Fragment>
               ))}
-              <div className="flex items-center gap-2">
-                <img
-                  className="w-4 h-4"
-                  alt="Globe"
-                  src="/figmaAssets/earth-1.svg"
-                />
-                <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
-                  EN
-                </div>
-              </div>
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-[#5a3729] hover:text-[#71b0ff]">
+              <button 
+                className="text-[#5a3729] hover:text-[#71b0ff]"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                data-testid="button-mobile-menu"
+              >
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -101,6 +104,62 @@ export const News = (): JSX.Element => {
           </nav>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="absolute top-0 right-0 w-64 h-full bg-[#f7e489] shadow-lg">
+            <div className="flex justify-end p-4">
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[#5a3729] hover:text-[#71b0ff]"
+                data-testid="button-close-mobile-menu"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="px-4 py-2">
+              {navigationItems.map((item, index) => (
+                <React.Fragment key={index}>
+                  <a
+                    href={
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#/?section=mission' :
+                      item === 'AWARD' ? '/#/?section=award' :
+                      item === 'SUPPORT US' ? '/#/?section=support-us' :
+                      item === 'CONTACT' ? '/#/?section=contact' :
+                      `#${item.toLowerCase().replace(' ', '-')}`
+                    }
+                    className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </a>
+                  {item === 'CONTACT' && (
+                    <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
+                      <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                        <img
+                          className="w-12 h-auto"
+                          alt="Note"
+                          src={noteImg}
+                        />
+                      </a>
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+              <div className="py-4 flex justify-center">
+                <LanguageSwitcher />
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
 
       {/* News Content Section */}
       <section className="py-8 md:py-16">
@@ -168,9 +227,13 @@ export const News = (): JSX.Element => {
                 <a
                   key={index}
                   href={
-                    item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '/news' :
-                    item === 'Privacy Policy' ? '/legal' : 
+                    item === 'ABOUT' ? '/#/about' : 
+                    item === 'NEWS' ? '/#/news' :
+                    item === 'Privacy Policy' ? '/#/legal' : 
+                    item === 'MISSION' ? '/#/?section=mission' :
+                    item === 'AWARD' ? '/#/?section=award' :
+                    item === 'SUPPORT US' ? '/#/?section=support-us' :
+                    item === 'CONTACT' ? '/#/?section=contact' :
                     `/#${item.toLowerCase().replace(' ', '-')}`
                   }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"

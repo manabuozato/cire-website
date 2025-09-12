@@ -6,10 +6,35 @@ import { Separator } from "@/components/ui/separator";
 import noteImg from '@assets/note1_1757664796406.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { useLocation } from 'wouter';
 
 export const Top = (): JSX.Element => {
   const { language } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [location] = useLocation();
+  
+  // Handle section scrolling from URL parameters
+  React.useEffect(() => {
+    // Parse query parameters from hash for hash routing (e.g., /#/?section=mission)
+    const hash = window.location.hash;
+    const queryStart = hash.indexOf('?');
+    
+    if (queryStart !== -1) {
+      const queryString = hash.substring(queryStart + 1);
+      const urlParams = new URLSearchParams(queryString);
+      const section = urlParams.get('section');
+      
+      if (section) {
+        const element = document.getElementById(section);
+        if (element) {
+          // Add a small delay to ensure the page has loaded
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      }
+    }
+  }, [location]);
   
   // Translation content
   const content = {
@@ -152,8 +177,13 @@ export const Top = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '#news' :
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#/?section=mission' :
+                      item === 'AWARD' ? '/#/?section=award' :
+                      item === 'SUPPORT US' ? '/#/?section=support-us' :
+                      item === 'CONTACT' ? '/#/?section=contact' :
                       `#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
@@ -211,8 +241,13 @@ export const Top = (): JSX.Element => {
                 <React.Fragment key={index}>
                   <a
                     href={
-                      item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '#news' :
+                      item === 'ABOUT' ? '/#/about' : 
+                      item === 'NEWS' ? '/#/news' :
+                      item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#/?section=mission' :
+                      item === 'AWARD' ? '/#/?section=award' :
+                      item === 'SUPPORT US' ? '/#/?section=support-us' :
+                      item === 'CONTACT' ? '/#/?section=contact' :
                       `#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
@@ -267,7 +302,7 @@ export const Top = (): JSX.Element => {
             </div>
             {/* ABOUT button below text */}
             <div className="flex items-center justify-center">
-              <a href="/about">
+              <a href="/#/about">
                 <Button 
                   className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
                   data-testid="button-about"
@@ -501,9 +536,13 @@ export const Top = (): JSX.Element => {
                 <a
                   key={index}
                   href={
-                    item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '#news' :
-                    item === 'Privacy Policy' ? '/legal' : 
+                    item === 'ABOUT' ? '/#/about' : 
+                    item === 'NEWS' ? '/#/news' :
+                    item === 'Privacy Policy' ? '/#/legal' : 
+                    item === 'MISSION' ? '/#/?section=mission' :
+                    item === 'AWARD' ? '/#/?section=award' :
+                    item === 'SUPPORT US' ? '/#/?section=support-us' :
+                    item === 'CONTACT' ? '/#/?section=contact' :
                     `#${item.toLowerCase().replace(' ', '-')}`
                   }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
