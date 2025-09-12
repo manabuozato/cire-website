@@ -90,8 +90,15 @@ export const Top = (): JSX.Element => {
                   {item}
                 </a>
               ))}
-              <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
-                EN
+              <div className="flex items-center gap-2">
+                <img
+                  className="w-4 h-4"
+                  alt="Globe"
+                  src="/figmaAssets/earth-1.svg"
+                />
+                <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
+                  EN
+                </div>
               </div>
             </div>
 
