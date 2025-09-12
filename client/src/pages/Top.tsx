@@ -76,7 +76,7 @@ export const Top = (): JSX.Element => {
       ]
     },
     en: {
-      heroTitle: "We are a nonprofit organization that supports \"Chef-in-Residence\" — limited-term restaurant programs that welcome traveling chefs into regions and communities.",
+      heroTitle: "We are a nonprofit supporting \"Chef-in-Residence\": \nlimited-term restaurant residencies\nthat bring traveling chefs into local communities.",
       heroSubtitle: "",
       missionTitle: "MISSION",
       missionSubtitle: "Three Conditions for the Ideal",
@@ -271,7 +271,7 @@ export const Top = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
+                    <div className="py-3 flex justify-start border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                         <img
                           className="w-12 h-auto"
@@ -297,7 +297,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-8 md:pt-12 lg:pt-16 xl:pt-20 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-12 md:pt-16 lg:pt-20 xl:pt-24 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
