@@ -2,8 +2,12 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import noteImg from '@assets/note1_1757664796406.png';
 import icModelImg from '@assets/icmodel_1757663210701.png';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export const About = (): JSX.Element => {
+  const { language } = useLanguage();
+  
   const navigationItems = [
     "ABOUT",
     "MISSION", 
@@ -105,7 +109,7 @@ export const About = (): JSX.Element => {
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
-                        className="w-48 sm:w-56 h-auto ml-2"
+                        className="w-12 sm:w-14 h-auto ml-2"
                         alt="Note"
                         src={noteImg}
                       />
@@ -113,16 +117,7 @@ export const About = (): JSX.Element => {
                   )}
                 </React.Fragment>
               ))}
-              <div className="flex items-center gap-2">
-                <img
-                  className="w-4 h-4"
-                  alt="Globe"
-                  src="/figmaAssets/earth-1.svg"
-                />
-                <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
-                  EN
-                </div>
-              </div>
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile menu button */}
@@ -169,7 +164,7 @@ export const About = (): JSX.Element => {
 
           {/* What is Creative Regional Culture Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="bg-[#F2EDF0] rounded-3xl p-6 md:p-8">
+            <div className="bg-[#f7e489] rounded-3xl p-6 md:p-8">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
                 <div className="flex-shrink-0">
                   <img
@@ -341,7 +336,7 @@ export const About = (): JSX.Element => {
             </div>
             <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
               <img
-                className="w-48 sm:w-56 h-auto"
+                className="w-12 sm:w-14 h-auto"
                 alt="Note"
                 src="/figmaAssets/clip-path-group.png"
               />
