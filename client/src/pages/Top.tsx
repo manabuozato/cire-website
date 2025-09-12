@@ -131,8 +131,8 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
-            <div className="text-center text-[#5a3729] px-4 mb-8">
-              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-relaxed">
+            <div className="text-center text-[#5a3729] px-4 mb-4">
+              <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
                 当協会は、旅するシェフを地域に迎え<br />
                 期間限定で展開されるレストラン活動である<br />
                 「シェフ・イン・レジデンス」を応援する<br />
