@@ -408,11 +408,11 @@ export const Top = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Contact Section - Full Width Blue Background */}
-      <section className="w-full bg-[#71b0ff] py-16 scroll-mt-16 md:scroll-mt-20" id="contact">
+      {/* Contact Section */}
+      <section className="py-16 scroll-mt-16 md:scroll-mt-20" id="contact">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-[2.40px] mb-8" data-testid="text-section-title">
+          <div className="max-w-5xl mx-auto mb-12 md:mb-16 text-center bg-[#F2EDF0] rounded-3xl p-6 md:p-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8" data-testid="text-section-title">
               {content[language].contactTitle}
             </h2>
             <a
@@ -421,7 +421,7 @@ export const Top = (): JSX.Element => {
               rel="noopener noreferrer"
             >
               <Button 
-                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
                 data-testid="button-google-form"
               >
                 GOOGLE FORM

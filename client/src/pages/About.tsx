@@ -255,7 +255,7 @@ export const About = (): JSX.Element => {
                   alt="iC Model - innumerable Cs Model"
                   className="w-full md:w-80 lg:w-96 h-auto"
                 />
-                <p className="text-xs text-[#5a3729] mt-2 text-left">
+                <p className="text-xs text-[#5a3729] mt-2 text-left max-w-80 lg:max-w-96">
                   参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）　（2024, UNIVERSITY of CREATIVITY）
                 </p>
               </div>
