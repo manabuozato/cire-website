@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import noteImg from '@assets/note_1757659491855.png';
+import icModelImg from '@assets/icmodel_1757663210701.png';
 
 export const About = (): JSX.Element => {
   const navigationItems = [
@@ -38,7 +39,7 @@ export const About = (): JSX.Element => {
     {
       name: "守護直樹",
       nameKana: "（しゅご なおき）", 
-      position: "理事・共同ファウンダー",
+      position: "理事",
       description: "茨城県出身。都内の司法書士法人に勤務後独立し、司法書士法人の役員を務める。法人商業登記コンサルティング業務を専門とし、クライアント数は年間300社を超える。飲食好きが功を奏し現職に至る。"
     },
     {
@@ -50,10 +51,22 @@ export const About = (): JSX.Element => {
   ];
 
   const whatWeDo = [
-    "1. 情報発信",
-    "2. アワード（別表）",
-    "3. 旅するシェフと迎える地域のサポート",
-    "4. 外国人招致プログラム（☆）"
+    {
+      title: "１．情報発信と調査研究",
+      description: "旅するシェフ、迎える地域やキッチンそれぞれが抱える課題や魅力を調査・分析し、その結果を広く共有することで、課題の解決策や成功事例を提示します。"
+    },
+    {
+      title: "２．アワードの実施",
+      description: "理想的な「シェフ・イン・レジデンス」の活動を実現しているシェフや地域、キッチンを称え、さらなる活動推進のためのアワードを開催します。これにより、各地での活動が活性化し、より多くの地域での取り組みが促進されることを目指しています。"
+    },
+    {
+      title: "３．旅するシェフと迎える地域のサポート",
+      description: "旅するシェフと迎える地域が効果的かつ円滑に連携できるように支援します。具体的には、地域のキッチン運営の助言や実務サポート、旅するシェフの滞在支援、さらに国際交流を促すための外国人シェフの招聘も行います。"
+    },
+    {
+      title: "４．外国人シェフ招致プログラム",
+      description: "外国人シェフが地域に「旅するシェフ」で活動することによるインパクト検証や課題発見のため、外国人シェフを対象とした招致を目指した活動を行います。"
+    }
   ];
 
   return (
@@ -92,7 +105,7 @@ export const About = (): JSX.Element => {
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
-                        className="w-12 sm:w-14 h-auto ml-2"
+                        className="w-20 sm:w-24 md:w-28 h-auto ml-2"
                         alt="Note"
                         src={noteImg}
                       />
@@ -162,7 +175,7 @@ export const About = (): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-6 md:gap-8">
               <div className="flex-shrink-0">
                 <img
-                  src="/attached_assets/icmodel_1757663210701.png"
+                  src={icModelImg}
                   alt="iC Model - innumerable Cs Model"
                   className="w-full md:w-80 lg:w-96 h-auto"
                 />
@@ -180,20 +193,32 @@ export const About = (): JSX.Element => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* What We Do Section */}
-          <div className="max-w-4xl mx-auto mb-12 md:mb-16 text-center bg-[#e8dcc6] rounded-3xl p-6 md:p-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8">
-              WHAT WE DO
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              {whatWeDo.map((item, index) => (
-                <div key={index} className="text-sm sm:text-base md:text-lg text-[#5a3729] font-medium">
-                  {item}
-                </div>
-              ))}
-            </div>
+      {/* What We Do Section - Full Width */}
+      <section className="w-full bg-[#F2EDF0] py-8 md:py-16">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8 text-center">
+            WHAT WE DO
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {whatWeDo.map((item, index) => (
+              <div key={index} className="text-left">
+                <h3 className="text-sm sm:text-base md:text-lg text-[#5a3729] font-bold mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-[#5a3729] leading-5 text-justify">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 md:py-16">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 
           {/* Member Section */}
           <div className="max-w-6xl mx-auto mb-12 md:mb-16">
@@ -228,8 +253,8 @@ export const About = (): JSX.Element => {
               
               {/* Second row - 大里 centered */}
               {memberData[3] && (
-                <div className="flex justify-center">
-                  <div className="bg-[#e8dcc6]/30 rounded-3xl p-4 md:p-6 text-center max-w-sm md:max-w-md lg:max-w-lg">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                  <div className="bg-[#e8dcc6]/30 rounded-3xl p-4 md:p-6 text-center sm:col-start-1 lg:col-start-2">
                     <h3 className="text-base md:text-lg font-bold text-[#5a3729] mb-1">
                       {memberData[3].name}
                     </h3>
@@ -249,7 +274,7 @@ export const About = (): JSX.Element => {
           </div>
 
           {/* Organization Section */}
-          <div className="max-w-4xl mx-auto mb-12 md:mb-16 text-center">
+          <div className="max-w-5xl mx-auto mb-12 md:mb-16 text-center bg-[#F2EDF0] rounded-3xl p-6 md:p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8">
               ORGANIZATION
             </h2>
