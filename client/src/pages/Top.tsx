@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import noteImg from '@assets/note_1757659491855.png';
 
 export const Top = (): JSX.Element => {
   const missionCards = [
@@ -86,11 +87,13 @@ export const Top = (): JSX.Element => {
                     {item}
                   </a>
                   {item === 'CONTACT' && (
-                    <img
-                      className="w-12 sm:w-14 h-auto ml-2"
-                      alt="Note"
-                      src="/figmaAssets/clip-path-group.png"
-                    />
+                    <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                      <img
+                        className="w-12 sm:w-14 h-auto ml-2"
+                        alt="Note"
+                        src={noteImg}
+                      />
+                    </a>
                   )}
                 </React.Fragment>
               ))}
@@ -172,16 +175,16 @@ export const Top = (): JSX.Element => {
             {missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[650px] sm:min-h-[700px]"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[750px] sm:min-h-[800px] flex flex-col"
               >
-                <CardContent className="flex flex-col items-center justify-between gap-4 p-0 h-full">
-                  <div className="flex flex-col items-center gap-4">
+                <CardContent className="flex flex-col items-center gap-2 p-0 flex-1">
+                  <div className="flex flex-col items-center gap-2">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
                         {card.badge}
                       </span>
                     </Badge>
-                    <h4 className="font-bold text-[#5a3729] text-xl text-center tracking-[1.32px] leading-[30px]">
+                    <h4 className="font-bold text-[#5a3729] text-xl text-center tracking-[1.32px] leading-[30px] mb-2">
                       {card.title.split("\n").map((line, lineIndex) => (
                         <React.Fragment key={lineIndex}>
                           {line}
@@ -191,15 +194,15 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="flex-grow flex items-center justify-center py-4">
+                  <div className="w-full flex items-center justify-center py-2">
                     <img
-                      className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 object-contain"
+                      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain max-w-full max-h-[200px]"
                       alt="Mission"
                       src={card.image}
                     />
                   </div>
                   
-                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center">
+                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center mt-auto pt-2">
                     {card.description}
                   </p>
                 </CardContent>
@@ -299,7 +302,7 @@ export const Top = (): JSX.Element => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="flex justify-center">
               <img
-                className="w-64 h-auto object-contain max-w-full"
+                className="w-72 sm:w-80 md:w-96 h-auto object-contain max-w-full"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
@@ -361,11 +364,13 @@ export const Top = (): JSX.Element => {
             <div className="text-[#e9e8e3] text-xs tracking-[0.60px] text-center md:text-left">
               ©2025 一般社団法人日本シェフ・イン・レジデンス応援協会 All rights reserved.
             </div>
-            <img
-              className="w-12 sm:w-14 h-auto"
-              alt="Logo"
-              src="/figmaAssets/clip-path-group.png"
-            />
+            <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+              <img
+                className="w-12 sm:w-14 h-auto"
+                alt="Note"
+                src="/figmaAssets/clip-path-group.png"
+              />
+            </a>
           </div>
         </div>
       </footer>
