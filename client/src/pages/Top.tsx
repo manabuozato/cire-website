@@ -183,7 +183,7 @@ export const Top = (): JSX.Element => {
             </div>
             
             {/* Navigation Menu */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden xl:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   {(item === 'MISSION' || item === 'AWARD' || item === 'NEWS' || item === 'SUPPORT US' || item === 'CONTACT') ? (
@@ -229,7 +229,7 @@ export const Top = (): JSX.Element => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="xl:hidden">
               <button 
                 className="text-[#5a3729] hover:text-[#71b0ff]"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -246,7 +246,7 @@ export const Top = (): JSX.Element => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 xl:hidden" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="absolute top-0 right-0 w-64 h-full bg-[#f7e489] shadow-lg">
             <div className="flex justify-end p-4">
               <button 
