@@ -19,7 +19,56 @@ export const About = (): JSX.Element => {
       memberTitle: "MEMBER",
       organizationTitle: "ORGANIZATION",
       creativeTerritoryTitle: "「創造的地域風土」とは",
-      creativeTerritoryContent: "「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。\n※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。\n参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）"
+      creativeTerritoryContent: "「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。\n※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。\n参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）",
+      whatWeDoTitle: "WHAT WE DO",
+      whatWeDo: [
+        {
+          title: "１．情報発信と調査研究",
+          description: "旅するシェフ、迎える地域やキッチンそれぞれが抱える課題や魅力を調査・分析し、その結果を広く共有することで、課題の解決策や成功事例を提示します。"
+        },
+        {
+          title: "２．アワードの実施",
+          description: "理想的な「シェフ・イン・レジデンス」の活動を実現しているシェフや地域、キッチンを称え、さらなる活動推進のためのアワードを開催します。これにより、各地での活動が活性化し、より多くの地域での取り組みが促進されることを目指しています。"
+        },
+        {
+          title: "３．旅するシェフと迎える地域のサポート",
+          description: "旅するシェフと迎える地域が効果的かつ円滑に連携できるように支援します。具体的には、地域のキッチン運営の助言や実務サポート、旅するシェフの滞在支援、さらに国際交流を促すための外国人シェフの招聘も行います。"
+        },
+        {
+          title: "４．外国人シェフ招致プログラム",
+          description: "外国人シェフが地域に「旅するシェフ」で活動することによるインパクト検証や課題発見のため、外国人シェフを対象とした招致を目指した活動を行います。"
+        }
+      ],
+      members: [
+        {
+          name: "日髙誠人",
+          nameReading: "（ひだか まさと）",
+          title: "代表理事・共同ファウンダー",
+          bio: "神奈川県出身。大手ITサービス企業にてディレクター・プランナーとして活動し、SaaS事業推進や全社ナレッジ活性化、新規事業開発などを担当。長崎県五島列島の地域課題解決に取り組む一般社団法人みつめる旅の理事も務める。2024年より、中小企業診断士としても活動。"
+        },
+        {
+          name: "西木戸弓佳",
+          nameReading: "（にしきど ゆみか）",
+          title: "理事・共同ファウンダー",
+          bio: "福岡県出身。広告制作やITプランナーとして従事後、老舗の工芸メーカーにて商品企画や地域活性化事業を手掛ける。D2Cベンチャーの取締役を経て独立し、現在はフリーの編集者・ディレクターとして活動。北海道を拠点に環境・地域の課題解決に取り組む株式会社SHIZENの取締役。"
+        },
+        {
+          name: "守護直樹",
+          nameReading: "（しゅご なおき）",
+          title: "理事",
+          bio: "茨城県出身。都内の司法書士法人に勤務後独立し、司法書士法人の役員を務める。法人商業登記コンサルティング業務を専門とし、クライアント数は年間300社を超える。飲食好きが功を奏し現職に至る。"
+        },
+        {
+          name: "大里学",
+          nameReading: "（おおざと まなぶ）",
+          title: "共同ファウンダー・運営サポート",
+          bio: "福井県大野市出身。東京都内の広告会社に在籍。米日財団の日米リーダーシッププログラム（USJLP）フェロー。本協会では、外部の立場からサポート活動を行う。"
+        }
+      ],
+      orgName: "一般社団法人日本シェフ・イン・レジデンス応援協会",
+      orgAddress: "〒220-0004 神奈川県横浜市西区北幸二丁目10番48号 むつみビル3階",
+      orgEmail: "Email: info@cire.or.jp",
+      orgNote: "本協会は、米日財団からの助成金を受けて運営されている 非営利型一般社団法人です。"
     },
     en: {
       pageTitle: "ABOUT",
@@ -30,7 +79,56 @@ export const About = (): JSX.Element => {
       memberTitle: "MEMBER",
       organizationTitle: "ORGANIZATION", 
       creativeTerritoryTitle: "What is \"Creative Regional Culture\"?",
-      creativeTerritoryContent: "\"Creative Regional Culture\" refers to the values, mindsets, and behavioral patterns commonly shared by the people who make up a region, and represents an environment where creativity naturally flourishes and new challenges and exchanges continuously emerge. By establishing such an environment, we can form communities where local people can easily participate in new endeavors and grow together while stimulating each other. We believe that Chef-in-Residence functions as a \"brackish zone between the everyday and the extraordinary,\" thereby enhancing creative regional culture.\n※Brackish zone: A water area formed where rivers and seas meet, referring to an environment where fresh and salt water mix. By extension, this term refers to places, spaces, opportunities, and environments where people, things, and matters of different natures come together.\nReference: Discussion Paper | iC Model (innumerable Cs Model) for Creating \"Creative Regional Culture\""
+      creativeTerritoryContent: "\"Creative Regional Culture\" refers to the values, mindsets, and behavioral patterns commonly shared by the people who make up a region, and represents an environment where creativity naturally flourishes and new challenges and exchanges continuously emerge. By establishing such an environment, we can form communities where local people can easily participate in new endeavors and grow together while stimulating each other. We believe that Chef-in-Residence functions as a \"brackish zone between the everyday and the extraordinary,\" thereby enhancing creative regional culture.\n※Brackish zone: A water area formed where rivers and seas meet, referring to an environment where fresh and salt water mix. By extension, this term refers to places, spaces, opportunities, and environments where people, things, and matters of different natures come together.\nReference: Discussion Paper | iC Model (innumerable Cs Model) for Creating \"Creative Regional Culture\"",
+      whatWeDoTitle: "WHAT WE DO",
+      whatWeDo: [
+        {
+          title: "1. Information Dissemination and Research",
+          description: "We investigate and analyze the challenges and attractions faced by traveling chefs and the regions and kitchens that welcome them, sharing the results widely to present solutions and success stories."
+        },
+        {
+          title: "2. Awards Implementation",
+          description: "We celebrate chefs, regions, and kitchens that realize ideal Chef-in-Residence activities, hosting awards to further promote such activities. This aims to revitalize activities in various locations and encourage initiatives in more regions."
+        },
+        {
+          title: "3. Support for Traveling Chefs and Host Regions",
+          description: "We support traveling chefs and host regions to collaborate effectively and smoothly. Specifically, this includes advice and practical support for regional kitchen operations, accommodation support for traveling chefs, and inviting foreign chefs to promote international exchange."
+        },
+        {
+          title: "4. Foreign Chef Invitation Program",
+          description: "We conduct activities aimed at inviting foreign chefs to verify the impact and identify challenges when foreign chefs work as 'traveling chefs' in regions."
+        }
+      ],
+      members: [
+        {
+          name: "Masato Hidaka",
+          nameReading: "",
+          title: "Representative Director & Co-founder",
+          bio: "Born in Kanagawa Prefecture. Worked as a director and planner at a major IT services company, handling SaaS business promotion, company-wide knowledge activation, and new business development. Also serves as a director of the general incorporated association Mitsumeru Tabi, which addresses regional issues in the Goto Islands, Nagasaki Prefecture. Since 2024, has also been active as a certified management consultant."
+        },
+        {
+          name: "Yumika Nishikido",
+          nameReading: "",
+          title: "Director & Co-founder",
+          bio: "Born in Fukuoka Prefecture. After working in advertising production and as an IT planner, handled product planning and regional revitalization projects at a long-established craft manufacturer. After serving as an executive at a D2C venture, became independent and currently works as a freelance editor and director. Director at SHIZEN Co., Ltd., which addresses environmental and regional issues based in Hokkaido."
+        },
+        {
+          name: "Naoki Shugo",
+          nameReading: "",
+          title: "Director",
+          bio: "Born in Ibaraki Prefecture. After working at a judicial scrivener corporation in Tokyo, became independent and now serves as an executive at a judicial scrivener corporation. Specializes in corporate commercial registration consulting services, with over 300 clients annually. His love of dining led to his current position."
+        },
+        {
+          name: "Manabu Osato",
+          nameReading: "",
+          title: "Co-founder & Operations Support",
+          bio: "Born in Ono City, Fukui Prefecture. Works at an advertising company in Tokyo. Fellow of the US-Japan Leadership Program (USJLP) by the US-Japan Foundation. Provides support activities for the association from an external position."
+        }
+      ],
+      orgName: "Japan Chef-in-Residence Empowerment Association (General Incorporated Association)",
+      orgAddress: "3F, Mutsumi Building, 2-10-48 Kita-Saiwai, Nishi-ku, Yokohama-shi, Kanagawa 220-0004, Japan",
+      orgEmail: "Email: info@cire.or.jp",
+      orgNote: "This association is a non-profit general incorporated association operated with grants from the US-Japan Foundation."
     }
   };
   
@@ -53,51 +151,6 @@ export const About = (): JSX.Element => {
     "Privacy Policy",
   ];
 
-  const memberData = [
-    {
-      name: "日髙誠人",
-      nameKana: "（ひだか まさと）",
-      position: "代表理事・共同ファウンダー",
-      description: "神奈川県出身。大手ITサービス企業にてディレクター・プランナーとして活動し、SaaS事業推進や全社ナレッジ活性化、新規事業開発などを担当。長崎県五島列島の地域課題解決に取り組む一般社団法人みつめる旅の理事も務める。2024年より、中小企業診断士としても活動。"
-    },
-    {
-      name: "西木戸弓佳", 
-      nameKana: "（にしきど ゆみか）",
-      position: "理事・共同ファウンダー",
-      description: "福岡県出身。広告制作やITプランナーとして従事後、老舗の工芸メーカーにて商品企画や地域活性化事業を手掛ける。D2Cベンチャーの取締役を経て独立し、現在はフリーの編集者・ディレクターとして活動。北海道を拠点に環境・地域の課題解決に取り組む株式会社SHIZENの取締役。"
-    },
-    {
-      name: "守護直樹",
-      nameKana: "（しゅご なおき）", 
-      position: "理事",
-      description: "茨城県出身。都内の司法書士法人に勤務後独立し、司法書士法人の役員を務める。法人商業登記コンサルティング業務を専門とし、クライアント数は年間300社を超える。飲食好きが功を奏し現職に至る。"
-    },
-    {
-      name: "大里学",
-      nameKana: "（おおざと まなぶ）",
-      position: "共同ファウンダー・運営サポート", 
-      description: "福井県大野市出身。東京都内の広告会社に在籍。米日財団の日米リーダーシッププログラム（USJLP）フェロー。本協会では、外部の立場からサポート活動を行う。"
-    }
-  ];
-
-  const whatWeDo = [
-    {
-      title: "１．情報発信と調査研究",
-      description: "旅するシェフ、迎える地域やキッチンそれぞれが抱える課題や魅力を調査・分析し、その結果を広く共有することで、課題の解決策や成功事例を提示します。"
-    },
-    {
-      title: "２．アワードの実施",
-      description: "理想的な「シェフ・イン・レジデンス」の活動を実現しているシェフや地域、キッチンを称え、さらなる活動推進のためのアワードを開催します。これにより、各地での活動が活性化し、より多くの地域での取り組みが促進されることを目指しています。"
-    },
-    {
-      title: "３．旅するシェフと迎える地域のサポート",
-      description: "旅するシェフと迎える地域が効果的かつ円滑に連携できるように支援します。具体的には、地域のキッチン運営の助言や実務サポート、旅するシェフの滞在支援、さらに国際交流を促すための外国人シェフの招聘も行います。"
-    },
-    {
-      title: "４．外国人シェフ招致プログラム",
-      description: "外国人シェフが地域に「旅するシェフ」で活動することによるインパクト検証や課題発見のため、外国人シェフを対象とした招致を目指した活動を行います。"
-    }
-  ];
 
   return (
     <main className="w-full bg-[#f7e489] min-h-screen">
@@ -234,10 +287,10 @@ export const About = (): JSX.Element => {
       <section className="w-full bg-[#F2EDF0] py-8 md:py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[2.40px] mb-8 text-center">
-            WHAT WE DO
+            {content[language].whatWeDoTitle}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {whatWeDo.map((item, index) => (
+            {content[language].whatWeDo.map((item, index) => (
               <div key={index} className="text-left">
                 <h3 className="text-sm sm:text-base md:text-lg text-[#5a3729] font-bold mb-2">
                   {item.title}
@@ -264,7 +317,7 @@ export const About = (): JSX.Element => {
             <div className="space-y-6 md:space-y-8">
               {/* First row - 日髙, 西木戸, 守護 on wide screens; 日髙, 西木戸 on medium */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {memberData.slice(0, 3).map((member, index) => (
+                {content[language].members.slice(0, 3).map((member, index) => (
                   <div 
                     key={index} 
                     className={`${index === 2 ? 'sm:col-span-2 lg:col-span-1 sm:justify-self-center lg:justify-self-auto' : ''} bg-[#F2EDF0] rounded-3xl p-4 md:p-6 text-center`}
@@ -273,33 +326,33 @@ export const About = (): JSX.Element => {
                       {member.name}
                     </h3>
                     <p className="text-xs md:text-sm text-[#5a3729] mb-2">
-                      {member.nameKana}
+                      {member.nameReading}
                     </p>
                     <p className="text-xs md:text-sm font-bold text-[#5a3729] mb-3">
-                      {member.position}
+                      {member.title}
                     </p>
                     <p className="text-xs text-[#5a3729] leading-4 text-justify">
-                      {member.description}
+                      {member.bio}
                     </p>
                   </div>
                 ))}
               </div>
               
               {/* Second row - 大里 centered */}
-              {memberData[3] && (
+              {content[language].members[3] && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                   <div className="bg-[#F2EDF0] rounded-3xl p-4 md:p-6 text-center sm:col-start-1 lg:col-start-2">
                     <h3 className="text-base md:text-lg font-bold text-[#5a3729] mb-1">
-                      {memberData[3].name}
+                      {content[language].members[3].name}
                     </h3>
                     <p className="text-xs md:text-sm text-[#5a3729] mb-2">
-                      {memberData[3].nameKana}
+                      {content[language].members[3].nameReading}
                     </p>
                     <p className="text-xs md:text-sm font-bold text-[#5a3729] mb-3">
-                      {memberData[3].position}
+                      {content[language].members[3].title}
                     </p>
                     <p className="text-xs text-[#5a3729] leading-4 text-justify">
-                      {memberData[3].description}
+                      {content[language].members[3].bio}
                     </p>
                   </div>
                 </div>
@@ -314,17 +367,16 @@ export const About = (): JSX.Element => {
             </h2>
             <div className="space-y-4 text-[10px] sm:text-xs md:text-sm text-[#5a3729]">
               <p className="font-bold text-sm sm:text-base md:text-lg">
-                一般社団法人日本シェフ・イン・レジデンス応援協会
+                {content[language].orgName}
               </p>
               <p>
-                〒220-0004 神奈川県横浜市西区北幸二丁目10番48号 むつみビル3階
+                {content[language].orgAddress}
               </p>
               <p>
-                Email: info@cire.or.jp
+                {content[language].orgEmail}
               </p>
               <p className="mt-6 font-medium">
-                本協会は、米日財団からの助成金を受けて運営されている<br />
-                非営利型一般社団法人です。
+                {content[language].orgNote}
               </p>
             </div>
           </div>

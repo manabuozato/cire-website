@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { Top } from "@/pages/Top";
 import { About } from "@/pages/About";
 import { News } from "@/pages/News";
-import { Legal } from "@/pages/Legal";
+import { PrivacyPolicy } from "@/pages/PrivacyPolicy";
 
 function Router() {
   return (
@@ -18,7 +18,7 @@ function Router() {
       <Route path="/" component={Top} />
       <Route path="/about" component={About} />
       <Route path="/news" component={News} />
-      <Route path="/legal" component={Legal} />
+      <Route path="/legal" component={PrivacyPolicy} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
