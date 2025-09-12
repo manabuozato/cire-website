@@ -205,23 +205,23 @@
 
 /* Responsive cloud background for ABOUT section */
 .about-cloud-bg {
-  background-size: 80%;
+  background-size: 90%;
 }
 
 @media (min-width: 640px) {
   .about-cloud-bg {
-    background-size: 65%;
+    background-size: 75%;
   }
 }
 
 @media (min-width: 768px) {
   .about-cloud-bg {
-    background-size: 55%;
+    background-size: 65%;
   }
 }
 
 @media (min-width: 1024px) {
   .about-cloud-bg {
-    background-size: 45%;
+    background-size: 55%;
   }
 }

@@ -80,7 +80,11 @@ export const Top = (): JSX.Element => {
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <a
-                    href={item === 'ABOUT' ? '/about' : `#${item.toLowerCase().replace(' ', '-')}`}
+                    href={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      `#${item.toLowerCase().replace(' ', '-')}`
+                    }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
@@ -360,7 +364,12 @@ export const Top = (): JSX.Element => {
               {footerNavigationItems.map((item, index) => (
                 <a
                   key={index}
-                  href={item === 'ABOUT' ? '/about' : item === 'Privacy Policy' ? '/legal' : `#${item.toLowerCase().replace(' ', '-')}`}
+                  href={
+                    item === 'ABOUT' ? '/about' : 
+                    item === 'NEWS' ? '/news' :
+                    item === 'Privacy Policy' ? '/legal' : 
+                    `#${item.toLowerCase().replace(' ', '-')}`
+                  }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
                 >
                   {item}

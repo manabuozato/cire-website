@@ -1,0 +1,200 @@
+import React from "react";
+import noteImg from '@assets/note_1757659491855.png';
+
+export const News = (): JSX.Element => {
+  const navigationItems = [
+    "ABOUT",
+    "MISSION", 
+    "AWARD",
+    "NEWS",
+    "SUPPORT US",
+    "CONTACT",
+  ];
+
+  const footerNavigationItems = [
+    "ABOUT",
+    "MISSION",
+    "AWARD", 
+    "NEWS",
+    "SUPPORT US",
+    "CONTACT",
+    "Privacy Policy",
+  ];
+
+  const newsItems = [
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
+    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" }
+  ];
+
+  return (
+    <main className="w-full bg-[#f7e489] min-h-screen">
+      {/* Header Navigation */}
+      <header className="sticky top-0 bg-[#f7e489] z-50">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <a href="/">
+                <img
+                  className="h-3 sm:h-4 w-auto"
+                  alt="Cir title"
+                  src="/figmaAssets/cir-title.svg"
+                />
+              </a>
+            </div>
+            
+            {/* Navigation Menu */}
+            <div className="hidden md:flex items-center space-x-6">
+              {navigationItems.map((item, index) => (
+                <React.Fragment key={index}>
+                  <a
+                    href={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      `/#${item.toLowerCase().replace(' ', '-')}`
+                    }
+                    className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
+                    data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </a>
+                  {item === 'CONTACT' && (
+                    <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                      <img
+                        className="w-12 sm:w-14 h-auto ml-2"
+                        alt="Note"
+                        src={noteImg}
+                      />
+                    </a>
+                  )}
+                </React.Fragment>
+              ))}
+              <div className="flex items-center gap-2">
+                <img
+                  className="w-4 h-4"
+                  alt="Globe"
+                  src="/figmaAssets/earth-1.svg"
+                />
+                <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
+                  EN
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button className="text-[#5a3729] hover:text-[#71b0ff]">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      {/* News Content Section */}
+      <section className="py-8 md:py-16">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          {/* Main Title */}
+          <div className="text-center mb-12 md:mb-16">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
+              NEWS
+            </h1>
+          </div>
+          
+          {/* News Items */}
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6 md:space-y-8">
+              {newsItems.map((item, index) => (
+                <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 py-4 border-b border-[#5a3729]/20">
+                  <div className="text-sm md:text-base font-bold text-[#5a3729] whitespace-nowrap">
+                    {item.date}
+                  </div>
+                  <a 
+                    href="#" 
+                    className="text-sm md:text-base text-[#5a3729] hover:text-[#71b0ff] transition-colors cursor-pointer"
+                    data-testid={`link-news-${index}`}
+                  >
+                    {item.title}
+                  </a>
+                </div>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            <div className="flex justify-center items-center gap-4 md:gap-6 mt-12 md:mt-16">
+              <a 
+                href="#" 
+                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#5a3729] text-white flex items-center justify-center font-bold text-sm md:text-base hover:bg-[#71b0ff] transition-colors"
+                data-testid="pagination-1"
+              >
+                1
+              </a>
+              <a 
+                href="#" 
+                className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-[#5a3729] text-[#5a3729] flex items-center justify-center font-bold text-sm md:text-base hover:bg-[#5a3729] hover:text-white transition-colors"
+                data-testid="pagination-2"
+              >
+                2
+              </a>
+              <a 
+                href="#" 
+                className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-[#5a3729] text-[#5a3729] flex items-center justify-center font-bold text-sm md:text-base hover:bg-[#5a3729] hover:text-white transition-colors"
+                data-testid="pagination-3"
+              >
+                3
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full bg-[#b63622] py-12">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-8">
+            <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
+              {footerNavigationItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={
+                    item === 'ABOUT' ? '/about' : 
+                    item === 'NEWS' ? '/news' :
+                    item === 'Privacy Policy' ? '/legal' : 
+                    `/#${item.toLowerCase().replace(' ', '-')}`
+                  }
+                  className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 pt-8 border-t border-[#e9e8e3]/20">
+            <div className="text-[#e9e8e3] text-xs tracking-[0.60px] text-center md:text-left">
+              ©2025 一般社団法人日本シェフ・イン・レジデンス応援協会 All rights reserved.
+            </div>
+            <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+              <img
+                className="w-12 sm:w-14 h-auto"
+                alt="Note"
+                src="/figmaAssets/clip-path-group.png"
+              />
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+};

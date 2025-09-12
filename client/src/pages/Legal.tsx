@@ -44,7 +44,12 @@ export const Legal = (): JSX.Element => {
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <a
-                    href={item === 'ABOUT' ? '/about' : item === 'Privacy Policy' ? '/legal' : `/#${item.toLowerCase().replace(' ', '-')}`}
+                    href={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      `/#${item.toLowerCase().replace(' ', '-')}`
+                    }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
@@ -89,14 +94,20 @@ export const Legal = (): JSX.Element => {
       <section className="py-16 pt-32">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px] mb-8" data-testid="text-section-title">
-              PRIVACY POLICY
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px] mb-4" data-testid="text-section-title">
+              LEGAL
             </h1>
+            <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-8">
+              プライバシーポリシー
+            </h2>
           </div>
           
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
-              <div className="text-[#5a3729] text-base leading-7 space-y-6">
+              <div className="text-xs sm:text-sm md:text-base text-[#5a3729] leading-6 md:leading-7 text-justify mb-6">
+                一般社団法人日本シェフ・イン・レジデンス応援協会は、「シェフ・イン・レジデンス」活動を応援する非営利型一般社団法人です。私たちは特に「継続型」「地元住民と観光客の両方に開かれた」「シェフと地域が自然に融合する仕組みを持つ」という3つの条件を満たした「シェフ・イン・レジデンス」の実現を目指す地域、シェフ、事業者等を応援します。そのようなかたちの「シェフ・イン・レジデンス」が日本各地に広がり、「創造的地域風土」を育む「日常と非日常の汽水域」となることで、地域がもっと面白く元気に、そして日本全体がもっと面白く豊かになることを目指しています。
+              </div>
+              <div className="text-[#5a3729] text-sm md:text-base leading-7 space-y-6">
                 <p>
                   一般社団法人日本シェフ・イン・レジデンス応援協会（以下、「当協会」といいます。）は、当協会が運営するウェブサイト（以下、「本サイト」といいます。）における個人情報の取り扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
                 </p>
@@ -234,7 +245,12 @@ export const Legal = (): JSX.Element => {
               {footerNavigationItems.map((item, index) => (
                 <a
                   key={index}
-                  href={item === 'ABOUT' ? '/about' : item === 'Privacy Policy' ? '/legal' : `/#${item.toLowerCase().replace(' ', '-')}`}
+                  href={
+                    item === 'ABOUT' ? '/about' : 
+                    item === 'NEWS' ? '/news' :
+                    item === 'Privacy Policy' ? '/legal' : 
+                    `/#${item.toLowerCase().replace(' ', '-')}`
+                  }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
                 >
                   {item}

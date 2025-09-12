@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 
 import { Top } from "@/pages/Top";
 import { About } from "@/pages/About";
+import { News } from "@/pages/News";
 import { Legal } from "@/pages/Legal";
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       {/* Add pages below */}
       <Route path="/" component={Top} />
       <Route path="/about" component={About} />
+      <Route path="/news" component={News} />
       <Route path="/legal" component={Legal} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
