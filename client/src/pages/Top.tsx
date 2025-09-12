@@ -80,7 +80,7 @@ export const Top = (): JSX.Element => {
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <a
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    href={item === 'ABOUT' ? '/about' : `#${item.toLowerCase().replace(' ', '-')}`}
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
                     data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
                   >
@@ -122,7 +122,7 @@ export const Top = (): JSX.Element => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-16 md:pt-20">
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
@@ -141,17 +141,19 @@ export const Top = (): JSX.Element => {
             </div>
             {/* ABOUT button below text */}
             <div className="flex justify-center">
-              <Button 
-                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
-                data-testid="button-about"
-              >
-                ABOUT
-                <img
-                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
-                  alt="Arrow"
-                  src="/figmaAssets/vector-6.svg"
-                />
-              </Button>
+              <a href="/about">
+                <Button 
+                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                  data-testid="button-about"
+                >
+                  ABOUT
+                  <img
+                    className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                    alt="Arrow"
+                    src="/figmaAssets/vector-6.svg"
+                  />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -176,7 +178,7 @@ export const Top = (): JSX.Element => {
             {missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[750px] sm:min-h-[800px] flex flex-col"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col"
               >
                 <CardContent className="flex flex-col items-center gap-2 p-0 flex-1">
                   <div className="flex flex-col items-center gap-2">
@@ -197,7 +199,7 @@ export const Top = (): JSX.Element => {
                   
                   <div className="w-full flex items-center justify-center">
                     <img
-                      className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain max-w-full max-h-[200px] sm:max-h-[240px] md:max-h-[280px] lg:max-h-[320px] xl:max-h-[360px]"
+                      className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain max-w-full max-h-[150px] sm:max-h-[180px] md:max-h-[200px] lg:max-h-[220px] xl:max-h-[240px]"
                       alt="Mission"
                       src={card.image}
                     />
@@ -303,7 +305,7 @@ export const Top = (): JSX.Element => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="flex justify-center">
               <img
-                className="w-96 sm:w-full md:w-full lg:w-full xl:w-full h-auto object-contain max-w-full"
+                className="w-full h-auto object-contain max-w-full scale-110"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
@@ -358,7 +360,7 @@ export const Top = (): JSX.Element => {
               {footerNavigationItems.map((item, index) => (
                 <a
                   key={index}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
+                  href={item === 'ABOUT' ? '/about' : item === 'Privacy Policy' ? '/legal' : `#${item.toLowerCase().replace(' ', '-')}`}
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
                 >
                   {item}
