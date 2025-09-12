@@ -394,7 +394,7 @@ export const Top = (): JSX.Element => {
                 src="/figmaAssets/support.png"
               />
             </div>
-            <div className="space-y-8 flex flex-col justify-start">
+            <div className="space-y-8 flex flex-col items-start">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
                   {content[language].supportSubtitle}

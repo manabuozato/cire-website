@@ -248,7 +248,7 @@ export const About = (): JSX.Element => {
 
           {/* What is Creative Regional Culture Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6 items-start">
               <div className="flex-shrink-0">
                 <img
                   src={icModelImg}
