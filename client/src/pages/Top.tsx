@@ -49,7 +49,7 @@ export const Top = (): JSX.Element => {
       missionDescription: "「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards", 
-      awardDescription: "「The Relay Awards（ザ・リレー・アワード）」は、当協会が掲げる3条件（①シェフが次々に訪れ続ける継続性／②観光客にも地元の人にも開かれている設計／③シェフと地域を自然に融合させる仕組み）を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n対象は、各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）です。順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n\n授賞イベント「The Relay Awards 2025」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
+      awardDescription: "「**The Relay Awards**（ザ・リレー・アワード）」は、当協会が掲げる3条件を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）を表彰対象とし、順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\n\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n**The Relay Awards** エントリーフォーム\n\n\n授賞イベント「**The Relay Awards 2025**」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
@@ -410,13 +410,26 @@ export const Top = (): JSX.Element => {
             </div>
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-normal text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
                   {content[language].awardSubtitle}
                 </h3>
                 <div className="text-[#5a3729] text-base leading-6 space-y-4">
                   {content[language].awardDescription.split('\n').map((line, index) => {
                     if (line.startsWith('アワードへのエントリーについて（キッチン・レジデンス）') || line.startsWith('How to Enter (Kitchen-Residences)')) {
                       return <p key={index} className="font-bold">{line}</p>;
+                    }
+                    // Handle **text** for bold formatting
+                    if (line.includes('**')) {
+                      const parts = line.split(/(\*\*.*?\*\*)/);
+                      return (
+                        <p key={index}>
+                          {parts.map((part, partIndex) => 
+                            part.startsWith('**') && part.endsWith('**') 
+                              ? <strong key={partIndex}>{part.slice(2, -2)}</strong> 
+                              : part
+                          )}
+                        </p>
+                      );
                     }
                     return <p key={index}>{line}</p>;
                   })}
