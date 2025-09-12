@@ -128,31 +128,30 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center py-28 md:py-32 lg:py-36 min-h-[500px] md:min-h-[600px] relative" id="about" style={{ backgroundSize: '60%' }}>
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[500px] md:min-h-[600px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '60%' }}>
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center gap-8 text-center">
-            {/* Text and Button Group */}
-            <div className="flex flex-col items-center gap-6">
-              <div className="text-center text-[#5a3729] px-4 mb-8">
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-relaxed">
-                  シェフ・イン・レジデンスとは<br />
-                  日本や世界を旅するシェフを地域に迎え入れ<br />
-                  期間限定で展開されるレストラン活動です
-                </h1>
-              </div>
-              <div className="flex justify-center">
-                <Button 
-                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
-                  data-testid="button-about"
-                >
-                  ABOUT
-                  <img
-                    className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
-                    alt="Arrow"
-                    src="/figmaAssets/vector-6.svg"
-                  />
-                </Button>
-              </div>
+          <div className="flex flex-col items-center justify-center text-center">
+            {/* Text centered in cloud background */}
+            <div className="text-center text-[#5a3729] px-4 mb-8">
+              <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-relaxed">
+                シェフ・イン・レジデンスとは<br />
+                日本や世界を旅するシェフを地域に迎え入れ<br />
+                期間限定で展開されるレストラン活動です
+              </h1>
+            </div>
+            {/* ABOUT button below text */}
+            <div className="flex justify-center">
+              <Button 
+                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                data-testid="button-about"
+              >
+                ABOUT
+                <img
+                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                  alt="Arrow"
+                  src="/figmaAssets/vector-6.svg"
+                />
+              </Button>
             </div>
           </div>
         </div>
@@ -177,9 +176,9 @@ export const Top = (): JSX.Element => {
             {missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-8 h-full"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-8"
               >
-                <CardContent className="flex flex-col items-center gap-6 p-0 h-full">
+                <CardContent className="flex flex-col items-center gap-6 p-0">
                   <div className="flex flex-col items-center gap-4">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
