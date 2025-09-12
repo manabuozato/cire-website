@@ -15,6 +15,9 @@ export const Top = (): JSX.Element => {
   
   // Handle section scrolling from URL parameters
   React.useEffect(() => {
+    // Only handle section scrolling on the Top page (/)
+    if (location !== '/') return;
+    
     // Parse query parameters from hash for hash routing (e.g., /#/?section=mission)
     const hash = window.location.hash;
     const queryStart = hash.indexOf('?');
@@ -73,8 +76,8 @@ export const Top = (): JSX.Element => {
       ]
     },
     en: {
-      heroTitle: "Supporting Chef-in-Residence\nActivities Nationwide",
-      heroSubtitle: "Creating New Food Experiences Connecting Regions and Chefs",
+      heroTitle: "We are a nonprofit organization that supports \"Chef-in-Residence\" — limited-term restaurant programs that welcome traveling chefs into regions and communities.",
+      heroSubtitle: "",
       missionTitle: "MISSION",
       missionSubtitle: "Three Conditions for the Ideal",
       missionDescription: "\"Chef-in-Residence\" is an initiative to invite chefs from outside the region to promote regional revitalization, serving as an important means to enhance regional creativity and vitality. In particular, we regard \"traveling chefs\" as key figures in regional revitalization, and we have established the following three conditions for the ideal form of \"Chef-in-Residence\" that we aim for.",
@@ -138,6 +141,16 @@ export const Top = (): JSX.Element => {
   };
 
   const navigationItems = [
+    "ABOUT",
+    "MISSION", 
+    "AWARD",
+    "NEWS",
+    "SUPPORT US",
+    "CONTACT",
+  ];
+
+  const mobileNavigationItems = [
+    "HOME",
     "ABOUT",
     "MISSION", 
     "AWARD",
@@ -237,10 +250,11 @@ export const Top = (): JSX.Element => {
               </button>
             </div>
             <nav className="px-4 py-2">
-              {navigationItems.map((item, index) => (
+              {mobileNavigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
                     to={
+                      item === 'HOME' ? '/' :
                       item === 'ABOUT' ? '/about' : 
                       item === 'NEWS' ? '/news' :
                       item === 'Privacy Policy' ? '/legal' : 
@@ -257,7 +271,7 @@ export const Top = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
+                    <div className="py-3 flex justify-start border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                         <img
                           className="w-12 h-auto"
