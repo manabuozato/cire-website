@@ -82,7 +82,7 @@ export const Top = (): JSX.Element => {
                   <a
                     href={
                       item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
+                      item === 'NEWS' ? '#news' :
                       `#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
@@ -282,7 +282,8 @@ export const Top = (): JSX.Element => {
           <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="flex justify-center">
               <Button 
-                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                disabled
+                className="bg-white text-[#71b0ff] cursor-not-allowed rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] opacity-75"
                 data-testid="button-view-more"
               >
                 VIEW MORE
@@ -366,7 +367,7 @@ export const Top = (): JSX.Element => {
                   key={index}
                   href={
                     item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '/news' :
+                    item === 'NEWS' ? '#news' :
                     item === 'Privacy Policy' ? '/legal' : 
                     `#${item.toLowerCase().replace(' ', '-')}`
                   }

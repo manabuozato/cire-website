@@ -93,7 +93,7 @@ export const About = (): JSX.Element => {
                   <a
                     href={
                       item === 'ABOUT' ? '/about' : 
-                      item === 'NEWS' ? '/news' :
+                      item === 'NEWS' ? '/#news' :
                       item === 'Privacy Policy' ? '/legal' : 
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
@@ -105,7 +105,7 @@ export const About = (): JSX.Element => {
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
-                        className="w-20 sm:w-24 md:w-28 h-auto ml-2"
+                        className="w-80 sm:w-96 md:w-32 h-auto ml-2"
                         alt="Note"
                         src={noteImg}
                       />
@@ -152,7 +152,7 @@ export const About = (): JSX.Element => {
           
           {/* Main Description */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="text-[10px] sm:text-xs md:text-sm text-[#5a3729] leading-5 md:leading-6 text-justify">
+            <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
               一般社団法人日本シェフ・イン・レジデンス応援協会は、「シェフ・イン・レジデンス」活動を応援する非営利型一般社団法人です。私たちは特に「継続型」「地元住民と観光客の両方に開かれた」「シェフと地域が自然に融合する仕組みを持つ」という3つの条件を満たした「シェフ・イン・レジデンス」の実現を目指す地域、シェフ、事業者等を応援します。そのようなかたちの「シェフ・イン・レジデンス」が日本各地に広がり、「創造的地域風土」を育む「日常と非日常の汽水域」となることで、地域がもっと面白く元気に、そして日本全体がもっと面白く豊かになることを目指しています。
             </div>
           </div>
@@ -162,33 +162,37 @@ export const About = (): JSX.Element => {
             <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-6 text-center">
               「シェフ・イン・レジデンス」とは
             </h2>
-            <div className="text-[10px] sm:text-xs md:text-sm text-[#5a3729] leading-5 md:leading-6 text-justify">
+            <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
               「シェフ・イン・レジデンス」とは、日本や世界を旅するシェフを地域に迎え入れ、期間限定で展開されるレストラン活動です。この活動は、地域に新たな出会いや創造性を生み出すことを目的としています。旅するシェフが地域の人々や地元食材、文化、風土と交流することで、地域の魅力を（再）発見し、地域の魅力がさらに高まり広がります。またシェフにとってはその地域ならではの経験が得られます。一般社団法人日本シェフ・イン・レジデンス応援協会は、全国各地でこうした活動が持続的に行われ、広がっていくよう応援しています。
             </div>
           </div>
 
           {/* What is Creative Regional Culture Section */}
-          <div className="max-w-4xl mx-auto mb-12 md:mb-16 bg-white/30 rounded-3xl p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-6">
-              「創造的地域風土」とは
-            </h2>
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-              <div className="flex-shrink-0">
-                <img
-                  src={icModelImg}
-                  alt="iC Model - innumerable Cs Model"
-                  className="w-full md:w-80 lg:w-96 h-auto"
-                />
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div className="md:flex-shrink-0 md:w-auto w-full">
+                <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-6 md:mb-0">
+                  「創造的地域風土」とは
+                </h2>
               </div>
-              <div className="flex-1">
-                <div className="text-[10px] sm:text-xs md:text-sm text-[#5a3729] leading-5 md:leading-6 text-justify mb-4">
-                  「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-[#F2EDF0] rounded-3xl p-6 md:p-8 flex-1">
+                <div className="flex-shrink-0">
+                  <img
+                    src={icModelImg}
+                    alt="iC Model - innumerable Cs Model"
+                    className="w-full md:w-80 lg:w-96 h-auto"
+                  />
                 </div>
-                <div className="text-xs sm:text-sm text-[#5a3729] leading-5 italic">
-                  ※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。
-                </div>
-                <div className="text-xs text-[#5a3729] mt-4">
-                  参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）
+                <div className="flex-1">
+                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify mb-4">
+                    「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。
+                  </div>
+                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] italic">
+                    ※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。
+                  </div>
+                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] mt-4">
+                    参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）
+                  </div>
                 </div>
               </div>
             </div>
@@ -319,7 +323,7 @@ export const About = (): JSX.Element => {
                   key={index}
                   href={
                     item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '/news' :
+                    item === 'NEWS' ? '/#news' :
                     item === 'Privacy Policy' ? '/legal' : 
                     `/#${item.toLowerCase().replace(' ', '-')}`
                   }
