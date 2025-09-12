@@ -13,8 +13,8 @@ export const Top = (): JSX.Element => {
   // Translation content
   const content = {
     ja: {
-      heroTitle: "シェフ・イン・レジデンス\n活動を応援する社団法人",
-      heroSubtitle: "地域と料理人をつなぐ、新たな食体験の創造",
+      heroTitle: "わたしたちは、旅するシェフを地域に迎え\n期間限定で展開されるレストラン活動である\n「シェフ・イン・レジデンス」を応援する\n非営利団体です",
+      heroSubtitle: "",
       missionTitle: "MISSION",
       missionSubtitle: "理想のための３条件",
       missionDescription: "「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。",
@@ -210,10 +210,10 @@ export const Top = (): JSX.Element => {
               </p>
             </div>
             {/* ABOUT button below text */}
-            <div className="flex justify-center">
+            <div className="flex items-center justify-center">
               <a href="/about">
                 <Button 
-                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
                   data-testid="button-about"
                 >
                   ABOUT
