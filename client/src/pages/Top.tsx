@@ -26,7 +26,25 @@ export const Top = (): JSX.Element => {
       supportTitle: "SUPPORT US!",
       supportSubtitle: "応援協会だって応援されたい",
       supportDescription: "一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。",
-      contactTitle: "CONTACT"
+      contactTitle: "CONTACT",
+      awardFormLinkText: "The Relay Awards エントリーフォーム",
+      missionCards: [
+        {
+          badge: "その１",
+          title: "シェフが次々に\n訪れ続ける「継続型」\nであること",
+          description: "一時的なイベントにとどまらず、年間を通して多種多様なシェフが絶え間なく訪れ、継続的に期間限定レストランが開かれ続けることにより、地域に持続的な活気と新鮮な刺激をもたらします。"
+        },
+        {
+          badge: "その２",
+          title: "観光客にも\n地元の人にも\n開かれていること",
+          description: "観光客だけを対象にせず、地元住民も非日常を味わいつつも、気軽に訪れられるように設計することで、レストランが地域と隔絶せず、地域と観光客とシェフが交流できる場となります。"
+        },
+        {
+          badge: "その３",
+          title: "シェフと地域を\n融合させる\n仕組みがあること",
+          description: "地元住民や食材との交流を容易にし、旅するシェフと地域が自然に交流できる仕組みや環境が整っていることで、レストラン以外にもシェフと地域の接点が生まれます。"
+        }
+      ]
     },
     en: {
       heroTitle: "Supporting Chef-in-Residence\nActivities Nationwide",
@@ -42,32 +60,32 @@ export const Top = (): JSX.Element => {
       supportTitle: "SUPPORT US!",
       supportSubtitle: "Even the Support Association Wants Support",
       supportDescription: "The Japan Chef-in-Residence Support Association is a non-profit organization operating through pro bono work by its members. We welcome a wide range of support from those who empathize with our activities, from encouraging messages to real support, and even donations. If you would like to support us in any way, please contact us through the CONTACT below.",
-      contactTitle: "CONTACT"
+      contactTitle: "CONTACT",
+      awardFormLinkText: "The Relay Awards Entry Form",
+      missionCards: [
+        {
+          badge: "Part 1",
+          title: "Continuous\nVisiting Chefs\nProgram",
+          description: "Rather than being limited to temporary events, various chefs visit continuously throughout the year, and pop-up restaurants operate on an ongoing basis, bringing sustained vitality and fresh excitement to the region."
+        },
+        {
+          badge: "Part 2", 
+          title: "Open to Both\nTourists and\nLocal Residents",
+          description: "By designing the program not only for tourists but also for local residents to enjoy extraordinary experiences while feeling comfortable to visit, restaurants become places where the community, tourists, and chefs can interact rather than being isolated from the region."
+        },
+        {
+          badge: "Part 3",
+          title: "Mechanisms for\nIntegrating Chefs\nwith the Region",
+          description: "By facilitating interactions with local residents and ingredients, and establishing systems and environments where visiting chefs can naturally connect with the region, contact points between chefs and the community are created beyond just the restaurant."
+        }
+      ]
     }
   };
   
-  const missionCards = [
-    {
-      badge: "その１",
-      title: "シェフが次々に\n訪れ続ける「継続型」\nであること",
-      image: "/figmaAssets/sono1.png",
-      description:
-        "一時的なイベントにとどまらず、年間を通して多種多様なシェフが絶え間なく訪れ、継続的に期間限定レストランが開かれ続けることにより、地域に持続的な活気と新鮮な刺激をもたらします。",
-    },
-    {
-      badge: "その２",
-      title: "観光客にも\n地元の人にも\n開かれていること",
-      image: "/figmaAssets/sono2-3.png",
-      description:
-        "観光客だけを対象にせず、地元住民も非日常を味わいつつも、気軽に訪れられるように設計することで、レストランが地域と隔絶せず、地域と観光客とシェフが交流できる場となります。",
-    },
-    {
-      badge: "その３",
-      title: "シェフと地域を\n融合させる\n仕組みがあること",
-      image: "/figmaAssets/sono3.svg",
-      description:
-        "地元住民や食材との交流を容易にし、旅するシェフと地域が自然に交流できる仕組みや環境が整っていることで、レストラン以外にもシェフと地域の接点が生まれます。",
-    },
+  const missionCardImages = [
+    "/figmaAssets/sono1.png",
+    "/figmaAssets/sono2-3.png", 
+    "/figmaAssets/sono3.svg"
   ];
 
   const newsItems = [
@@ -204,18 +222,18 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px] mb-8" data-testid="text-section-title">
-              MISSION
+              {content[language].missionTitle}
             </h2>
             <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] mb-6">
-              理想のための３条件
+              {content[language].missionSubtitle}
             </h3>
             <p className="text-[#5a3729] text-base max-w-4xl mx-auto leading-6 text-justify">
-              「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。
+              {content[language].missionDescription}
             </p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {missionCards.map((card, index) => (
+            {content[language].missionCards.map((card, index) => (
               <Card
                 key={index}
                 className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col"
@@ -229,10 +247,10 @@ export const Top = (): JSX.Element => {
                     </Badge>
                     <h4 className="font-bold text-[#5a3729] text-xl text-center tracking-[1.32px] leading-[30px] mb-2">
                       {card.title.split("\n").map((line, lineIndex) => (
-                        <React.Fragment key={lineIndex}>
+                        <span key={lineIndex} className="contents">
                           {line}
                           {lineIndex < card.title.split("\n").length - 1 && <br />}
-                        </React.Fragment>
+                        </span>
                       ))}
                     </h4>
                   </div>
@@ -241,7 +259,7 @@ export const Top = (): JSX.Element => {
                     <img
                       className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain max-w-full max-h-[150px] sm:max-h-[180px] md:max-h-[200px] lg:max-h-[220px] xl:max-h-[240px]"
                       alt="Mission"
-                      src={card.image}
+                      src={missionCardImages[index]}
                     />
                   </div>
                   
@@ -260,7 +278,7 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
-              AWARD
+              {content[language].awardTitle}
             </h2>
           </div>
           
@@ -275,11 +293,21 @@ export const Top = (): JSX.Element => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-normal text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
-                  The Relay Awards
+                  {content[language].awardSubtitle}
                 </h3>
-                <p className="text-[#5a3729] text-base leading-6">
-                  日本におけるシェフ・イン・レジデンスの発展と地域活性化を目的とした新たな表彰制度「The Relay Awards（ザ・リレー・アワード）」を創設いたしました。あわせて、本アワードの表彰イベントを2025年12月1日（月）17:00より、SHIBAURA HOUSE（〒108-0023 東京都港区芝浦3-15-4）にて開催予定です（原則：ご案内制・一般販売なし／サポーターご案内枠あり）。
-                </p>
+                <div className="text-[#5a3729] text-base leading-6 space-y-4">
+                  {content[language].awardDescription.split('\n').map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
+                  <a 
+                    href={content[language].awardFormLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block text-[#71b0ff] hover:underline font-bold"
+                  >
+                    {content[language].awardFormLinkText}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -291,7 +319,7 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
-              NEWS
+              {content[language].newsTitle}
             </h2>
           </div>
           
@@ -313,13 +341,13 @@ export const Top = (): JSX.Element => {
           </div>
         </div>
         
-        {/* View More CTA - Full Width Blue Background */}
-        <div className="w-full bg-[#71b0ff] py-8 mt-12">
+        {/* View More CTA - Full Width Pink Background */}
+        <div className="w-full bg-[#f2edf0] py-8 mt-12">
           <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="flex justify-center">
               <Button 
                 disabled
-                className="bg-white text-[#71b0ff] cursor-not-allowed rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] opacity-75"
+                className="bg-[#71b0ff] text-white cursor-not-allowed rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] opacity-75"
                 data-testid="button-view-more"
               >
                 VIEW MORE
@@ -339,12 +367,12 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#5a3729] tracking-[2.40px]" data-testid="text-section-title">
-              SUPPORT US!
+              {content[language].supportTitle}
             </h2>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="flex justify-center">
+            <div className="flex justify-center lg:justify-start">
               <img
                 className="w-full h-auto object-contain max-w-full scale-110"
                 alt="Support"
@@ -354,10 +382,10 @@ export const Top = (): JSX.Element => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
-                  応援協会も応援されたい
+                  {content[language].supportSubtitle}
                 </h3>
                 <p className="text-[#5a3729] text-base leading-6">
-                  一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
+                  {content[language].supportDescription}
                 </p>
               </div>
             </div>
@@ -370,7 +398,7 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-[2.40px] mb-8" data-testid="text-section-title">
-              CONTACT
+              {content[language].contactTitle}
             </h2>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSddTII6LxsrnJNBWboTBvWRfaErkLBnqt6WYt3Z2oxTw_tzwQ/viewform?usp=dialog"
