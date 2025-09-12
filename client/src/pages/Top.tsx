@@ -125,7 +125,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] py-16 relative overflow-hidden" id="about">
+      <section className="w-full bg-[#71b0ff] py-16 relative" id="about">
         {/* Cloud Background Image */}
         <div className="absolute inset-0 flex items-center justify-center">
           <img
