@@ -120,22 +120,23 @@ export const Top = (): JSX.Element => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat mt-4">
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
-      {/* About CTA Section - Full Width Blue Background */}
-      <section className="w-full bg-[#71b0ff] py-8" id="about">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 text-center">
-            {/* Cloud Image */}
-            <div className="w-full md:w-auto">
-              <img
-                className="w-full max-w-lg h-auto object-contain mx-auto"
-                alt="Vector Background"
-                src="/figmaAssets/vector.png"
-              />
-            </div>
+      {/* About CTA Section - Full Width Blue Background with Cloud Background */}
+      <section className="w-full bg-[#71b0ff] py-16 relative" id="about">
+        {/* Cloud Background Image */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-30">
+          <img
+            className="w-full max-w-4xl h-auto object-contain"
+            alt="Vector Background"
+            src="/figmaAssets/vector.png"
+          />
+        </div>
+        
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center justify-center gap-8 text-center">
             {/* Text and Button Group */}
             <div className="flex flex-col items-center gap-6">
               <div className="text-center text-[#5a3729] px-4">
