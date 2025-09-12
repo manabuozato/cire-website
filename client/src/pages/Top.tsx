@@ -66,7 +66,7 @@ export const Top = (): JSX.Element => {
   return (
     <main className="w-full bg-[#f7e489] min-h-screen">
       {/* Header Navigation */}
-      <header className="sticky top-0 bg-white/90 backdrop-blur-sm shadow-md z-50">
+      <header className="sticky top-0 bg-[#f7e489] shadow-md z-50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
@@ -109,40 +109,43 @@ export const Top = (): JSX.Element => {
 
       {/* Hero Section */}
       <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat">
-        <div className="aspect-[16/9] md:aspect-[21/9] flex items-center justify-center">
-          <div className="text-center text-[#5a3729] px-4 max-w-4xl mx-auto">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed">
-              シェフ・イン・レジデンスとは<br />
-              日本や世界を旅するシェフを地域に迎え入れ<br />
-              期間限定で展開されるレストラン活動です
-            </h1>
-          </div>
-        </div>
+        <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background */}
       <section className="w-full bg-[#71b0ff] py-8" id="about">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
+          <div className="relative flex flex-col md:flex-row items-center justify-center gap-8 text-center">
+            {/* Cloud Image */}
             <div className="w-full md:w-auto">
               <img
-                className="w-full max-w-lg h-auto object-cover mx-auto"
+                className="w-full max-w-lg h-auto object-contain mx-auto"
                 alt="Vector Background"
                 src="/figmaAssets/vector.png"
               />
             </div>
-            <div className="flex justify-center">
-              <Button 
-                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
-                data-testid="button-about"
-              >
-                ABOUT
-                <img
-                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
-                  alt="Arrow"
-                  src="/figmaAssets/vector-6.svg"
-                />
-              </Button>
+            {/* Text and Button Group */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center text-[#5a3729] px-4">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed">
+                  シェフ・イン・レジデンスとは<br />
+                  日本や世界を旅するシェフを地域に迎え入れ<br />
+                  期間限定で展開されるレストラン活動です
+                </h1>
+              </div>
+              <div className="flex justify-center">
+                <Button 
+                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                  data-testid="button-about"
+                >
+                  ABOUT
+                  <img
+                    className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                    alt="Arrow"
+                    src="/figmaAssets/vector-6.svg"
+                  />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -290,9 +293,9 @@ export const Top = (): JSX.Element => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
+            <div className="flex justify-center">
               <img
-                className="w-full h-auto object-cover"
+                className="w-64 h-auto object-contain max-w-full"
                 alt="Support"
                 src="/figmaAssets/group.png"
               />
