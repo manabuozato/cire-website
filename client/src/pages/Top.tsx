@@ -20,7 +20,7 @@ export const Top = (): JSX.Element => {
       missionDescription: "「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards", 
-      awardDescription: "「The Relay Awards（ザ・リレー・アワード）」は、当協会が掲げる3条件（①シェフが次々に訪れ続ける継続性／②観光客にも地元の人にも開かれている設計／③シェフと地域を自然に融合させる仕組み）を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n対象は、各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）です。順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\nアワードへのエントリーについて（キッチン・レジデンス）\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n\n授賞イベント「The Relay Awards 2025」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
+      awardDescription: "「The Relay Awards（ザ・リレー・アワード）」は、当協会が掲げる3条件（①シェフが次々に訪れ続ける継続性／②観光客にも地元の人にも開かれている設計／③シェフと地域を自然に融合させる仕組み）を満たす、または実現を目指すシェフ・イン・レジデンスを応援・顕彰する表彰プログラムです。\n対象は、各地でシェフ・イン・レジデンスを主催・運営する「キッチン・レジデンス」（組織・団体・個人）です。順位づけではなく、優れた取り組みの可視化と学びの共有を目的とします。\n\nアワードへのエントリーについて（キッチン・レジデンス）\nエントリー（自薦・他薦）：下記フォームより受け付けます。\n\n授賞イベント「The Relay Awards 2025」は、2025年12月1日（月）17:00〜、SHIBAURA HOUSE（東京・芝浦）にて開催予定（ご案内制／一部CF枠予定）。",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
@@ -54,12 +54,12 @@ export const Top = (): JSX.Element => {
       missionDescription: "\"Chef-in-Residence\" is an initiative to invite chefs from outside the region to promote regional revitalization, serving as an important means to enhance regional creativity and vitality. In particular, we regard \"traveling chefs\" as key figures in regional revitalization, and we have established the following three conditions for the ideal form of \"Chef-in-Residence\" that we aim for.",
       awardTitle: "AWARD",
       awardSubtitle: "The Relay Awards",
-      awardDescription: "The Relay Awards is a recognition program that supports and celebrates Chef-in-Residence initiatives that meet—or are working to realize—our three conditions:\n1. continuous rotation of visiting chefs, 2) a design open to both local residents and tourists, and 3) mechanisms that naturally integrate chefs with the region.\nEligibility Eligible applicants are \"Kitchen-Residences\"—hosts that organize and operate Chef-in-Residence programs in their local areas (organizations, groups, or individuals). This is not a ranking contest; the aim is to surface exemplary practices and share learning.\nHow to Enter (Kitchen-Residences) Entries (self-nominations or third-party nominations) are accepted via the form below.\n\nAwards Event The Relay Awards 2025 is scheduled for Monday, December 1, 2025, from 17:00 (JST) at SHIBAURA HOUSE (Shibaura, Minato-ku, Tokyo). (Invitation-only; limited supporter allocations planned.)",
+      awardDescription: "The Relay Awards is a recognition program that supports and celebrates Chef-in-Residence initiatives that meet—or are working to realize—our three conditions:\n1. continuous rotation of visiting chefs, 2) a design open to both local residents and tourists, and 3) mechanisms that naturally integrate chefs with the region.\nEligibility Eligible applicants are \"Kitchen-Residences\"—hosts that organize and operate Chef-in-Residence programs in their local areas (organizations, groups, or individuals). This is not a ranking contest; the aim is to surface exemplary practices and share learning.\n\nHow to Enter (Kitchen-Residences)\nEntries (self-nominations or third-party nominations) are accepted via the form below.\n\nAwards Event The Relay Awards 2025 is scheduled for Monday, December 1, 2025, from 17:00 (JST) at SHIBAURA HOUSE (Shibaura, Minato-ku, Tokyo). (Invitation-only; limited supporter allocations planned.)",
       awardFormLink: "https://docs.google.com/forms/d/e/1FAIpQLScNJy_wzmtZlhNjnTffATeUKtOUe9pnuud3-VyLNmjzB6UeLg/closedform",
       newsTitle: "NEWS",
       supportTitle: "SUPPORT US!",
-      supportSubtitle: "Even the Support Association Wants Support",
-      supportDescription: "The Japan Chef-in-Residence Support Association is a non-profit organization operating through pro bono work by its members. We welcome a wide range of support from those who empathize with our activities, from encouraging messages to real support, and even donations. If you would like to support us in any way, please contact us through the CONTACT below.",
+      supportSubtitle: "Even the Association Wants Support",
+      supportDescription: "The Japan Chef-in-Residence Empowerment Association is a non-profit organization operating through pro bono work by its members. We welcome a wide range of support from those who empathize with our activities, from encouraging messages to real support, and even donations. If you would like to support us in any way, please contact us through the CONTACT below.",
       contactTitle: "CONTACT",
       awardFormLinkText: "The Relay Awards Entry Form",
       missionCards: [
@@ -88,16 +88,28 @@ export const Top = (): JSX.Element => {
     "/figmaAssets/sono3.svg"
   ];
 
-  const newsItems = [
-    {
-      date: "2025.09.12",
-      title: "「The Relay Awards設立のお知らせ」をリリースしました",
-    },
-    {
-      date: "2025.02.14", 
-      title: "一般社団法人日本シェフ・イン・レジデンス応援協会設立",
-    },
-  ];
+  const newsItems = {
+    ja: [
+      {
+        date: "2025.09.12",
+        title: "「The Relay Awards設立のお知らせ」をリリースしました",
+      },
+      {
+        date: "2025.02.14", 
+        title: "一般社団法人日本シェフ・イン・レジデンス応援協会設立",
+      },
+    ],
+    en: [
+      {
+        date: "2025.09.12",
+        title: "Released 'Announcement of The Relay Awards Establishment'",
+      },
+      {
+        date: "2025.02.14", 
+        title: "Established Japan Chef-in-Residence Empowerment Association",
+      },
+    ]
+  };
 
   const navigationItems = [
     "ABOUT",
@@ -296,9 +308,12 @@ export const Top = (): JSX.Element => {
                   {content[language].awardSubtitle}
                 </h3>
                 <div className="text-[#5a3729] text-base leading-6 space-y-4">
-                  {content[language].awardDescription.split('\n').map((line, index) => (
-                    <p key={index}>{line}</p>
-                  ))}
+                  {content[language].awardDescription.split('\n').map((line, index) => {
+                    if (line.startsWith('アワードへのエントリーについて（キッチン・レジデンス）') || line.startsWith('How to Enter (Kitchen-Residences)')) {
+                      return <p key={index} className="font-bold">{line}</p>;
+                    }
+                    return <p key={index}>{line}</p>;
+                  })}
                   <a 
                     href={content[language].awardFormLink}
                     target="_blank"
@@ -325,7 +340,7 @@ export const Top = (): JSX.Element => {
           
           <div className="max-w-4xl mx-auto">
             <ul className="divide-y divide-[#5a3729]">
-              {newsItems.map((item, index) => (
+              {newsItems[language].map((item, index) => (
                 <li key={index} className="py-6">
                   <div className="flex flex-col md:flex-row md:items-center gap-4">
                     <span className="font-normal text-[#5a3729] text-sm tracking-[1.50px] md:w-32 flex-shrink-0">
@@ -379,7 +394,7 @@ export const Top = (): JSX.Element => {
                 src="/figmaAssets/support.png"
               />
             </div>
-            <div className="space-y-8">
+            <div className="space-y-8 flex flex-col justify-start">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
                   {content[language].supportSubtitle}

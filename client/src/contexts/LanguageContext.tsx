@@ -63,11 +63,11 @@ const translations = {
   }
 };
 
-// Detect browser language
+// Detect browser language - default to Japanese, only switch to English if browser language is English
 const detectBrowserLanguage = (): Language => {
   if (typeof window !== 'undefined') {
     const browserLang = navigator.language || navigator.languages?.[0];
-    return browserLang?.startsWith('ja') ? 'ja' : 'en';
+    return browserLang?.startsWith('en') ? 'en' : 'ja';
   }
   return 'ja'; // Default to Japanese on server
 };
