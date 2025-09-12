@@ -89,11 +89,11 @@ export const Top = (): JSX.Element => {
                   >
                     {item}
                   </a>
-                  {item === 'SUPPORT US' && (
+                  {item === 'CONTACT' && (
                     <img
-                      className="h-6 w-auto"
+                      className="w-12 sm:w-14 h-auto ml-2"
                       alt="Note"
-                      src="@assets/note_1757653059730.png"
+                      src="/figmaAssets/clip-path-group.png"
                     />
                   )}
                 </React.Fragment>
@@ -123,12 +123,12 @@ export const Top = (): JSX.Element => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat mt-4">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat mt-6">
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[500px] md:min-h-[600px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '60%' }}>
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[500px] md:min-h-[600px] relative flex items-center justify-center" id="about" style={{ backgroundSize: '45%' }}>
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
@@ -176,9 +176,9 @@ export const Top = (): JSX.Element => {
             {missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-8"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-8 min-h-[600px]"
               >
-                <CardContent className="flex flex-col items-center gap-6 p-0">
+                <CardContent className="flex flex-col items-center gap-6 p-0 h-full">
                   <div className="flex flex-col items-center gap-4">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
@@ -196,12 +196,12 @@ export const Top = (): JSX.Element => {
                   </div>
                   
                   <img
-                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain"
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-contain flex-shrink-0 my-4"
                     alt="Mission"
                     src={card.image}
                   />
                   
-                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] flex-grow">
+                  <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] flex-grow text-center">
                     {card.description}
                   </p>
                 </CardContent>
@@ -346,16 +346,11 @@ export const Top = (): JSX.Element => {
       <footer className="w-full bg-[#b63622] py-12">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="flex-shrink-0 flex items-center gap-4">
+            <div className="flex-shrink-0">
               <img
                 className="h-3 sm:h-4 w-auto"
                 alt="Cir title"
                 src="/figmaAssets/cir-title.svg"
-              />
-              <img
-                className="h-6 w-auto"
-                alt="Note"
-                src="@assets/note_1757653059730.png"
               />
             </div>
             
