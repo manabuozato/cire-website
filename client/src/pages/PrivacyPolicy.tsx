@@ -200,6 +200,58 @@ export const PrivacyPolicy = (): JSX.Element => {
         </div>
       </header>
 
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+          <div className="absolute top-0 right-0 w-64 h-full bg-[#f7e489] shadow-lg">
+            <div className="flex justify-end p-4">
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[#5a3729] hover:text-[#71b0ff]"
+                data-testid="button-close-mobile-menu"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="px-4 py-2">
+              {navigationItems.map((item, index) => (
+                <React.Fragment key={index}>
+                  <a
+                    href={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/#news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      `/#${item.toLowerCase().replace(' ', '-')}`
+                    }
+                    className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </a>
+                  {item === 'CONTACT' && (
+                    <div className="py-3 flex justify-center border-b border-[#5a3729]/20">
+                      <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                        <img
+                          className="w-12 h-auto"
+                          alt="Note"
+                          src={noteImg}
+                        />
+                      </a>
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+              <div className="py-4 flex justify-center">
+                <LanguageSwitcher />
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+
       {/* Privacy Policy Content Section */}
       <section className="py-8 md:py-16">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
