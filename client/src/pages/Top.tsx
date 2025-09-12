@@ -70,30 +70,33 @@ export const Top = (): JSX.Element => {
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center gap-4">
+            <div className="flex-shrink-0">
               <img
                 className="h-3 sm:h-4 w-auto"
                 alt="Cir title"
                 src="/figmaAssets/cir-title.svg"
-              />
-              <img
-                className="h-6 w-auto"
-                alt="Note"
-                src="@assets/note_1757653059730.png"
               />
             </div>
             
             {/* Navigation Menu */}
             <div className="hidden md:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
-                  data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
-                >
-                  {item}
-                </a>
+                <React.Fragment key={index}>
+                  <a
+                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
+                    data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </a>
+                  {item === 'SUPPORT US' && (
+                    <img
+                      className="h-6 w-auto"
+                      alt="Note"
+                      src="@assets/note_1757653059730.png"
+                    />
+                  )}
+                </React.Fragment>
               ))}
               <div className="flex items-center gap-2">
                 <img
@@ -125,13 +128,13 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center bg-contain py-24 md:py-28 lg:py-32 min-h-[420px] md:min-h-[520px] relative" id="about">
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center py-28 md:py-32 lg:py-36 min-h-[500px] md:min-h-[600px] relative" id="about" style={{ backgroundSize: '60%' }}>
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center gap-8 text-center">
             {/* Text and Button Group */}
             <div className="flex flex-col items-center gap-6">
-              <div className="text-center text-[#5a3729] px-4">
-                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-relaxed">
+              <div className="text-center text-[#5a3729] px-4 mb-8">
+                <h1 className="text-lg sm:text-xl md:text-2xl font-bold leading-relaxed">
                   シェフ・イン・レジデンスとは<br />
                   日本や世界を旅するシェフを地域に迎え入れ<br />
                   期間限定で展開されるレストラン活動です
@@ -301,7 +304,7 @@ export const Top = (): JSX.Element => {
               <img
                 className="w-64 h-auto object-contain max-w-full"
                 alt="Support"
-                src="/figmaAssets/group.png"
+                src="/figmaAssets/support.png"
               />
             </div>
             <div className="space-y-8">
