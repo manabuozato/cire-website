@@ -326,6 +326,7 @@ export const Top = (): JSX.Element => {
                     className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
                     alt="Arrow"
                     src="/figmaAssets/vector-6.svg"
+                    style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(96%) saturate(1458%) hue-rotate(201deg) brightness(101%) contrast(101%)' }}
                   />
                 </Button>
               </a>
