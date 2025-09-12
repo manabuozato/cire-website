@@ -165,16 +165,14 @@ export const About = (): JSX.Element => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/">
-                <img
-                  className="h-3 sm:h-4 w-auto"
-                  alt="Cir title"
-                  src="/figmaAssets/cir-title.svg"
-                />
+                <h1 className="text-[#5a3729] font-bold text-xs sm:text-sm lg:text-base leading-tight">
+                  一般社団法人日本シェフ・イン・レジデンス応援協会
+                </h1>
               </Link>
             </div>
             
             {/* Navigation Menu */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
@@ -208,7 +206,7 @@ export const About = (): JSX.Element => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button 
                 className="text-[#5a3729] hover:text-[#71b0ff]"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -225,7 +223,7 @@ export const About = (): JSX.Element => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 lg:hidden" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="absolute top-0 right-0 w-64 h-full bg-[#f7e489] shadow-lg">
             <div className="flex justify-end p-4">
               <button 
