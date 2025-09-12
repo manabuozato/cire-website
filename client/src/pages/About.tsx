@@ -19,7 +19,7 @@ export const About = (): JSX.Element => {
       memberTitle: "MEMBER",
       organizationTitle: "ORGANIZATION",
       creativeTerritoryTitle: "「創造的地域風土」とは",
-      creativeTerritoryContent: "「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。\n※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。\n参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）",
+      creativeTerritoryContent: "「創造的地域風土」とは、地域を構成する人々が共通して持つ価値観や考え方、行動様式を指し、創造性が自然と育ちやすく、新たな挑戦や交流が次々と生まれるような環境のことです。このような環境を整えることで、地域の人々が気軽に新たな試みに参加し、互いに刺激し合いながら成長し合えるコミュニティが形成されます。わたしたちは、シェフ・イン・レジデンスが「日常と非日常の汽水域※」として機能することで、創造的地域風土を高めると考えています。\n\n※汽水域：河川と海が交わる場所に形成される水域で、淡水と海水が混ざり合う環境を指します。その意味を転じて、性質の異なるヒト・モノ・コトが混ざり合う場・空間・機会・環境のことを指しています。",
       whatWeDoTitle: "WHAT WE DO",
       whatWeDo: [
         {
@@ -79,7 +79,7 @@ export const About = (): JSX.Element => {
       memberTitle: "MEMBER",
       organizationTitle: "ORGANIZATION", 
       creativeTerritoryTitle: "What is \"Creative Regional Culture\"?",
-      creativeTerritoryContent: "\"Creative Regional Culture\" refers to the values, mindsets, and behavioral patterns commonly shared by the people who make up a region, and represents an environment where creativity naturally flourishes and new challenges and exchanges continuously emerge. By establishing such an environment, we can form communities where local people can easily participate in new endeavors and grow together while stimulating each other. We believe that Chef-in-Residence functions as a \"brackish zone between the everyday and the extraordinary,\" thereby enhancing creative regional culture.\n※Brackish zone: A water area formed where rivers and seas meet, referring to an environment where fresh and salt water mix. By extension, this term refers to places, spaces, opportunities, and environments where people, things, and matters of different natures come together.\nReference: Discussion Paper | iC Model (innumerable Cs Model) for Creating \"Creative Regional Culture\"",
+      creativeTerritoryContent: "\"Creative Regional Culture\" refers to the values, mindsets, and behavioral patterns commonly shared by the people who make up a region, and represents an environment where creativity naturally flourishes and new challenges and exchanges continuously emerge. By establishing such an environment, we can form communities where local people can easily participate in new endeavors and grow together while stimulating each other. We believe that Chef-in-Residence functions as a \"brackish zone between the everyday and the extraordinary,\" thereby enhancing creative regional culture.\n\n※Brackish zone: A water area formed where rivers and seas meet, referring to an environment where fresh and salt water mix. By extension, this term refers to places, spaces, opportunities, and environments where people, things, and matters of different natures come together.",
       whatWeDoTitle: "WHAT WE DO",
       whatWeDo: [
         {
@@ -248,34 +248,35 @@ export const About = (): JSX.Element => {
 
           {/* What is Creative Regional Culture Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
-            <div className="bg-[#f7e489] rounded-3xl p-6 md:p-8">
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
-                <div className="flex-shrink-0">
-                  <img
-                    src={icModelImg}
-                    alt="iC Model - innumerable Cs Model"
-                    className="w-full md:w-80 lg:w-96 h-auto"
-                  />
-                </div>
-                <div className="flex-1 flex items-start">
-                  <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 mb-6">
+              <div className="flex-shrink-0">
+                <img
+                  src={icModelImg}
+                  alt="iC Model - innumerable Cs Model"
+                  className="w-full md:w-80 lg:w-96 h-auto"
+                />
+                <p className="text-xs text-[#5a3729] mt-2 text-left">
+                  参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）　（2024, UNIVERSITY of CREATIVITY）
+                </p>
+              </div>
+              <div className="flex-1">
+                <div className="bg-[#f7e489] rounded-3xl p-6 md:p-8 h-fit">
+                  <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px] mb-4">
                     {content[language].creativeTerritoryTitle}
                   </h2>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
-                  {content[language].creativeTerritoryContent.split('\n').map((line, index) => (
-                    <React.Fragment key={index}>
-                      {line}
-                      {index < content[language].creativeTerritoryContent.split('\n').length - 1 && (
-                        <>
-                          <br />
-                          <br />
-                        </>
-                      )}
-                    </React.Fragment>
-                  ))}
+                  <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
+                    {content[language].creativeTerritoryContent.split('\n').map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        {index < content[language].creativeTerritoryContent.split('\n').length - 1 && (
+                          <>
+                            <br />
+                            <br />
+                          </>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
