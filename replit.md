@@ -1,6 +1,11 @@
 # Overview
 
-This is a full-stack web application built with React and Express.js, featuring a modern component-based frontend using shadcn/ui and a PostgreSQL database with Drizzle ORM. The application appears to be a Japanese restaurant/chef showcase website based on the UI content, with sections for missions, awards, and news. The project uses TypeScript throughout and follows a clean monorepo structure with shared types and schemas.
+This is a full-stack web application built with React and Express.js, featuring a modern component-based frontend using shadcn/ui and a PostgreSQL database with Drizzle ORM. The application is a Japanese website for "一般社団法人日本シェフ・イン・レジデンス応援協会" (Japan Chef-in-Residence Empowerment Association) with sections for missions, awards, and news. The project uses TypeScript throughout and follows a clean monorepo structure with shared types and schemas.
+
+## Recent Updates (September 2025)
+- ✅ **Mobile Navigation Consistency**: Resolved hamburger menu fixes across all pages (legal and about)
+- ✅ **Deployment Architecture**: Fixed complex static deployment issues between development and published versions
+- ✅ **Build Process**: Cleaned up duplicate public directories and stale bundles to ensure fresh deployments
 
 # User Preferences
 
