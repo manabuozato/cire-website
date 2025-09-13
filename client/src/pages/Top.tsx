@@ -115,6 +115,17 @@ export const Top = (): JSX.Element => {
       {
         date: "2025.09.17",
         title: "「The Relay Awards創設のお知らせ」をリリースしました",
+        link: "/relay-awards-announcement-2025.pdf"
+      },
+      {
+        date: "2025.07.18",
+        title: "note記事「ゼロから立ち上がる\"食の場\" 　〜地域と料理人をつなぐ小高の挑戦〜」を公開しました",
+        link: "https://note.com/cire/n/n8de407facb51"
+      },
+      {
+        date: "2025.07.18",
+        title: "note記事「小さな温泉街の大きな挑戦 〜WATOWAが紡ぐ料理人と地域の物語〜」を公開しました",
+        link: "https://note.com/cire/n/n89a1dba56e5d"
       },
       {
         date: "2025.02.14", 
@@ -125,6 +136,17 @@ export const Top = (): JSX.Element => {
       {
         date: "2025.09.17",
         title: "Released 'Announcement of The Relay Awards Establishment'",
+        link: "/relay-awards-announcement-2025.pdf"
+      },
+      {
+        date: "2025.07.18",
+        title: "Note article 'A \\\"Food Place\\\" Rising from Zero - Odaka's Challenge to Connect Regions and Chefs' published",
+        link: "https://note.com/cire/n/n8de407facb51"
+      },
+      {
+        date: "2025.07.18",
+        title: "Note article 'A Small Hot Spring Town's Big Challenge - WATOWA's Story Connecting Chefs and the Region' published",
+        link: "https://note.com/cire/n/n89a1dba56e5d"
       },
       {
         date: "2025.02.14", 
@@ -486,9 +508,21 @@ export const Top = (): JSX.Element => {
                     <span className="font-normal text-[#5a3729] text-sm tracking-[1.50px] md:w-32 flex-shrink-0">
                       {item.date}
                     </span>
-                    <span className="font-normal text-[#5a3729] text-sm tracking-[1.50px] flex-1">
-                      {item.title}
-                    </span>
+                    {item.link ? (
+                      <a 
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-normal text-[#5a3729] text-sm tracking-[1.50px] flex-1 hover:text-[#71b0ff] transition-colors cursor-pointer"
+                        data-testid={`link-news-${index}`}
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <span className="font-normal text-[#5a3729] text-sm tracking-[1.50px] flex-1">
+                        {item.title}
+                      </span>
+                    )}
                   </div>
                 </li>
               ))}
