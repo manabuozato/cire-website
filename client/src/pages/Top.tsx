@@ -308,10 +308,10 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px] px-4 sm:px-8 md:px-12 lg:px-16" id="about">
+      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[500px] sm:max-w-[650px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] h-auto object-contain"
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[300px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[520px] xl:max-w-[580px] h-auto object-contain"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
@@ -387,9 +387,9 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center px-2">
+                  <div className="w-full flex items-center justify-center px-4">
                     <img
-                      className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain max-w-full max-h-[120px] sm:max-h-[140px] md:max-h-[160px] lg:max-h-[180px]"
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain max-w-full max-h-[100px] sm:max-h-[120px] md:max-h-[140px] lg:max-h-[160px]"
                       alt="Mission"
                       src={missionCardImages[index]}
                     />
