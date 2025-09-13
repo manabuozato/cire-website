@@ -308,12 +308,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-gradient-to-b from-[#71b0ff] via-[#71b0ff] to-[#87c0ff] min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
-        <img 
-          src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[650px] h-auto object-contain"
-          alt="Cloud background"
-        />
+      <section className="relative w-full bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center bg-[length:min(90vw,350px)] sm:bg-[length:min(85vw,400px)] md:bg-[length:min(80vw,500px)] lg:bg-[length:min(75vw,600px)] xl:bg-[length:min(70vw,650px)] min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px] xl:min-h-[440px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
           {/* Text centered in cloud background */}
           <div className="text-center text-[#5a3729] px-4 mb-4">
