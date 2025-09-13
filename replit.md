@@ -41,6 +41,11 @@ Preferred communication style: Simple, everyday language.
 - **Code Quality**: Consistent imports with absolute paths using @ aliases
 - **Hot Reload**: Development server with automatic restart and error overlay
 
+## Deployment Configuration
+- **Build Output**: Vite builds to `dist/public/` but deployment expects files in `dist/`
+- **Solution**: Post-build step copies files from `dist/public/*` to `dist/` to match `.replit` publicDir setting
+- **Static Assets**: Both `@assets` imports and `/figmaAssets/` direct references work correctly after build reorganization
+
 # External Dependencies
 
 ## UI Libraries
