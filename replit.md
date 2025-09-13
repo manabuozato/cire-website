@@ -63,3 +63,30 @@ Preferred communication style: Simple, everyday language.
 - **React Hook Form**: Form handling with validation
 - **Wouter**: Lightweight client-side routing
 - **date-fns**: Date manipulation and formatting utilities
+
+# Deployment & File Structure
+
+## Static Deployment Configuration
+- **Deployment Type**: Static deployment configured in `.replit` file
+- **Public Directory**: `publicDir = "dist"` - files are served from the `dist/` directory
+- **Build Command**: `build = ["npm", "run", "build"]` - runs Vite build process
+- **Build Target**: `deploymentTarget = "static"` - optimized for static content delivery
+
+## File Structure & Asset Management
+- **Development Assets**: Place static files in `client/public/` for development
+- **Production Assets**: Build process copies `client/public/` contents to `dist/`
+- **Served Files**: Only files in `dist/` are served in production (not `client/public/`)
+- **Static Pages**: For static HTML pages that bypass React routing, place in `dist/[route]/index.html`
+
+## Important Notes for Future Development
+1. **Never create duplicate public directories** - Only use `client/public/` for source assets
+2. **Static page modifications** - Edit files in `dist/` directly for immediate deployment changes, or rebuild from `client/public/`
+3. **Image assets** - Copy images to both `client/public/figmaAssets/` and `dist/figmaAssets/` for consistency
+4. **Route conflicts** - Static HTML files in `dist/[route]/` take precedence over React routes
+5. **Deployment verification** - Always check `.replit` configuration for correct `publicDir` setting
+
+## Troubleshooting Deployment Issues
+- If changes don't appear after republishing, verify files exist in `dist/` directory
+- Check for static HTML files that might override React routing
+- Ensure image paths reference correct locations (`/figmaAssets/` for production)
+- Run `npm run build` to regenerate `dist/` from source files
