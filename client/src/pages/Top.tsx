@@ -368,9 +368,9 @@ export const Top = (): JSX.Element => {
             {content[language].missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-4 sm:p-6 md:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col overflow-hidden"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-4 sm:p-6 md:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col overflow-hidden min-w-0"
               >
-                <CardContent className="flex flex-col items-center gap-2 p-0 flex-1">
+                <CardContent className="flex flex-col items-center gap-2 p-0 flex-1 min-w-0">
                   <div className="flex flex-col items-center gap-2">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
@@ -387,12 +387,13 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center px-8 sm:px-10 md:px-12 py-2">
-                    <div className="w-[70px] sm:w-[80px] md:w-[90px] h-[70px] sm:h-[80px] md:h-[90px] flex items-center justify-center overflow-hidden">
-                      <img
-                        className="w-[60px] sm:w-[70px] md:w-[80px] h-[60px] sm:h-[70px] md:h-[80px] object-contain"
-                        alt="Mission"
-                        src={missionCardImages[index]}
+                  <div className="w-full flex items-center justify-center py-2">
+                    <div className="size-[72px] sm:size-[84px] md:size-[96px] shrink-0 rounded-lg overflow-hidden">
+                      <div
+                        className="w-full h-full bg-no-repeat bg-center bg-contain"
+                        style={{ backgroundImage: `url(${missionCardImages[index]})` }}
+                        role="img"
+                        aria-label="Mission illustration"
                       />
                     </div>
                   </div>
