@@ -175,7 +175,7 @@ export const Top = (): JSX.Element => {
   ];
 
   return (
-    <main className="w-full bg-[#f7e489] min-h-screen">
+    <main className="w-full bg-[#f7e489] min-h-screen" data-testid="spa-top-page-2025-09-13">
       {/* Header Navigation */}
       <header className="sticky top-0 bg-[#f7e489] z-50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
