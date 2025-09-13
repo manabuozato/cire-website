@@ -186,34 +186,22 @@ export const Top = (): JSX.Element => {
             <div className="hidden xl:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  {(item === 'MISSION' || item === 'AWARD' || item === 'NEWS' || item === 'SUPPORT US' || item === 'CONTACT') ? (
-                    <a
-                      href={
-                        item === 'NEWS' ? '#news' :
-                        item === 'MISSION' ? '#mission' :
-                        item === 'AWARD' ? '#award' :
-                        item === 'SUPPORT US' ? '#support-us' :
-                        item === 'CONTACT' ? '#contact' :
-                        '#'
-                      }
-                      className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
-                      data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
-                    >
-                      {item}
-                    </a>
-                  ) : (
-                    <Link
-                      to={
-                        item === 'ABOUT' ? '/about' : 
-                        item === 'Privacy Policy' ? '/legal' : 
-                        `/${item.toLowerCase().replace(' ', '-')}`
-                      }
-                      className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
-                      data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
-                    >
-                      {item}
-                    </Link>
-                  )}
+                  <Link
+                    to={
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/?section=news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
+                    }
+                    className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
+                    data-testid={`link-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </Link>
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
