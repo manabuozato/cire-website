@@ -25,7 +25,7 @@ const translations = {
     'top.title': 'シェフ・イン・レジデンス<br />活動を応援する社団法人',
     'top.mission.title': 'MISSION',
     'top.mission.subtitle': '理想的な「シェフ・イン・レジデンス」の3つの条件',
-    'top.mission.description': '「シェフ・イン・レジデンス」は地域外のシェフを招き入れて地域活性化を図る取り組みであり、地域の創造性と活力を高める重要な手段です。私たちは旅するシェフを地域活性化のキーパーソンと捉え、応援したい理想的な形として以下の3つの条件を定めています。',
+    'top.mission.description': '「シェフ・イン・レジデンス」とは、地域外のシェフを招き入れて地域の活性化を促す取り組みであり、地域の創造性や活力を高めるための重要な手段となります。特に、わたしたちは、「旅するシェフ」を地域活性化の鍵となる存在として捉え、わたしたちが目指す「シェフ・イン・レジデンス」の理想的なかたちの条件として以下の３つを挙げています。そして、全国各地でこうした活動が持続的に行われ、広がっていくよう応援しています。',
     
     // About page  
     'about.title': 'ABOUT',
@@ -50,7 +50,7 @@ const translations = {
     'top.title': 'A General Incorporated Association<br />that supports Chef-in-Residence programs',
     'top.mission.title': 'MISSION',
     'top.mission.subtitle': 'Three Conditions for the Ideal Form',
-    'top.mission.description': '"Chef-in-Residence" invites chefs from outside the region to help revitalize local areas—an important means to boost a region\'s creativity and vitality. We regard traveling chefs as key to regional revitalization, and define the following three conditions as the ideal form we aim to support.',
+    'top.mission.description': '"Chef-in-Residence" refers to initiatives that welcome chefs from outside the region to promote regional revitalization—an important way to enhance a region\'s creativity and vitality. We regard traveling chefs as key actors in revitalization and set out the following three conditions as the ideal form of Chef-in-Residence we aim to support. We also work to ensure these activities are carried out sustainably and spread across Japan and all over the world.',
     
     // About page
     'about.title': 'ABOUT',
