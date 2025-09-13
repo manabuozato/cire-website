@@ -311,7 +311,7 @@ export const Top = (): JSX.Element => {
       <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[300px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[520px] xl:max-w-[580px] h-auto object-contain"
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[650px] xl:max-w-[700px] h-auto object-contain"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
@@ -364,11 +364,11 @@ export const Top = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {content[language].missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-4 sm:p-6 md:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col overflow-hidden"
               >
                 <CardContent className="flex flex-col items-center gap-2 p-0 flex-1">
                   <div className="flex flex-col items-center gap-2">
@@ -387,12 +387,14 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center px-4">
-                    <img
-                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain max-w-full max-h-[100px] sm:max-h-[120px] md:max-h-[140px] lg:max-h-[160px]"
-                      alt="Mission"
-                      src={missionCardImages[index]}
-                    />
+                  <div className="w-full flex items-center justify-center px-2 py-2">
+                    <div className="w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] h-[100px] sm:h-[120px] md:h-[140px] flex items-center justify-center overflow-hidden">
+                      <img
+                        className="w-full h-full object-contain"
+                        alt="Mission"
+                        src={missionCardImages[index]}
+                      />
+                    </div>
                   </div>
                   
                   <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center mt-auto">
