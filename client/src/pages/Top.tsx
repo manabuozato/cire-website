@@ -118,7 +118,7 @@ export const Top = (): JSX.Element => {
         link: "/relay-awards-announcement-2025.pdf"
       },
       {
-        date: "2025.07.18",
+        date: "2025.08.23",
         title: "note記事「ゼロから立ち上がる\"食の場\" 　〜地域と料理人をつなぐ小高の挑戦〜」を公開しました",
         link: "https://note.com/cire/n/n8de407facb51"
       },
@@ -135,18 +135,8 @@ export const Top = (): JSX.Element => {
     en: [
       {
         date: "2025.09.17",
-        title: "Released 'Announcement of The Relay Awards Establishment'",
+        title: "Released 'Announcement of The Relay Awards Establishment'　（in JAPANESE）",
         link: "/relay-awards-announcement-2025.pdf"
-      },
-      {
-        date: "2025.07.18",
-        title: "Note article 'A \\\"Food Place\\\" Rising from Zero - Odaka's Challenge to Connect Regions and Chefs' published",
-        link: "https://note.com/cire/n/n8de407facb51"
-      },
-      {
-        date: "2025.07.18",
-        title: "Note article 'A Small Hot Spring Town's Big Challenge - WATOWA's Story Connecting Chefs and the Region' published",
-        link: "https://note.com/cire/n/n89a1dba56e5d"
       },
       {
         date: "2025.02.14", 
