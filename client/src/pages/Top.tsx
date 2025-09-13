@@ -303,7 +303,7 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]" style={{ backgroundPosition: '60% center' }}>
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]" style={{ backgroundPosition: '90% center' }}>
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
