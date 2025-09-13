@@ -303,15 +303,15 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
-        <div className="aspect-[16/9] md:aspect-[21/9]"></div>
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px] transition-all duration-300 ease-in-out">
+        <div className="aspect-[16/9] md:aspect-[21/9] transition-all duration-300 ease-in-out"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
       <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-auto object-contain"
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[500px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] h-auto object-contain transition-all duration-300 ease-in-out"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
