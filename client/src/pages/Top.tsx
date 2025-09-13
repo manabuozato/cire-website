@@ -303,9 +303,7 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
-        {/* Background layer with slight scale down */}
-        <div className="absolute inset-0 left-1/2 -translate-x-1/2 h-full w-[101.5vw] sm:w-[102vw] md:w-[102.5vw] lg:w-[103vw] bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat scale-[0.995] sm:scale-[0.992] md:scale-[0.99] lg:scale-[0.988]"></div>
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
         <div className="aspect-[16/9] md:aspect-[21/9] relative">
         </div>
       </section>
