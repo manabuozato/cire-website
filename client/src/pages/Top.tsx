@@ -262,37 +262,24 @@ export const Top = (): JSX.Element => {
             <nav className="px-4 py-2">
               {mobileNavigationItems.map((item, index) => (
                 <React.Fragment key={index}>
-                  {(item === 'MISSION' || item === 'AWARD' || item === 'NEWS' || item === 'SUPPORT US' || item === 'CONTACT') ? (
-                    <a
-                      href={
-                        item === 'NEWS' ? '#news' :
-                        item === 'MISSION' ? '#mission' :
-                        item === 'AWARD' ? '#award' :
-                        item === 'SUPPORT US' ? '#support-us' :
-                        item === 'CONTACT' ? '#contact' :
-                        '#'
-                      }
-                      className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
-                    >
-                      {item}
-                    </a>
-                  ) : (
-                    <Link
-                      to={
-                        item === 'HOME' ? '/' :
-                        item === 'ABOUT' ? '/about' : 
-                        item === 'Privacy Policy' ? '/legal' : 
-                        `/${item.toLowerCase().replace(' ', '-')}`
-                      }
-                      className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
-                    >
-                      {item}
-                    </Link>
-                  )}
+                  <Link
+                    to={
+                      item === 'HOME' ? '/' :
+                      item === 'ABOUT' ? '/about' : 
+                      item === 'NEWS' ? '/?section=news' :
+                      item === 'Privacy Policy' ? '/legal' : 
+                      item === 'MISSION' ? '/?section=mission' :
+                      item === 'AWARD' ? '/?section=award' :
+                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'CONTACT' ? '/?section=contact' :
+                      `/${item.toLowerCase().replace(' ', '-')}`
+                    }
+                    className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    data-testid={`link-mobile-nav-${item.toLowerCase().replace(' ', '-')}`}
+                  >
+                    {item}
+                  </Link>
                   {item === 'CONTACT' && (
                     <div className="py-4 flex justify-start border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
