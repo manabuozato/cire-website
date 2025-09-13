@@ -443,10 +443,18 @@ export const Top = (): JSX.Element => {
                               href={content[language].awardFormLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] transition-all duration-150"
-                              data-testid="link-entry-form"
                             >
-                              ENTRY FORM
+                              <Button 
+                                className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px]"
+                                data-testid="link-entry-form"
+                              >
+                                ENTRY FORM
+                                <img
+                                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                                  alt="Arrow"
+                                  src="/figmaAssets/vector-6.svg"
+                                />
+                              </Button>
                             </a>
                           </div>
                         </div>
