@@ -175,7 +175,7 @@ export const Top = (): JSX.Element => {
   ];
 
   return (
-    <main className="w-full bg-[#f7e489] min-h-screen" data-testid="spa-top-page-2025-09-13">
+    <main className="w-full bg-[#f7e489] min-h-screen">
       {/* Header Navigation */}
       <header className="sticky top-0 bg-[#f7e489] z-50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -303,12 +303,17 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-contain sm:bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
         <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center bg-[length:min(90vw,350px)] sm:bg-[length:min(86vw,400px)] md:bg-[length:min(84vw,480px)] lg:bg-[length:min(82vw,560px)] xl:bg-[length:min(80vw,640px)] min-h-[300px] sm:min-h-[340px] md:min-h-[380px] lg:min-h-[420px] xl:min-h-[460px] flex items-center justify-center -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 xl:-mt-24 scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+        <img 
+          src="/figmaAssets/vector.png" 
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-auto object-contain"
+          alt="Cloud background"
+        />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
           {/* Text centered in cloud background */}
           <div className="text-center text-[#5a3729] px-4 mb-4">
@@ -359,13 +364,13 @@ export const Top = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {content[language].missionCards.map((card, index) => (
               <Card
                 key={index}
-                className="bg-[#f2edf0] rounded-[30px] border-0 p-4 sm:p-6 md:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col overflow-hidden min-w-0"
+                className="bg-[#f2edf0] rounded-[30px] border-0 p-6 sm:p-8 min-h-[450px] sm:min-h-[480px] flex flex-col"
               >
-                <CardContent className="flex flex-col items-center gap-2 p-0 flex-1 min-w-0">
+                <CardContent className="flex flex-col items-center gap-2 p-0 flex-1">
                   <div className="flex flex-col items-center gap-2">
                     <Badge className="bg-[#71b0ff] rounded-[60px] border-0 hover:bg-[#71b0ff] px-4 py-2">
                       <span className="font-bold text-white text-sm">
@@ -382,14 +387,12 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center py-4">
-                    <div className="w-full max-w-[60px] sm:max-w-[100px] md:max-w-[130px] lg:max-w-[160px] xl:max-w-[180px] aspect-square rounded-lg overflow-hidden bg-white/10 p-1 sm:p-3 md:p-4 lg:p-5">
-                      <img
-                        className="w-full h-full object-contain"
-                        alt="Mission illustration"
-                        src={missionCardImages[index]}
-                      />
-                    </div>
+                  <div className="w-full flex items-center justify-center">
+                    <img
+                      className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 xl:w-44 xl:h-44 object-contain max-w-full max-h-[150px] sm:max-h-[180px] md:max-h-[200px] lg:max-h-[220px] xl:max-h-[240px]"
+                      alt="Mission"
+                      src={missionCardImages[index]}
+                    />
                   </div>
                   
                   <p className="text-[#5a3729] text-sm leading-6 tracking-[0.60px] text-center mt-auto">
