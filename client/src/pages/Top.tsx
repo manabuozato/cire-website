@@ -308,10 +308,10 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] min-h-[250px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[360px] xl:min-h-[400px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+      <section className="relative w-full bg-gradient-to-b from-[#71b0ff] via-[#71b0ff] to-[#87c0ff] min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] xl:min-h-[500px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] h-auto object-cover"
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[650px] h-auto object-contain"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
