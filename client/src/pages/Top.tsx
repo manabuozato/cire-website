@@ -199,7 +199,7 @@ export const Top = (): JSX.Element => {
                     <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                       {language === 'ja' ? (
                         <img
-                          className="w-12 h-auto ml-2 flex-shrink-0"
+                          className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain ml-2"
                           alt="Note"
                           src={noteImg}
                         />
@@ -270,7 +270,7 @@ export const Top = (): JSX.Element => {
                       <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                         {language === 'ja' ? (
                           <img
-                            className="w-12 h-auto flex-shrink-0"
+                            className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain"
                             alt="Note"
                             src={noteImg}
                           />
@@ -291,45 +291,52 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-16 md:pt-20">
-        <div className="aspect-[16/9] md:aspect-[21/9]"></div>
+      <section className="relative bg-[#71b0ff] pt-16 md:pt-20 scroll-mt-[80px] md:scroll-mt-[96px]">
+        <img 
+          src="/figmaAssets/group-4.png" 
+          className="w-full h-auto object-cover aspect-[16/9] md:aspect-[21/9]"
+          alt="Hero background"
+        />
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-32 md:pt-40 lg:pt-48 xl:pt-56 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center">
-            {/* Text centered in cloud background */}
-            <div className="text-center text-[#5a3729] px-4 mb-4">
-              <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
-                {content[language].heroTitle.split('\n').map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    {index < content[language].heroTitle.split('\n').length - 1 && <br />}
-                  </React.Fragment>
-                ))}
-              </h1>
-              <p className="text-xs sm:text-sm md:text-base text-[#5a3729] mt-2">
-                {content[language].heroSubtitle}
-              </p>
-            </div>
-            {/* ABOUT button below text */}
-            <div className="flex items-center justify-center">
-              <a href="/#/about">
-                <Button 
-                  className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
-                  data-testid="button-about"
-                >
-                  ABOUT
-                  <img
-                    className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
-                    alt="Arrow"
-                    src="/figmaAssets/vector-6.svg"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(96%) saturate(1458%) hue-rotate(201deg) brightness(101%) contrast(101%)' }}
-                  />
-                </Button>
-              </a>
-            </div>
+      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] grid place-items-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+        <img 
+          src="/figmaAssets/vector.png" 
+          className="pointer-events-none absolute inset-0 mx-auto w-full max-w-[1200px] h-auto object-contain"
+          alt="Cloud background"
+        />
+        <div className="relative z-10 px-4 text-center">
+          {/* Text centered in cloud background */}
+          <div className="text-center text-[#5a3729] px-4 mb-4">
+            <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
+              {content[language].heroTitle.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  {index < content[language].heroTitle.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </h1>
+            <p className="text-xs sm:text-sm md:text-base text-[#5a3729] mt-2">
+              {content[language].heroSubtitle}
+            </p>
+          </div>
+          {/* ABOUT button below text */}
+          <div className="flex items-center justify-center">
+            <a href="/#/about">
+              <Button 
+                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
+                data-testid="button-about"
+              >
+                ABOUT
+                <img
+                  className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
+                  alt="Arrow"
+                  src="/figmaAssets/vector-6.svg"
+                  style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(96%) saturate(1458%) hue-rotate(201deg) brightness(101%) contrast(101%)' }}
+                />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -596,7 +603,7 @@ export const Top = (): JSX.Element => {
             <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
               {language === 'ja' ? (
                 <img
-                  className="w-12 h-auto flex-shrink-0"
+                  className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain"
                   alt="Note"
                   src="/figmaAssets/clip-path-group.png"
                 />
