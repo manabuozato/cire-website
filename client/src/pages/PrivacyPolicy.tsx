@@ -128,6 +128,16 @@ export const PrivacyPolicy = (): JSX.Element => {
     "CONTACT",
   ];
 
+  const mobileNavigationItems = [
+    "HOME",
+    "ABOUT",
+    "MISSION", 
+    "AWARD",
+    "NEWS",
+    "SUPPORT US",
+    "CONTACT",
+  ];
+
   const footerNavigationItems = [
     "ABOUT",
     "MISSION",
@@ -217,13 +227,18 @@ export const PrivacyPolicy = (): JSX.Element => {
               </button>
             </div>
             <nav className="px-4 py-2">
-              {navigationItems.map((item, index) => (
+              {mobileNavigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <a
                     href={
+                      item === 'HOME' ? '/#/' :
                       item === 'ABOUT' ? '/#/about' : 
                       item === 'NEWS' ? '/#/news' :
                       item === 'Privacy Policy' ? '/#/legal' : 
+                      item === 'MISSION' ? '/#?section=mission' :
+                      item === 'AWARD' ? '/#?section=award' :
+                      item === 'SUPPORT US' ? '/#?section=support-us' :
+                      item === 'CONTACT' ? '/#?section=contact' :
                       `/#${item.toLowerCase().replace(' ', '-')}`
                     }
                     className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
