@@ -387,10 +387,10 @@ export const Top = (): JSX.Element => {
                     </h4>
                   </div>
                   
-                  <div className="w-full flex items-center justify-center px-2 py-2">
-                    <div className="w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px] h-[100px] sm:h-[120px] md:h-[140px] flex items-center justify-center overflow-hidden">
+                  <div className="w-full flex items-center justify-center px-6 py-2">
+                    <div className="w-[100px] sm:w-[110px] md:w-[120px] h-[100px] sm:h-[110px] md:h-[120px] flex items-center justify-center overflow-hidden rounded-lg bg-transparent">
                       <img
-                        className="w-full h-full object-contain"
+                        className="max-w-full max-h-full object-contain"
                         alt="Mission"
                         src={missionCardImages[index]}
                       />
