@@ -388,10 +388,13 @@ export const Top = (): JSX.Element => {
                   </div>
                   
                   <div className="w-full flex items-center justify-center py-2">
-                    <div className="size-[72px] sm:size-[84px] md:size-[96px] shrink-0 rounded-lg overflow-hidden">
+                    <div className="size-[72px] sm:size-[84px] md:size-[96px] shrink-0 rounded-lg overflow-hidden p-3 bg-origin-content">
                       <div
-                        className="w-full h-full bg-no-repeat bg-center bg-contain"
-                        style={{ backgroundImage: `url(${missionCardImages[index]})` }}
+                        className="w-full h-full bg-no-repeat bg-center"
+                        style={{ 
+                          backgroundImage: `url(${missionCardImages[index]})`,
+                          backgroundSize: index === 2 ? "75%" : "85%"
+                        }}
                         role="img"
                         aria-label="Mission illustration"
                       />
