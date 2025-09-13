@@ -138,7 +138,7 @@ export const Top = (): JSX.Element => {
     "MISSION", 
     "AWARD",
     "NEWS",
-    "SUPPORT US",
+    "SUPPORT",
     "CONTACT",
   ];
 
@@ -148,7 +148,7 @@ export const Top = (): JSX.Element => {
     "MISSION", 
     "AWARD",
     "NEWS",
-    "SUPPORT US",
+    "SUPPORT",
     "CONTACT",
   ];
 
@@ -157,7 +157,7 @@ export const Top = (): JSX.Element => {
     "MISSION",
     "AWARD", 
     "NEWS",
-    "SUPPORT US",
+    "SUPPORT",
     "CONTACT",
     "Privacy Policy",
   ];
@@ -186,7 +186,7 @@ export const Top = (): JSX.Element => {
                       item === 'Privacy Policy' ? '/legal' : 
                       item === 'MISSION' ? '/?section=mission' :
                       item === 'AWARD' ? '/?section=award' :
-                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'SUPPORT' ? '/?section=support-us' :
                       item === 'CONTACT' ? '/?section=contact' :
                       `/${item.toLowerCase().replace(' ', '-')}`
                     }
@@ -255,7 +255,7 @@ export const Top = (): JSX.Element => {
                       item === 'Privacy Policy' ? '/legal' : 
                       item === 'MISSION' ? '/?section=mission' :
                       item === 'AWARD' ? '/?section=award' :
-                      item === 'SUPPORT US' ? '/?section=support-us' :
+                      item === 'SUPPORT' ? '/?section=support-us' :
                       item === 'CONTACT' ? '/?section=contact' :
                       `/${item.toLowerCase().replace(' ', '-')}`
                     }
@@ -292,18 +292,19 @@ export const Top = (): JSX.Element => {
 
       {/* Hero Section */}
       <section className="relative bg-[#71b0ff] pt-16 md:pt-20 scroll-mt-[80px] md:scroll-mt-[96px]">
-        <img 
-          src="/figmaAssets/group-4.png" 
-          className="w-full h-auto object-cover aspect-[16/9] md:aspect-[21/9]"
-          alt="Hero background"
-        />
+        <div className="w-full h-auto aspect-[16/9] md:aspect-[21/9]" style={{
+          backgroundImage: "url('/figmaAssets/group-4.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat"
+        }}></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
       <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] grid place-items-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto w-full max-w-[1200px] h-auto object-contain"
+          className="pointer-events-none absolute inset-0 mx-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-auto object-contain"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center">
@@ -584,7 +585,7 @@ export const Top = (): JSX.Element => {
                     item === 'Privacy Policy' ? '/legal' : 
                     item === 'MISSION' ? '/?section=mission' :
                     item === 'AWARD' ? '/?section=award' :
-                    item === 'SUPPORT US' ? '/?section=support-us' :
+                    item === 'SUPPORT' ? '/?section=support-us' :
                     item === 'CONTACT' ? '/?section=contact' :
                     `/${item.toLowerCase().replace(' ', '-')}`
                   }
