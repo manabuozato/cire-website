@@ -6,41 +6,31 @@ import { Separator } from "@/components/ui/separator";
 import noteImg from '@assets/note1_1757664796406.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { useLocation, Link } from 'wouter';
+import { useLocation, useSearch, Link } from 'wouter';
 
 export const Top = (): JSX.Element => {
   const { language } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [location] = useLocation();
+  const search = useSearch();
   
   // Handle section scrolling from URL parameters
   React.useEffect(() => {
-    const handleScrollToSection = () => {
-      // Only on Top page path
-      if (location !== '/') return;
-      
-      const current = window.location.hash || '#/';
-      const [pathPart, queryPart] = current.split('?');
-      
-      // Only handle if we're on the root path
-      if (!pathPart.startsWith('#/') || (pathPart !== '#/' && pathPart !== '#')) return;
-      
-      const params = new URLSearchParams(queryPart || '');
-      const section = params.get('section');
-      
-      if (!section) return;
-      
-      const element = document.getElementById(section);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
-    };
+    // Only on Top page path
+    if (location !== '/') return;
     
-    // Run whenever location changes (this will trigger on wouter navigation)
-    handleScrollToSection();
-  }, [location]);
+    const params = new URLSearchParams(search);
+    const section = params.get('section');
+    
+    if (!section) return;
+    
+    const element = document.getElementById(section);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [location, search]);
   
   // Translation content
   const content = {
