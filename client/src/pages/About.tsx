@@ -145,6 +145,16 @@ export const About = (): JSX.Element => {
     "CONTACT",
   ];
 
+  const mobileNavigationItems = [
+    "HOME",
+    "ABOUT",
+    "MISSION", 
+    "AWARD",
+    "NEWS",
+    "SUPPORT US",
+    "CONTACT",
+  ];
+
   const footerNavigationItems = [
     "ABOUT",
     "MISSION",
@@ -237,10 +247,11 @@ export const About = (): JSX.Element => {
               </button>
             </div>
             <nav className="px-4 py-2">
-              {navigationItems.map((item, index) => (
+              {mobileNavigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
                     to={
+                      item === 'HOME' ? '/' :
                       item === 'ABOUT' ? '/about' : 
                       item === 'NEWS' ? '/?section=news' :
                       item === 'Privacy Policy' ? '/legal' : 
