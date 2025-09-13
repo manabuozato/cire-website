@@ -151,18 +151,20 @@ export const Legal = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <div className="py-4 flex justify-start border-b border-[#5a3729]/20">
-                      <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
-                        {language === 'ja' ? (
-                          <img
-                            className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain"
-                            alt="Note"
-                            src={noteImg}
-                          />
-                        ) : (
-                          <span className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors flex-shrink-0">medium</span>
-                        )}
-                      </a>
+                    <div className="py-4 border-b border-[#5a3729]/20">
+                      <div className="text-left">
+                        <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer" className="inline-block">
+                          {language === 'ja' ? (
+                            <img
+                              className="w-[48px] h-auto block"
+                              alt="Note"
+                              src={noteImg}
+                            />
+                          ) : (
+                            <span className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors">medium</span>
+                          )}
+                        </a>
+                      </div>
                     </div>
                   )}
                 </React.Fragment>
