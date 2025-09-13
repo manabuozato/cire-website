@@ -431,7 +431,7 @@ export const Top = (): JSX.Element => {
                             href={content[language].awardFormLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block bg-[#4285f4] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#3367d6] transition-colors"
+                            className="inline-block bg-[#1a73e8] text-white font-medium text-sm py-2 px-4 rounded shadow-sm hover:bg-[#1557b0] hover:shadow-md transition-all duration-150"
                             data-testid="link-entry-form"
                           >
                             ENTRY FORM
