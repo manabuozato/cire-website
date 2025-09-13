@@ -170,9 +170,9 @@ export const Top = (): JSX.Element => {
           <nav className="flex items-center justify-between py-4 min-h-[4rem] md:min-h-[5rem]">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-[#5a3729] font-bold text-xs sm:text-sm lg:text-base leading-tight">
+              <Link to="/" className="text-[#5a3729] font-bold text-xs sm:text-sm lg:text-base leading-tight hover:text-[#71b0ff] transition-colors" data-testid="link-home">
                 一般社団法人日本シェフ・イン・レジデンス応援協会
-              </h1>
+              </Link>
             </div>
             
             {/* Navigation Menu */}
@@ -199,12 +199,12 @@ export const Top = (): JSX.Element => {
                     <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                       {language === 'ja' ? (
                         <img
-                          className="w-12 h-12 ml-2 flex-shrink-0"
+                          className="w-12 h-auto ml-2 flex-shrink-0"
                           alt="Note"
                           src={noteImg}
                         />
                       ) : (
-                        <span className="ml-2 px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+                        <span className="ml-2 font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors flex-shrink-0">medium</span>
                       )}
                     </a>
                   )}
@@ -270,12 +270,12 @@ export const Top = (): JSX.Element => {
                       <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                         {language === 'ja' ? (
                           <img
-                            className="w-12 h-12 flex-shrink-0"
+                            className="w-12 h-auto flex-shrink-0"
                             alt="Note"
                             src={noteImg}
                           />
                         ) : (
-                          <span className="px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+                          <span className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors flex-shrink-0">medium</span>
                         )}
                       </a>
                     </div>
@@ -296,7 +296,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-24 md:pt-32 lg:pt-40 xl:pt-48 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-32 md:pt-40 lg:pt-48 xl:pt-56 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
@@ -596,12 +596,12 @@ export const Top = (): JSX.Element => {
             <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
               {language === 'ja' ? (
                 <img
-                  className="w-12 h-12 flex-shrink-0"
+                  className="w-12 h-auto flex-shrink-0"
                   alt="Note"
                   src="/figmaAssets/clip-path-group.png"
                 />
               ) : (
-                <span className="px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+                <span className="text-[#e9e8e3] text-sm tracking-[0.60px] hover:text-white transition-colors flex-shrink-0">medium</span>
               )}
             </a>
           </div>
