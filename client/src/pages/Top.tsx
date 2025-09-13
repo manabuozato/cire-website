@@ -308,10 +308,10 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px] overflow-hidden" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full min-w-[800px] sm:min-w-[1000px] md:min-w-[1200px] lg:min-w-[1400px] xl:min-w-[1600px] h-auto object-contain transition-all duration-300 ease-in-out"
+          className="pointer-events-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full min-w-[600px] sm:min-w-[700px] md:min-w-[800px] lg:min-w-[900px] xl:min-w-[1000px] h-auto object-contain transition-all duration-300 ease-in-out scale-110"
           alt="Cloud background"
         />
         <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
