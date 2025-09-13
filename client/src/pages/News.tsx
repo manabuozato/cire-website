@@ -225,22 +225,22 @@ export const News = (): JSX.Element => {
           <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-8">
             <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-6">
               {footerNavigationItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href={
-                    item === 'ABOUT' ? '/#/about' : 
-                    item === 'NEWS' ? '/#/news' :
-                    item === 'Privacy Policy' ? '/#/legal' : 
-                    item === 'MISSION' ? '/#/?section=mission' :
-                    item === 'AWARD' ? '/#/?section=award' :
-                    item === 'SUPPORT US' ? '/#/?section=support-us' :
-                    item === 'CONTACT' ? '/#/?section=contact' :
-                    `/#${item.toLowerCase().replace(' ', '-')}`
+                  to={
+                    item === 'ABOUT' ? '/about' : 
+                    item === 'NEWS' ? '/news' :
+                    item === 'Privacy Policy' ? '/legal' : 
+                    item === 'MISSION' ? '/?section=mission' :
+                    item === 'AWARD' ? '/?section=award' :
+                    item === 'SUPPORT US' ? '/?section=support-us' :
+                    item === 'CONTACT' ? '/?section=contact' :
+                    `/${item.toLowerCase().replace(' ', '-')}`
                   }
                   className="font-bold text-[#e9e8e3] text-sm tracking-[0.70px] hover:text-white transition-colors"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

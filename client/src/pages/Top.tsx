@@ -576,7 +576,7 @@ export const Top = (): JSX.Element => {
                   key={index}
                   to={
                     item === 'ABOUT' ? '/about' : 
-                    item === 'NEWS' ? '/news' :
+                    item === 'NEWS' ? '/?section=news' :
                     item === 'Privacy Policy' ? '/legal' : 
                     item === 'MISSION' ? '/?section=mission' :
                     item === 'AWARD' ? '/?section=award' :
