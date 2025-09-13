@@ -388,7 +388,7 @@ export const Top = (): JSX.Element => {
                   </div>
                   
                   <div className="w-full flex items-center justify-center py-4">
-                    <div className="w-full max-w-[80px] sm:max-w-[120px] md:max-w-[150px] lg:max-w-[180px] xl:max-w-[200px] aspect-square rounded-lg overflow-hidden bg-white/10 p-2 sm:p-4 md:p-5 lg:p-6">
+                    <div className="w-full max-w-[60px] sm:max-w-[100px] md:max-w-[130px] lg:max-w-[160px] xl:max-w-[180px] aspect-square rounded-lg overflow-hidden bg-white/10 p-1 sm:p-3 md:p-4 lg:p-5">
                       <img
                         className="w-full h-full object-contain"
                         alt="Mission illustration"
