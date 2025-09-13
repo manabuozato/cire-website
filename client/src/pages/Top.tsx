@@ -438,15 +438,17 @@ export const Top = (): JSX.Element => {
                       return (
                         <div key={index}>
                           <p className="mb-6">{line}</p>
-                          <a 
-                            href={content[language].awardFormLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-block bg-[#1a73e8] text-white font-medium text-sm py-2 px-4 rounded shadow-sm hover:bg-[#1557b0] hover:shadow-md transition-all duration-150"
-                            data-testid="link-entry-form"
-                          >
-                            ENTRY FORM
-                          </a>
+                          <div className="flex justify-center">
+                            <a 
+                              href={content[language].awardFormLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] transition-all duration-150"
+                              data-testid="link-entry-form"
+                            >
+                              ENTRY FORM
+                            </a>
+                          </div>
                         </div>
                       );
                     }
