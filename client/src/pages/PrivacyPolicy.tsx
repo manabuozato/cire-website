@@ -173,7 +173,7 @@ export const PrivacyPolicy = (): JSX.Element => {
                   {item === 'CONTACT' && (
                     <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                       <img
-                        className="w-12 sm:w-14 h-auto ml-2"
+                        className="w-12 h-auto ml-2"
                         alt="Note"
                         src={noteImg}
                       />
@@ -340,7 +340,7 @@ export const PrivacyPolicy = (): JSX.Element => {
             </div>
             <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
               <img
-                className="w-12 sm:w-14 h-auto"
+                className="w-12 h-auto"
                 alt="Note"
                 src="/figmaAssets/clip-path-group.png"
               />
