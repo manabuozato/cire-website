@@ -393,7 +393,7 @@ export const Top = (): JSX.Element => {
                         className="w-full h-full bg-no-repeat bg-center"
                         style={{ 
                           backgroundImage: `url(${missionCardImages[index]})`,
-                          backgroundSize: index === 2 ? "75%" : "85%"
+                          backgroundSize: index === 0 ? "90%" : index === 1 ? "95%" : "75%"
                         }}
                         role="img"
                         aria-label="Mission illustration"
