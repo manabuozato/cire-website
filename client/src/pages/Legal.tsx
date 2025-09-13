@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import noteImg from '@assets/note_1757659491855.png';
 import { Link } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 
 export const Legal = (): JSX.Element => {
   const { language } = useLanguage();
@@ -150,29 +151,24 @@ export const Legal = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <div className="py-4 flex justify-start items-start border-b border-[#5a3729]/20">
-                      <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
-                        <img
-                          className="w-12 h-auto"
-                          alt="Note"
-                          src={noteImg}
-                        />
+                    <div className="py-4 flex justify-start border-b border-[#5a3729]/20">
+                      <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
+                        {language === 'ja' ? (
+                          <img
+                            className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain"
+                            alt="Note"
+                            src={noteImg}
+                          />
+                        ) : (
+                          <span className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors flex-shrink-0">medium</span>
+                        )}
                       </a>
                     </div>
                   )}
                 </React.Fragment>
               ))}
               <div className="py-4 flex justify-center">
-                <div className="flex items-center gap-2">
-                  <img
-                    className="w-4 h-4"
-                    alt="Globe"
-                    src="/figmaAssets/earth-1.svg"
-                  />
-                  <div className="font-bold text-[#5a3729] text-sm tracking-[0.70px]">
-                    EN
-                  </div>
-                </div>
+                <LanguageSwitcher />
               </div>
             </nav>
           </div>
