@@ -308,16 +308,16 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+      <section className="relative w-full bg-[#71b0ff] pt-4 sm:pt-6 md:pt-8 lg:pt-12 scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
         {/* Cloud background div with proper aspect ratio */}
         <div 
-          className="mx-auto bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-top bg-contain aspect-[2/1] transition-all duration-300 ease-in-out"
-          style={{ width: 'clamp(240px, 60vw, 520px)' }}
+          className="mx-auto bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center bg-contain aspect-[2/1] transition-all duration-300 ease-in-out"
+          style={{ width: 'clamp(320px, 70vw, 640px)' }}
           aria-hidden="true"
         />
         
         {/* Content positioned over cloud */}
-        <div className="relative -mt-12 sm:-mt-16 md:-mt-20 lg:-mt-24 px-4 text-center max-w-lg mx-auto pb-8 sm:pb-12 md:pb-16">
+        <div className="relative -mt-16 sm:-mt-20 md:-mt-24 lg:-mt-32 px-4 text-center max-w-lg mx-auto pb-4 sm:pb-6 md:pb-8">
           {/* Text centered in cloud background */}
           <div className="text-center text-[#5a3729] px-4 mb-4">
             <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
