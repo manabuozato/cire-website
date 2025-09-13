@@ -26,18 +26,40 @@ export const News = (): JSX.Element => {
     "Privacy Policy",
   ];
 
-  const newsItems = [
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" },
-    { date: "2025.08.28", title: "タイトルが入ります。そのまま外リンクに飛びます。" }
-  ];
+  const newsItems = {
+    ja: [
+      {
+        date: "2025.09.17",
+        title: "「The Relay Awards創設のお知らせ」をリリースしました",
+        link: "/relay-awards-announcement-2025.pdf"
+      },
+      {
+        date: "2025.08.23",
+        title: "note記事「ゼロから立ち上がる\"食の場\" 　〜地域と料理人をつなぐ小高の挑戦〜」を公開しました",
+        link: "https://note.com/cire/n/n8de407facb51"
+      },
+      {
+        date: "2025.07.18",
+        title: "note記事「小さな温泉街の大きな挑戦 〜WATOWAが紡ぐ料理人と地域の物語〜」を公開しました",
+        link: "https://note.com/cire/n/n89a1dba56e5d"
+      },
+      {
+        date: "2025.02.14", 
+        title: "一般社団法人日本シェフ・イン・レジデンス応援協会設立",
+      },
+    ],
+    en: [
+      {
+        date: "2025.09.17",
+        title: "Released 'Announcement of The Relay Awards Establishment'　（in JAPANESE）",
+        link: "/relay-awards-announcement-2025.pdf"
+      },
+      {
+        date: "2025.02.14", 
+        title: "Established Japan Chef-in-Residence Empowerment Association",
+      },
+    ]
+  };
 
   return (
     <main className="w-full bg-[#f7e489] min-h-screen">
@@ -175,18 +197,26 @@ export const News = (): JSX.Element => {
           {/* News Items */}
           <div className="max-w-4xl mx-auto">
             <div className="space-y-6 md:space-y-8">
-              {newsItems.map((item, index) => (
+              {newsItems[language].map((item, index) => (
                 <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 py-4 border-b border-[#5a3729]/20">
                   <div className="text-sm md:text-base font-bold text-[#5a3729] whitespace-nowrap">
                     {item.date}
                   </div>
-                  <a 
-                    href="#" 
-                    className="text-sm md:text-base text-[#5a3729] hover:text-[#71b0ff] transition-colors cursor-pointer"
-                    data-testid={`link-news-${index}`}
-                  >
-                    {item.title}
-                  </a>
+                  {item.link ? (
+                    <a 
+                      href={item.link}
+                      target={item.link.startsWith('http') ? '_blank' : '_self'}
+                      rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      className="text-sm md:text-base text-[#5a3729] hover:text-[#71b0ff] transition-colors cursor-pointer"
+                      data-testid={`link-news-${index}`}
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <span className="text-sm md:text-base text-[#5a3729]" data-testid={`text-news-${index}`}>
+                      {item.title}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
