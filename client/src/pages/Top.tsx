@@ -553,7 +553,7 @@ export const Top = (): JSX.Element => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="flex justify-center lg:justify-start">
               <img
-                className="w-full h-auto object-contain max-w-sm lg:max-w-md"
+                className="w-full h-auto object-contain max-w-full scale-110"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
