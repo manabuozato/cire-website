@@ -196,12 +196,16 @@ export const Top = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
-                      <img
-                        className="w-12 h-auto ml-2"
-                        alt="Note"
-                        src={noteImg}
-                      />
+                    <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
+                      {language === 'ja' ? (
+                        <img
+                          className="w-12 h-12 ml-2 flex-shrink-0"
+                          alt="Note"
+                          src={noteImg}
+                        />
+                      ) : (
+                        <span className="ml-2 px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+                      )}
                     </a>
                   )}
                 </React.Fragment>
@@ -263,12 +267,16 @@ export const Top = (): JSX.Element => {
                   </Link>
                   {item === 'CONTACT' && (
                     <div className="py-4 flex justify-start border-b border-[#5a3729]/20">
-                      <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
-                        <img
-                          className="w-12 h-auto"
-                          alt="Note"
-                          src={noteImg}
-                        />
+                      <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
+                        {language === 'ja' ? (
+                          <img
+                            className="w-12 h-12 flex-shrink-0"
+                            alt="Note"
+                            src={noteImg}
+                          />
+                        ) : (
+                          <span className="px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+                        )}
                       </a>
                     </div>
                   )}
@@ -288,7 +296,7 @@ export const Top = (): JSX.Element => {
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-12 md:pt-16 lg:pt-20 xl:pt-24 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
+      <section className="w-full bg-[#71b0ff] bg-[url('/figmaAssets/vector.png')] bg-no-repeat bg-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] pt-24 md:pt-32 lg:pt-40 xl:pt-48 relative flex items-center justify-center scroll-mt-16 md:scroll-mt-20 about-cloud-bg" id="about">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center text-center">
             {/* Text centered in cloud background */}
@@ -585,12 +593,16 @@ export const Top = (): JSX.Element => {
             <div className="text-[#e9e8e3] text-xs tracking-[0.60px] text-center md:text-left">
               ©2025 一般社団法人日本シェフ・イン・レジデンス応援協会 All rights reserved.
             </div>
-            <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
-              <img
-                className="w-12 h-auto"
-                alt="Note"
-                src="/figmaAssets/clip-path-group.png"
-              />
+            <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
+              {language === 'ja' ? (
+                <img
+                  className="w-12 h-12 flex-shrink-0"
+                  alt="Note"
+                  src="/figmaAssets/clip-path-group.png"
+                />
+              ) : (
+                <span className="px-3 py-1 bg-black text-white text-sm font-medium rounded-full flex-shrink-0">medium</span>
+              )}
             </a>
           </div>
         </div>
