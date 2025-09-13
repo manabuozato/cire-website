@@ -291,23 +291,18 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[#71b0ff] pt-16 md:pt-20 scroll-mt-[80px] md:scroll-mt-[96px]">
-        <div className="w-full h-auto aspect-[16/9] md:aspect-[21/9]" style={{
-          backgroundImage: "url('/figmaAssets/group-4.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat"
-        }}></div>
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-16 md:pt-20 scroll-mt-[80px] md:scroll-mt-[96px]">
+        <div className="aspect-[16/9] md:aspect-[21/9]"></div>
       </section>
 
       {/* About CTA Section - Full Width Blue Background with Cloud Background */}
-      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] grid place-items-center scroll-mt-[80px] md:scroll-mt-[96px]" id="about">
+      <section className="relative w-full bg-[#71b0ff] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px] flex items-center justify-center scroll-mt-[80px] md:scroll-mt-[96px] mt-16 md:mt-20" id="about">
         <img 
           src="/figmaAssets/vector.png" 
-          className="pointer-events-none absolute inset-0 mx-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-auto object-contain"
+          className="pointer-events-none absolute inset-0 mx-auto my-auto w-full max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[700px] h-auto object-contain"
           alt="Cloud background"
         />
-        <div className="relative z-10 px-4 text-center">
+        <div className="relative z-10 px-4 text-center max-w-lg mx-auto">
           {/* Text centered in cloud background */}
           <div className="text-center text-[#5a3729] px-4 mb-4">
             <h1 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold leading-relaxed">
