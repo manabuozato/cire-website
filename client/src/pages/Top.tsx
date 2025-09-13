@@ -16,45 +16,31 @@ export const Top = (): JSX.Element => {
   // Handle section scrolling from URL parameters
   React.useEffect(() => {
     const handleScrollToSection = () => {
-      console.log('handleScrollToSection called');
       // Only on Top page path
+      if (location !== '/') return;
+      
       const current = window.location.hash || '#/';
       const [pathPart, queryPart] = current.split('?');
       
-      console.log('Current hash:', current, 'Path:', pathPart, 'Query:', queryPart);
-      
       // Only handle if we're on the root path
-      if (!pathPart.startsWith('#/') || (pathPart !== '#/' && pathPart !== '#')) {
-        console.log('Not on root path, skipping');
-        return;
-      }
+      if (!pathPart.startsWith('#/') || (pathPart !== '#/' && pathPart !== '#')) return;
       
       const params = new URLSearchParams(queryPart || '');
       const section = params.get('section');
       
-      console.log('Section parameter:', section);
-      
-      if (!section) {
-        console.log('No section parameter found');
-        return;
-      }
+      if (!section) return;
       
       const element = document.getElementById(section);
-      console.log('Element found:', !!element, 'for section:', section);
       if (element) {
         setTimeout(() => {
-          console.log('Scrolling to section:', section);
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
       }
     };
     
-    // Run on mount and on hash changes
+    // Run whenever location changes (this will trigger on wouter navigation)
     handleScrollToSection();
-    window.addEventListener('hashchange', handleScrollToSection);
-    
-    return () => window.removeEventListener('hashchange', handleScrollToSection);
-  }, []);
+  }, [location]);
   
   // Translation content
   const content = {

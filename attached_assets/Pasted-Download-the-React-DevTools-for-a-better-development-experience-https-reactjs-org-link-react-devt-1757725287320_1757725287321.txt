@@ -1,0 +1,156 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+10react-jsx-dev-runtime.development.js:87  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+Top.tsx:19 handleScrollToSection called
+Top.tsx:24 Current hash: #/ Path: #/ Query: undefined
+Top.tsx:35 Section parameter: null
+Top.tsx:38 No section parameter found
+6Top.tsx:205  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+error @ react-jsx-dev-runtime.development.js:61
+validateFragmentProps @ react-jsx-dev-runtime.development.js:1194
+jsxWithValidation @ react-jsx-dev-runtime.development.js:1301
+(anonymous) @ Top.tsx:205
+Top @ Top.tsx:204
+renderWithHooks @ react-dom.development.js:15486
+updateFunctionComponent @ react-dom.development.js:19617
+beginWork @ react-dom.development.js:21640
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+7Top.tsx:269  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+error @ react-jsx-dev-runtime.development.js:61
+validateFragmentProps @ react-jsx-dev-runtime.development.js:1194
+jsxWithValidation @ react-jsx-dev-runtime.development.js:1301
+(anonymous) @ Top.tsx:269
+Top @ Top.tsx:268
+renderWithHooks @ react-dom.development.js:15486
+updateFunctionComponent @ react-dom.development.js:19617
+beginWork @ react-dom.development.js:21640
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+4Top.tsx:322  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+error @ react-jsx-dev-runtime.development.js:61
+validateFragmentProps @ react-jsx-dev-runtime.development.js:1194
+jsxWithValidation @ react-jsx-dev-runtime.development.js:1301
+(anonymous) @ Top.tsx:322
+Top @ Top.tsx:321
+renderWithHooks @ react-dom.development.js:15486
+updateFunctionComponent @ react-dom.development.js:19617
+beginWork @ react-dom.development.js:21640
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+6Top.tsx:205  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+error @ react-jsx-dev-runtime.development.js:61
+validateFragmentProps @ react-jsx-dev-runtime.development.js:1194
+jsxWithValidation @ react-jsx-dev-runtime.development.js:1301
+(anonymous) @ Top.tsx:205
+Top @ Top.tsx:204
+renderWithHooks @ react-dom.development.js:15486
+updateFunctionComponent @ react-dom.development.js:19617
+beginWork @ react-dom.development.js:21640
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+4Top.tsx:322  Warning: Invalid prop `data-replit-metadata` supplied to `React.Fragment`. React.Fragment can only have `key` and `children` props.
+    at Top (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/pages/Top.tsx:28:24)
+    at Route (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:174:16)
+    at Switch (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:230:17)
+    at Router (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=d8a9719f:142:17)
+    at AppRouter
+    at LanguageProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/src/contexts/LanguageContext.tsx:75:36)
+    at Provider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-DN2NQJT6.js?v=d8a9719f:42:15)
+    at TooltipProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d8a9719f:2251:5)
+    at QueryClientProvider (https://7d0ae1ee-56c2-4c51-bc0b-c767248b38e2-00-2xrgxty1ol6eu.spock.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=d8a9719f:2805:3)
+    at App
+printWarning @ react-jsx-dev-runtime.development.js:87
+error @ react-jsx-dev-runtime.development.js:61
+validateFragmentProps @ react-jsx-dev-runtime.development.js:1194
+jsxWithValidation @ react-jsx-dev-runtime.development.js:1301
+(anonymous) @ Top.tsx:322
+Top @ Top.tsx:321
+renderWithHooks @ react-dom.development.js:15486
+updateFunctionComponent @ react-dom.development.js:19617
+beginWork @ react-dom.development.js:21640
+beginWork$1 @ react-dom.development.js:27465
+performUnitOfWork @ react-dom.development.js:26596
+workLoopSync @ react-dom.development.js:26505
+renderRootSync @ react-dom.development.js:26473
+performSyncWorkOnRoot @ react-dom.development.js:26124
+flushSyncCallbacks @ react-dom.development.js:12042
+(anonymous) @ react-dom.development.js:25690
+Top.tsx:19 handleScrollToSection called
+Top.tsx:24 Current hash: #/ Path: #/ Query: undefined
+Top.tsx:35 Section parameter: null
+Top.tsx:38 No section parameter found
