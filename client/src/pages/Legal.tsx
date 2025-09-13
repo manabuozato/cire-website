@@ -150,7 +150,7 @@ export const Legal = (): JSX.Element => {
                     {item}
                   </Link>
                   {item === 'CONTACT' && (
-                    <div className="py-3 flex justify-start border-b border-[#5a3729]/20">
+                    <div className="py-4 flex justify-start border-b border-[#5a3729]/20">
                       <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
                         <img
                           className="w-12 h-auto"
