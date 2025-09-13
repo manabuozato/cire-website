@@ -2,8 +2,10 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import noteImg from '@assets/note_1757659491855.png';
 import { Link } from 'wouter';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Legal = (): JSX.Element => {
+  const { language } = useLanguage();
   const navigationItems = [
     "ABOUT",
     "MISSION", 
@@ -270,7 +272,10 @@ export const Legal = (): JSX.Element => {
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8 pt-8 border-t border-[#e9e8e3]/20">
             <div className="text-[#e9e8e3] text-xs tracking-[0.60px] text-center md:text-left">
-              ©2025 一般社団法人日本シェフ・イン・レジデンス応援協会 All rights reserved.
+              {language === 'ja' 
+                ? '©2025 一般社団法人日本シェフ・イン・レジデンス応援協会 All rights reserved.'
+                : '©2025 Japan Chef-in-Residence Empowerment Association (General Incorporated Association) All rights reserved.'
+              }
             </div>
             <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
               <img
