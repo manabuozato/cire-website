@@ -4,9 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import noteImg from '@assets/note1_1757664796406.png';
-import leftChefImg from '@assets/left_1757739458535.png';
-import middleChefImg from '@assets/middle_1757739458535.png';
-import rightChefImg from '@assets/right_1757739458536.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { useLocation, useSearch, Link } from 'wouter';
@@ -306,49 +303,8 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
+      <section className="relative bg-[url('/figmaAssets/group-4.png')] bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]" style={{backgroundSize: '70%'}}>
         <div className="aspect-[16/9] md:aspect-[21/9] relative">
-          {/* Individual Chef Images */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="relative w-full h-full max-w-[800px] max-h-[400px]">
-              {/* Left Chef */}
-              <img
-                src={leftChefImg}
-                alt="Left Chef"
-                className="absolute w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
-                style={{ 
-                  left: '25%', 
-                  top: '45%', 
-                  transform: 'translate(-50%, -50%)',
-                  zIndex: 10 
-                }}
-              />
-              {/* Middle Chef */}
-              <img
-                src={middleChefImg}
-                alt="Middle Chef"
-                className="absolute w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
-                style={{ 
-                  left: '52%', 
-                  top: '45%', 
-                  transform: 'translate(-50%, -50%)',
-                  zIndex: 10 
-                }}
-              />
-              {/* Right Chef */}
-              <img
-                src={rightChefImg}
-                alt="Right Chef"
-                className="absolute w-[80px] h-[80px] md:w-[100px] md:h-[100px] lg:w-[120px] lg:h-[120px]"
-                style={{ 
-                  left: '70%', 
-                  top: '45%', 
-                  transform: 'translate(-50%, -50%)',
-                  zIndex: 10 
-                }}
-              />
-            </div>
-          </div>
         </div>
       </section>
 
