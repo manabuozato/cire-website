@@ -41,7 +41,7 @@ export const Legal = (): JSX.Element => {
             </div>
             
             {/* Navigation Menu */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden min-[1100px]:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
@@ -84,7 +84,7 @@ export const Legal = (): JSX.Element => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="min-[1100px]:hidden">
               <button className="text-[#5a3729] hover:text-[#71b0ff]">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

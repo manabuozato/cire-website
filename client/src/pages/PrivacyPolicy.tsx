@@ -155,7 +155,7 @@ export const PrivacyPolicy = (): JSX.Element => {
             </div>
             
             {/* Navigation Menu */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden min-[1100px]:flex items-center space-x-6">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <a
@@ -185,7 +185,7 @@ export const PrivacyPolicy = (): JSX.Element => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="min-[1100px]:hidden">
               <button 
                 className="text-[#5a3729] hover:text-[#71b0ff]"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -202,7 +202,7 @@ export const PrivacyPolicy = (): JSX.Element => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 md:hidden" onClick={() => setIsMobileMenuOpen(false)}>
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 min-[1100px]:hidden" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="absolute top-0 right-0 w-64 h-full bg-[#f7e489] shadow-lg">
             <div className="flex justify-end p-4">
               <button 
