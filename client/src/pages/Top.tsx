@@ -211,7 +211,7 @@ export const Top = (): JSX.Element => {
                     <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                       {language === 'ja' ? (
                         <img
-                          className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain ml-2"
+                          className="flex-none w-[64px] min-w-[64px] h-auto max-w-none object-contain ml-2"
                           alt="Note"
                           src={noteImg}
                         />
@@ -282,7 +282,7 @@ export const Top = (): JSX.Element => {
                       <a href={language === 'ja' ? "https://note.com/cire" : "https://medium.com/@j-cire"} target="_blank" rel="noopener noreferrer">
                         {language === 'ja' ? (
                           <img
-                            className="flex-none w-[48px] min-w-[48px] h-auto max-w-none object-contain"
+                            className="flex-none w-[64px] min-w-[64px] h-auto max-w-none object-contain"
                             alt="Note"
                             src={noteImg}
                           />
@@ -334,7 +334,7 @@ export const Top = (): JSX.Element => {
           <div className="flex items-center justify-center">
             <a href="/#/about">
               <Button 
-                className="bg-[#71b0ff] text-white hover:bg-blue-600 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
+                className="bg-[#71b0ff] text-white hover:bg-[#5a9fe8] rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
                 data-testid="button-about"
               >
                 ABOUT
@@ -554,7 +554,7 @@ export const Top = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                className="w-full h-auto object-contain scale-125"
+                className="w-full h-auto object-contain scale-150"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
