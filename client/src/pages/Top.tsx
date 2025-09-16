@@ -559,15 +559,13 @@ export const Top = (): JSX.Element => {
                 src="/figmaAssets/support.png"
               />
             </div>
-            <div className="w-full lg:w-1/2 space-y-8">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
-                  応援協会だって応援されたい
-                </h3>
-                <p className="text-[#5a3729] text-base leading-6 text-justify">
-                  一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
-                </p>
-              </div>
+            <div className="w-full lg:w-1/2">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
+                応援協会だって応援されたい
+              </h3>
+              <p className="text-[#5a3729] text-base leading-6 text-justify">
+                一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
+              </p>
             </div>
           </div>
         </div>
