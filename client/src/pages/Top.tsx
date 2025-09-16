@@ -551,10 +551,10 @@ export const Top = (): JSX.Element => {
             </h2>
           </div>
           
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                className="w-full h-auto object-contain scale-150"
+                className="w-full h-auto object-contain scale-125"
                 alt="Support"
                 src="/figmaAssets/support.png"
               />
