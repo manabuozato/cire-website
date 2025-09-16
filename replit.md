@@ -95,3 +95,4 @@ Preferred communication style: Simple, everyday language.
 - Check for static HTML files that might override React routing
 - Ensure image paths reference correct locations (`/figmaAssets/` for production)
 - Run `npm run build` to regenerate `dist/` from source files
+- **CRITICAL: Vite Build Directory Mismatch** - Vite builds to `dist/public/` but Replit static deployment with `publicDir = "dist"` expects files directly in `dist/`. If preview works but published version doesn't, move files: `mv dist/public/* dist/ && rm -rf dist/public`. This is the most common cause of preview/published discrepancies.
