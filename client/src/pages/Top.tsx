@@ -551,16 +551,16 @@ export const Top = (): JSX.Element => {
             </h2>
           </div>
           
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="w-full lg:w-1/2 overflow-visible">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="overflow-visible justify-self-start">
               <img
                 className="block self-start w-[1400px] min-w-[1400px] h-auto object-contain"
                 alt="Support"
                 src="/figmaAssets/support.png?v=20250916"
-                style={{ width: '1400px', minWidth: '1400px' }}
+                style={{ width: '1400px', minWidth: '1400px', marginTop: '0' }}
               />
             </div>
-            <div className="w-full lg:w-1/2">
+            <div>
               <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6 mt-0">
                 応援協会だって応援されたい
               </h3>
