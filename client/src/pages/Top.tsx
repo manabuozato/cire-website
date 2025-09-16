@@ -555,8 +555,8 @@ export const Top = (): JSX.Element => {
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
                 className="w-full h-auto max-w-lg object-contain"
-                alt="Note Big"
-                src="/figmaAssets/note_big.png"
+                alt="Support"
+                src="/figmaAssets/support.png"
               />
             </div>
             <div className="w-full lg:w-1/2 space-y-8">
