@@ -554,7 +554,7 @@ export const Top = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                className="block w-full min-w-[960px] sm:min-w-[1280px] md:min-w-[1600px] lg:min-w-[2000px] xl:min-w-[2400px] h-auto object-contain flex-none shrink-0 self-start -mt-4 lg:-mt-16"
+                className="block w-full min-w-[960px] sm:min-w-[1280px] md:min-w-[1600px] lg:min-w-[2000px] xl:min-w-[2400px] h-auto object-contain flex-none shrink-0 self-start"
                 alt="Support"
                 src="/figmaAssets/support.png?v=20250916"
                 style={{ width: '960px', minWidth: '960px' }}
