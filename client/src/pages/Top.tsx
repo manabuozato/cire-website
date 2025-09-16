@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import noteImg from '@assets/note_big.png';
+import ojisanImg from '@assets/ojisan_04 1_1758006741917.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { useLocation, useSearch, Link } from 'wouter';
@@ -554,10 +555,10 @@ export const Top = (): JSX.Element => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="overflow-visible justify-self-start">
               <img
-                className="block self-start w-[1400px] min-w-[1400px] h-auto object-contain"
+                className="block self-start w-[200px] min-w-[200px] h-auto object-contain"
                 alt="Support"
-                src="/attached_assets/ojisan_04%201_1758006741917.png"
-                style={{ width: '1400px', minWidth: '1400px', marginTop: '0' }}
+                src={ojisanImg}
+                style={{ width: '200px', minWidth: '200px', marginTop: '0' }}
               />
             </div>
             <div>
