@@ -359,7 +359,7 @@ export const Top = (): JSX.Element => {
               <img
                 src="/figmaAssets/note_big.png"
                 alt="Note Big"
-                className="w-full h-auto max-w-md mx-auto md:mx-0"
+                className="w-full h-auto max-w-lg mx-auto md:mx-0"
               />
             </div>
             {/* Right side - Text content */}
@@ -368,7 +368,7 @@ export const Top = (): JSX.Element => {
                 一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
               </div>
               <div className="mt-8">
-                <br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </div>
             </div>
           </div>
