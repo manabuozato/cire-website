@@ -50,6 +50,7 @@ export const Top = (): JSX.Element => {
       supportSubtitle: "応援協会だって応援されたい",
       supportDescription: "一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。",
       contactTitle: "CONTACT",
+      orgName: "一般社団法人日本シェフ・イン・レジデンス応援協会",
       awardFormLinkText: "The Relay Awards エントリーフォーム",
       missionCards: [
         {
@@ -84,6 +85,7 @@ export const Top = (): JSX.Element => {
       supportSubtitle: "Even the Association Wants Support",
       supportDescription: "The Japan Chef-in-Residence Empowerment Association is a non-profit organization operating through pro bono work by its members. We welcome a wide range of support from those who empathize with our activities, from encouraging messages to real support, and even donations. If you would like to support us in any way, please contact us through the CONTACT below.",
       contactTitle: "CONTACT",
+      orgName: "Japan Chef-in-Residence Empowerment Association",
       awardFormLinkText: "The Relay Awards Entry Form",
       missionCards: [
         {
@@ -184,7 +186,7 @@ export const Top = (): JSX.Element => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="text-[#5a3729] font-bold text-xs sm:text-sm lg:text-base leading-tight hover:text-[#71b0ff] transition-colors" data-testid="link-home">
-                一般社団法人日本シェフ・イン・レジデンス応援協会
+                {content[language].orgName}
               </Link>
             </div>
             

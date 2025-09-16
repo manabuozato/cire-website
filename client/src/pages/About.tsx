@@ -176,7 +176,7 @@ export const About = (): JSX.Element => {
             <div className="flex-shrink-0">
               <Link to="/">
                 <h1 className="text-[#5a3729] font-bold text-xs sm:text-sm lg:text-base leading-tight">
-                  一般社団法人日本シェフ・イン・レジデンス応援協会
+                  {content[language].orgName}
                 </h1>
               </Link>
             </div>
