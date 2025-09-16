@@ -556,7 +556,7 @@ export const Top = (): JSX.Element => {
               <img
                 className="block self-start w-[1400px] min-w-[1400px] h-auto object-contain"
                 alt="Support"
-                src="/figmaAssets/support.png?v=20250916"
+                src="/attached_assets/ojisan_04%201_1758006741917.png"
                 style={{ width: '1400px', minWidth: '1400px', marginTop: '0' }}
               />
             </div>
