@@ -553,7 +553,7 @@ export const Top = (): JSX.Element => {
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="overflow-visible justify-self-start">
+            <div className="overflow-visible justify-self-center">
               <img
                 className="block self-start w-[200px] min-w-[200px] h-auto object-contain"
                 alt="Support"
