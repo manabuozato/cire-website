@@ -554,7 +554,7 @@ export const Top = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="w-full lg:w-1/2">
               <img
-                className="block self-start w-full max-w-[960px] h-auto object-contain"
+                className="block self-start w-full max-w-[1400px] h-auto object-contain"
                 alt="Support"
                 src="/figmaAssets/support.png?v=20250916"
               />
