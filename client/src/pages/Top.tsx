@@ -552,11 +552,12 @@ export const Top = (): JSX.Element => {
           </div>
           
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 overflow-visible">
               <img
-                className="block self-start w-full max-w-[1400px] h-auto object-contain"
+                className="block self-start w-[1400px] min-w-[1400px] h-auto object-contain"
                 alt="Support"
                 src="/figmaAssets/support.png?v=20250916"
+                style={{ width: '1400px', minWidth: '1400px' }}
               />
             </div>
             <div className="w-full lg:w-1/2">
