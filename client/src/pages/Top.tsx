@@ -552,16 +552,15 @@ export const Top = (): JSX.Element => {
           </div>
           
           <div className="flex flex-col lg:flex-row gap-12 items-start">
-            <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="w-full lg:w-1/2">
               <img
-                className="block w-full min-w-[960px] sm:min-w-[1280px] md:min-w-[1600px] lg:min-w-[2000px] xl:min-w-[2400px] h-auto object-contain flex-none shrink-0 self-start"
+                className="block self-start w-full max-w-[960px] h-auto object-contain"
                 alt="Support"
                 src="/figmaAssets/support.png?v=20250916"
-                style={{ width: '960px', minWidth: '960px' }}
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6 mt-0">
                 応援協会だって応援されたい
               </h3>
               <p className="text-[#5a3729] text-base leading-6 text-justify">
