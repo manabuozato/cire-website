@@ -1,5 +1,5 @@
 import React from "react";
-import noteImg from '@assets/note_1757659491855.png';
+import noteImg from '@assets/note_big.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Link } from 'wouter';

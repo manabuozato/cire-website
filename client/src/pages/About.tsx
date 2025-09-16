@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import noteImg from '@assets/note1_1757664796406.png';
+import noteImg from '@assets/note_big.png';
 import icModelImg from '@assets/icmodel_1757663210701.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';

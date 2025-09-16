@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import noteImg from '@assets/note1_1757664796406.png';
+import noteImg from '@assets/note_big.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { useLocation, useSearch, Link } from 'wouter';
@@ -303,7 +303,7 @@ export const Top = (): JSX.Element => {
       )}
 
       {/* Hero Section */}
-      <section className="relative bg-[url('/figmaAssets/group-4_new.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
+      <section className="relative bg-[url('/figmaAssets/group-5_new.png')] bg-cover bg-center bg-no-repeat pt-32 md:pt-36 lg:pt-40 scroll-mt-[80px] md:scroll-mt-[96px]">
         <div className="aspect-[16/9] md:aspect-[21/9] relative">
         </div>
       </section>
@@ -334,7 +334,7 @@ export const Top = (): JSX.Element => {
           <div className="flex items-center justify-center">
             <a href="/#/about">
               <Button 
-                className="bg-white text-[#71b0ff] hover:bg-gray-100 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
+                className="bg-[#71b0ff] text-white hover:bg-blue-600 rounded-[29px] px-8 py-3 font-bold text-base tracking-[0.80px] flex items-center justify-center"
                 data-testid="button-about"
               >
                 ABOUT
@@ -342,10 +342,35 @@ export const Top = (): JSX.Element => {
                   className="ml-2 w-1.5 h-2 sm:w-2 sm:h-2.5"
                   alt="Arrow"
                   src="/figmaAssets/vector-6.svg"
-                  style={{ filter: 'brightness(0) saturate(100%) invert(50%) sepia(96%) saturate(1458%) hue-rotate(201deg) brightness(101%) contrast(101%)' }}
+                  style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
               </Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Support Message Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left side - Large note image */}
+            <div className="w-full md:w-1/2">
+              <img
+                src="/figmaAssets/note_big.png"
+                alt="Note Big"
+                className="w-full h-auto max-w-md mx-auto md:mx-0"
+              />
+            </div>
+            {/* Right side - Text content */}
+            <div className="w-full md:w-1/2">
+              <div className="text-[#5a3729] text-base leading-relaxed text-justify">
+                一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
+              </div>
+              <div className="mt-8">
+                <br /><br /><br /><br /><br />
+              </div>
+            </div>
           </div>
         </div>
       </section>
