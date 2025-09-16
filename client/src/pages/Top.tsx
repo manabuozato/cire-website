@@ -350,31 +350,6 @@ export const Top = (): JSX.Element => {
         </div>
       </section>
 
-      {/* Support Message Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            {/* Left side - Large note image */}
-            <div className="w-full md:w-1/2">
-              <img
-                src="/figmaAssets/note_big.png"
-                alt="Note Big"
-                className="w-full h-auto max-w-lg mx-auto md:mx-0"
-              />
-            </div>
-            {/* Right side - Text content */}
-            <div className="w-full md:w-1/2">
-              <div className="text-[#5a3729] text-base leading-relaxed text-justify">
-                一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
-              </div>
-              <div className="mt-8">
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission Section */}
       <section className="py-16 scroll-mt-16 md:scroll-mt-20" id="mission">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -576,21 +551,21 @@ export const Top = (): JSX.Element => {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="flex justify-center lg:justify-start">
+          <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="w-full lg:w-1/2 flex justify-center">
               <img
-                className="w-full h-auto object-contain max-w-full scale-110"
-                alt="Support"
-                src="/figmaAssets/support.png"
+                className="w-full h-auto max-w-lg object-contain"
+                alt="Note Big"
+                src="/figmaAssets/note_big.png"
               />
             </div>
-            <div className="space-y-8 flex flex-col items-start">
+            <div className="w-full lg:w-1/2 space-y-8">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[#5a3729] tracking-[1.92px] leading-[45px] mb-6">
-                  {content[language].supportSubtitle}
+                  応援協会だって応援されたい
                 </h3>
-                <p className="text-[#5a3729] text-base leading-6">
-                  {content[language].supportDescription}
+                <p className="text-[#5a3729] text-base leading-6 text-justify">
+                  一般社団法人日本シェフ・イン・レジデンス応援協会は、運営メンバーによるプロボノで活動している非営利団体です。わたしたちの活動に共感・共鳴いただける方からの、応援メッセージからリアルなサポート、なんなら寄付まで、ひろく募集しております。もしなんらか応援いただける方は、下のCONTACTからご連絡ください。
                 </p>
               </div>
             </div>
