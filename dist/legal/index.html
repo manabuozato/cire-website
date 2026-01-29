@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-586EZ225WQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-586EZ225WQ');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 一般社団法人日本シェフ・イン・レジデンス応援協会</title>
+    <meta name="description" content="一般社団法人日本シェフ・イン・レジデンス応援協会のプライバシーポリシーをご確認ください。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f7e489',
+                        secondary: '#5a3729',
+                        accent: '#71b0ff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-primary { background-color: #f7e489; }
+        .text-secondary { color: #5a3729; }
+        .text-accent { color: #71b0ff; }
+        .hover\:text-accent:hover { color: #71b0ff; }
+        .container { max-width: 1200px; }
+    </style>
+</head>
+<body class="w-full bg-primary min-h-screen">
+    <!-- Header Navigation -->
+    <header class="sticky top-0 bg-primary z-50">
+        <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center justify-between py-4 min-h-16 md:min-h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/">
+                        <img
+                            class="h-3 sm:h-4 w-auto"
+                            alt="Cir title"
+                            src="/figmaAssets/cir-title.svg"
+                        />
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="hidden min-[1100px]:flex items-center space-x-6">
+                    <a href="/about" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-about">ABOUT</a>
+                    <a href="/#mission" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-mission">MISSION</a>
+                    <a href="/#award" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-award">AWARD</a>
+                    <a href="/news" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-news">NEWS</a>
+                    <a href="/#support-us" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-support-us">SUPPORT US</a>
+                    <a href="/#contact" class="font-bold text-secondary text-sm tracking-wide hover:text-accent transition-colors" data-testid="link-nav-contact">CONTACT</a>
+                    <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class="w-12 h-auto ml-2"
+                            alt="Note"
+                            src="/figmaAssets/note_big.png"
+                        />
+                    </a>
+                    <!-- Language Switcher placeholder -->
+                    <div class="flex space-x-2">
+                        <button class="text-secondary font-bold text-sm tracking-wide">JP</button>
+                        <span class="text-secondary">|</span>
+                        <button class="text-secondary font-bold text-sm tracking-wide">EN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="min-[1100px]:hidden">
+                    <button 
+                        id="mobile-menu-button"
+                        class="text-secondary hover:text-accent"
+                        data-testid="button-mobile-menu"
+                    >
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-black bg-opacity-50 min-[1100px]:hidden hidden">
+        <div class="absolute top-0 right-0 w-64 h-full bg-primary shadow-lg">
+            <div class="flex justify-end p-4">
+                <button 
+                    id="mobile-menu-close"
+                    class="text-secondary hover:text-accent"
+                    data-testid="button-close-mobile-menu"
+                >
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="px-4 py-2">
+                <a href="/" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-home">HOME</a>
+                <a href="/about" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-about">ABOUT</a>
+                <a href="/#mission" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-mission">MISSION</a>
+                <a href="/#award" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-award">AWARD</a>
+                <a href="/news" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-news">NEWS</a>
+                <a href="/#support-us" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-support-us">SUPPORT US</a>
+                <a href="/#contact" class="block py-3 font-bold text-secondary text-base tracking-wide hover:text-accent transition-colors border-b border-secondary/20" data-testid="link-mobile-nav-contact">CONTACT</a>
+                <div class="py-4 flex justify-start border-b border-secondary/20">
+                    <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer">
+                        <img
+                            class="w-12 h-auto"
+                            alt="Note"
+                            src="/figmaAssets/note_big.png"
+                        />
+                    </a>
+                </div>
+                <div class="py-4 flex justify-center">
+                    <div class="flex space-x-2">
+                        <button class="text-secondary font-bold text-sm tracking-wide">JP</button>
+                        <span class="text-secondary">|</span>
+                        <button class="text-secondary font-bold text-sm tracking-wide">EN</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Content Section -->
+    <section class="py-8 md:py-16">
+        <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <!-- Main Title -->
+            <div class="text-center mb-8 md:mb-12">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4">
+                    Privacy Policy
+                </h1>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <!-- Privacy Policy Content -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h2 class="text-xl md:text-2xl font-bold text-secondary mb-6">プライバシーポリシー</h2>
+                    
+                    <div class="space-y-6 text-secondary">
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">1. Basic Policy</h3>
+                            <p class="leading-relaxed">Japan Chef-in-Residence Empowerment Association (General Incorporated Association) (hereinafter referred to as "the Association") recognizes the importance of protecting personal information and has established this Privacy Policy to ensure the appropriate handling of personal information.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">2. Definition of Personal Information</h3>
+                            <p class="leading-relaxed">Personal information refers to information that can identify a specific individual, including name, address, phone number, email address, and other information that can identify a specific individual.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">3. Purpose of Use</h3>
+                            <p class="leading-relaxed">The Association uses personal information for the following purposes:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>To provide and improve our services</li>
+                                <li>To respond to inquiries</li>
+                                <li>To send information about events and activities</li>
+                                <li>For statistical analysis</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">4. Collection of Personal Information</h3>
+                            <p class="leading-relaxed">The Association collects personal information through appropriate means and within the scope necessary to achieve the purpose of use.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">5. Management of Personal Information</h3>
+                            <p class="leading-relaxed">The Association takes necessary and appropriate security measures to prevent unauthorized access, loss, destruction, alteration, and leakage of personal information.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">6. Provision to Third Parties</h3>
+                            <p class="leading-relaxed">The Association will not provide personal information to third parties without the prior consent of the individual, except in cases permitted by law.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">7. Disclosure and Correction</h3>
+                            <p class="leading-relaxed">If an individual requests disclosure, correction, or deletion of their personal information, the Association will respond promptly after verifying the identity of the requester.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">8. Use of Cookies</h3>
+                            <p class="leading-relaxed">The Association may use cookies to improve the user experience on this website. Users can disable cookies through their browser settings.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">9. Minors</h3>
+                            <p class="leading-relaxed">For use by minors, we may request consent from a parent or guardian as necessary.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">10. Amendments</h3>
+                            <p class="leading-relaxed">If this Policy is amended, changes will be announced on this website, and important changes will be notified in an easy-to-understand manner.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">11. Contact</h3>
+                            <p class="leading-relaxed">
+                                Japan Chef-in-Residence Empowerment Association (General Incorporated Association)<br>
+                                Address: 3F, Mutsumi Building, 2-10-48 Kita-Saiwai, Nishi-ku, Yokohama-shi, Kanagawa 220-0004, Japan<br>
+                                Email: info@cire.or.jp<br>
+                                Data Protection Manager: Masato Hidaka, Representative Director
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div class="text-center mt-8">
+                    <a href="/">
+                        <button class="bg-accent text-white hover:bg-blue-600 rounded-full px-8 py-3 font-bold text-base tracking-wide transition-colors" data-testid="button-back-home">
+                            HOMEに戻る
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-8">
+        <div class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="mb-4">
+                    <img
+                        class="h-4 w-auto mx-auto"
+                        alt="Cir title"
+                        src="/figmaAssets/cir-title.svg"
+                    />
+                </div>
+                <nav class="flex flex-wrap justify-center space-x-4 mb-4">
+                    <a href="/about" class="hover:text-primary transition-colors">ABOUT</a>
+                    <a href="/#mission" class="hover:text-primary transition-colors">MISSION</a>
+                    <a href="/#award" class="hover:text-primary transition-colors">AWARD</a>
+                    <a href="/news" class="hover:text-primary transition-colors">NEWS</a>
+                    <a href="/#support-us" class="hover:text-primary transition-colors">SUPPORT US</a>
+                    <a href="/#contact" class="hover:text-primary transition-colors">CONTACT</a>
+                    <a href="/legal" class="hover:text-primary transition-colors">Privacy Policy</a>
+                </nav>
+                <p class="text-sm">&copy; 2025 Japan Chef-in-Residence Empowerment Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close menu when clicking on menu items
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
