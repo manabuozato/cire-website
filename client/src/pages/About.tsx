@@ -9,6 +9,7 @@ import { Link } from 'wouter';
 export const About = (): JSX.Element => {
   const { language } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [enlargedImage, setEnlargedImage] = React.useState<{src: string, alt: string} | null>(null);
 
   // Translation content
   const content = {
@@ -168,6 +169,29 @@ export const About = (): JSX.Element => {
 
   return (
     <main className="w-full bg-[#f7e489] min-h-screen">
+      {/* Image Lightbox Modal */}
+      {enlargedImage && (
+        <div 
+          className="fixed inset-0 z-[100] bg-black/80 flex items-center justify-center p-4 cursor-pointer"
+          onClick={() => setEnlargedImage(null)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]">
+            <button
+              className="absolute -top-10 right-0 text-white text-3xl hover:text-gray-300 transition-colors"
+              onClick={() => setEnlargedImage(null)}
+            >
+              ✕
+            </button>
+            <img
+              src={enlargedImage.src}
+              alt={enlargedImage.alt}
+              className="max-w-full max-h-[85vh] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
+
       {/* Header Navigation */}
       <header className="sticky top-0 bg-[#f7e489] z-50">
         <div className="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -323,6 +347,72 @@ export const About = (): JSX.Element => {
             </div>
           </div>
 
+          {/* 案A - 一極集中から、すみずみの土地までをつなぐ */}
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
+                {language === 'ja' 
+                  ? '一極集中から、すみずみの土地までをつなぐ'
+                  : 'From concentration to connection—reaching every corner'
+                }
+              </h2>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div className="flex-shrink-0 md:w-1/2">
+                <img
+                  src={language === 'ja' ? '/figmaAssets/cire-diagram-A.png' : '/figmaAssets/cire-diagram-A-en.png'}
+                  alt={language === 'ja' ? 'シェフインレジデンスが日本全体に届く' : 'Chef-in-Residence reaches all of Japan'}
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setEnlargedImage({
+                    src: language === 'ja' ? '/figmaAssets/cire-diagram-A.png' : '/figmaAssets/cire-diagram-A-en.png',
+                    alt: language === 'ja' ? 'シェフインレジデンスが日本全体に届く' : 'Chef-in-Residence reaches all of Japan'
+                  })}
+                />
+              </div>
+              <div className="flex-1 md:w-1/2">
+                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
+                  {language === 'ja'
+                    ? 'シェフが地域へ行き、食べ手が地域を訪れる。埋もれていた土地の価値が発見され、外に届く。得られた経験は蓄積され、次へ渡る。料理人が動くだけで、なぜこんなにも多くのことが動くのか。シェフインレジデンスは、その循環を日本全体に広げます。現在、観光客は一部の有名な観光地に集中しています。地方には素晴らしい食材や文化があるにもかかわらず、その価値は知られていません。シェフインレジデンスは、シェフがさまざまな地域を訪れ、その土地の魅力を発見し、料理を通じて発信するシステムです。'
+                    : 'Chefs travel to regions, diners follow. Hidden local value is discovered and shared beyond. Experiences accumulate and pass to the next. Why does so much move when chefs move? Chef-in-Residence spreads this circulation throughout Japan. Currently, tourists concentrate in a few famous destinations. Despite wonderful ingredients and culture in rural areas, their value remains unknown. Chef-in-Residence is a system where chefs visit various regions, discovering local charms and sharing them through cuisine.'
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 案D - シェフインレジデンスで得られるもの */}
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-xl md:text-2xl font-bold text-[#5a3729] tracking-[1.92px]">
+                {language === 'ja' 
+                  ? 'シェフインレジデンスで得られるもの'
+                  : 'Value Delivered to Everyone Involved'
+                }
+              </h2>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div className="flex-shrink-0 md:w-1/2">
+                <img
+                  src={language === 'ja' ? '/figmaAssets/cire-diagram-D.png' : '/figmaAssets/cire-diagram-D-en.png'}
+                  alt={language === 'ja' ? '四つの視点から見たシェフインレジデンス' : 'Chef-in-Residence from four perspectives'}
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setEnlargedImage({
+                    src: language === 'ja' ? '/figmaAssets/cire-diagram-D.png' : '/figmaAssets/cire-diagram-D-en.png',
+                    alt: language === 'ja' ? '四つの視点から見たシェフインレジデンス' : 'Chef-in-Residence from four perspectives'
+                  })}
+                />
+              </div>
+              <div className="flex-1 md:w-1/2">
+                <div className="text-sm text-[#5a3729] leading-6 tracking-[0.60px] text-justify">
+                  {language === 'ja'
+                    ? '料理人が地域に滞在し、その土地の食材で料理をつくる。ただそれだけのことが、関わるすべての人に価値を届けます。シェフにとっては、新しい食材との出会い、地域の生産者との交流、そして自身の料理の幅を広げる機会となります。生産者にとっては、埋もれていた食材の価値が発見され、新しい販路や認知につながります。食べ手にとっては、その土地を訪れる理由が生まれ、特別な食体験を得られます。そして地域にとっては、外からの刺激と内からの誇りが交差し、新たな活力が生まれます。'
+                    : 'A chef stays in a region and cooks with local ingredients. This simple act delivers value to everyone involved. For chefs, it offers encounters with new ingredients, exchanges with local producers, and opportunities to expand their culinary range. For producers, hidden ingredient values are discovered, leading to new sales channels and recognition. For diners, it creates reasons to visit the region and provides special dining experiences. And for the region, external stimulation and internal pride intersect, creating new vitality.'
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* What is Creative Regional Culture Section */}
           <div className="max-w-4xl mx-auto mb-12 md:mb-16">
             {/* Title Section - Top */}
@@ -339,7 +429,11 @@ export const About = (): JSX.Element => {
                 <img
                   src={icModelImg}
                   alt="iC Model - innumerable Cs Model"
-                  className="w-full h-auto"
+                  className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setEnlargedImage({
+                    src: icModelImg,
+                    alt: 'iC Model - innumerable Cs Model'
+                  })}
                 />
                 <p className="text-xs text-[#5a3729] mt-2 text-left">
                   参考：ディスカッション・ペーパー｜「創造的地域風土」を生みだすiCモデル（innumerable Cs Model）　（2024, UNIVERSITY of CREATIVITY）
