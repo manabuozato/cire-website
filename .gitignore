@@ -3,3 +3,5 @@ node_modules
 server/public
 vite.config.ts.*
 *.tar.gz
+# vite build output (deploy copy is dist/ — run: rsync -a --delete --exclude public dist/public/ dist/)
+dist/public

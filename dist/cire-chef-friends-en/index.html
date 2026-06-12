@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!-- design-source: cire.or.jp 本体サイト (既存ブランド準拠、EXM借用なし) / units: ヘッダー構成・配色・タイポグラフィ -->
+<!-- design-rationale: cire.or.jp 本体サイトのデザインシステム（色・ヘッダー/フッター構成・タイポグラフィ）を踏襲する整合ページ。EXM借用ではなく既存ブランド準拠 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta name="googlebot" content="noindex, nofollow">
+<title>Travelling Chef Friends | Japan Chef-in-Residence Empowerment Association (CIRE)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7e489;
+    --ink: #5a3729;
+    --accent: #71b0ff;
+    --accent-hover: #5a9fe8;
+    --card: #f2edf0;
+    --footer: #b63622;
+    --footer-ink: #e9e8e3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Lato", "Zen Kaku Gothic New", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 50;
+  }
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    min-height: 72px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo:hover { color: var(--accent); }
+  .nav-links { display: none; gap: 14px; align-items: center; flex-wrap: nowrap; }
+  @media (min-width: 1100px) { .nav-links { display: flex; } }
+  .nav-links a {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links .lang-switch { display: flex; align-items: center; gap: 8px; font-weight: 500; letter-spacing: normal; }
+  .nav-links .lang-switch svg { display: block; }
+
+  /* Hero */
+  .hero {
+    padding: 96px 0 80px;
+    text-align: center;
+  }
+  .hero .eyebrow {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    padding: 8px 20px;
+    border-radius: 60px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+  .hero .lead {
+    font-size: clamp(14px, 1.6vw, 17px);
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.9;
+  }
+
+  /* About CTA block */
+  .about-cta {
+    background: var(--accent);
+    padding: 80px 24px;
+    text-align: center;
+    color: var(--ink);
+  }
+  .about-cta .inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .about-cta h2 {
+    font-size: clamp(18px, 2.4vw, 24px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .about-cta p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+
+  /* Sub-nav */
+  .subnav {
+    padding: 0 0 64px;
+    text-align: center;
+  }
+  .subnav ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .subnav li {
+    display: flex;
+    align-items: center;
+  }
+  .subnav li + li::before {
+    content: "·";
+    color: var(--ink);
+    opacity: 0.5;
+    margin: 0 14px;
+    font-weight: 700;
+  }
+  .subnav a {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .subnav a:hover {
+    color: var(--accent);
+  }
+
+  /* Sections */
+  section.block { padding: 80px 0; scroll-margin-top: 80px; }
+  section.block.alt { background: var(--card); }
+  .section-title {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    text-align: center;
+    font-size: clamp(18px, 2.4vw, 26px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 32px;
+  }
+  .section-desc {
+    max-width: 800px;
+    margin: 0 auto 48px;
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: left;
+  }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 720px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+  .card {
+    background: var(--card);
+    border-radius: 30px;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+  section.block.alt .card { background: #fff; }
+  .badge {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 60px;
+  }
+  .card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+  .card p {
+    font-size: 14px;
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+  }
+
+  /* Target list */
+  .target {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 30px;
+    padding: 32px;
+  }
+  section.block.alt .target { background: #fff; }
+  .target ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .target li {
+    padding-left: 28px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .target li::before {
+    content: "○";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* CTA Button */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 14px 32px;
+    border-radius: 29px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: var(--accent-hover); }
+  .btn::after {
+    content: "→";
+    font-size: 14px;
+  }
+  .btn-center { display: flex; justify-content: center; margin-top: 32px; }
+
+  /* FAQ */
+  .faq {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .faq details {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 20px 24px;
+  }
+  section.block.alt .faq details { background: #fff; }
+  .faq summary {
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq summary::after { content: "+"; font-size: 20px; color: var(--accent); }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(90,55,41,0.15);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--footer);
+    color: var(--footer-ink);
+    padding: 48px 0;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+  @media (min-width: 720px) { .footer-nav { justify-content: flex-end; } }
+  .footer-nav a {
+    color: var(--footer-ink);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+  }
+  .footer-nav a:hover { color: #fff; }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(233,232,227,0.2);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+  }
+  @media (min-width: 720px) {
+    .footer-bottom { flex-direction: row; justify-content: space-between; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="https://cire.or.jp" class="logo">Japan Chef-in-Residence Empowerment Association (CIRE)</a>
+      <div class="nav-links">
+        <a href="https://cire.or.jp/#/about">ABOUT</a>
+        <a href="https://cire.or.jp/?section=mission">MISSION</a>
+        <a href="https://cire.or.jp/?section=award">AWARD</a>
+        <a href="https://cire.or.jp/?section=news">NEWS</a>
+        <a href="https://cire.or.jp/?section=support-us">SUPPORT</a>
+        <a href="https://cire.or.jp/?section=contact">CONTACT</a>
+        <a href="https://medium.com/@j-cire" target="_blank" rel="noopener noreferrer">medium</a>
+        <a href="/cire-chef-friends-en/">Travelling Chef Friends</a>
+        <a href="/cire-chef-friends/" class="lang-switch" aria-label="日本語に切り替え"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span>日本語</span></a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">CHEF FRIENDS</span>
+    <h1>We'd love to get to know you, chef.</h1>
+    <p class="lead">
+      Travelling chefs, and the regions that welcome them.<br>
+      We care about the encounters and exchanges that happen between them.<br>
+      CIRE (Japan Chef-in-Residence Empowerment Association) is, right now,<br>
+      starting to build a loose circle with chefs who are curious about this work.<br>
+      We call these chefs our <strong>Chef Friends</strong>.
+    </p>
+  </div>
+
+  <nav class="subnav" aria-label="In-page navigation">
+    <ul>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#activities">ACTIVITIES</a></li>
+      <li><a href="#target">FOR CHEFS</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#join">JOIN</a></li>
+    </ul>
+  </nav>
+</section>
+
+<!-- About CTA -->
+<section class="about-cta" id="about">
+  <div class="inner">
+    <h2>
+      CIRE is a non-profit intermediary<br>
+      that stands between regions and chefs.
+    </h2>
+    <p>
+      We are not a staffing agency or a registered booking platform.<br>
+      We act as a bridge so that regions and chefs can meet and build relationships over time.<br>
+      Chef Friends are the chefs who join us in that relationship-building work.
+    </p>
+    <a href="https://cire.or.jp/about" class="btn" target="_blank" rel="noopener noreferrer">ABOUT CIRE</a>
+  </div>
+</section>
+
+<!-- Activities -->
+<section class="block" id="activities">
+  <div class="container">
+    <h2 class="section-title">ACTIVITIES</h2>
+    <h3 class="section-sub">Three things we'd like to do together with our Friends</h3>
+    <p class="section-desc">
+      CIRE has three main areas of activity. As a Chef Friend, you are invited to engage with whichever ones interest you, and only as much as you have time for. The idea is not "please join all of it," but rather "let's find together the part you actually want to join."<br><br>
+      The relationship itself works the same way. Texting back and forth → talking on Zoom → sharing a meal → visiting a region → co-creating a project. We grow the relationship at your pace. You can start anywhere, and pause anywhere.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="badge">No.1</span>
+        <h4>Chef-in-Residence<br>Programs<br><span style="display:inline-block;background:#71b0ff;color:#fff;font-size:11px;padding:3px 12px;border-radius:60px;margin-top:8px;font-weight:700;letter-spacing:0.5px;">Active</span></h4>
+        <p>We support the launch and operation of chef-in-residence programs in regions across Japan, working with the host side (the kitchens). This is the core of what we do. We may reach out to Friends for site visits, programme design conversations, or local exchanges.</p>
+      </div>
+      <div class="card">
+        <span class="badge">No.2</span>
+        <h4>Chef<br>Network<br><span style="display:inline-block;background:#fff;color:#5a3729;font-size:11px;padding:3px 12px;border-radius:60px;margin-top:8px;font-weight:700;letter-spacing:0.5px;">In development</span></h4>
+        <p>We are preparing ways for travelling chefs to connect with each other and share information and spaces. The exact form is something we want to shape together with our Chef Friends.</p>
+      </div>
+      <div class="card">
+        <span class="badge">No.3</span>
+        <h4>The Relay Awards<br><span style="display:inline-block;background:#71b0ff;color:#fff;font-size:11px;padding:3px 12px;border-radius:60px;margin-top:8px;font-weight:700;letter-spacing:0.5px;">Active</span></h4>
+        <p>An awards programme that makes outstanding chef-in-residence work visible and shares what we can learn from it. We may invite Friends to nominate, take part in selection conversations, or join the ceremony.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Target -->
+<section class="block" id="target">
+  <div class="container">
+    <h2 class="section-title">FOR CHEFS</h2>
+    <h3 class="section-sub">Chefs we'd love to connect with</h3>
+
+    <div class="target">
+      <ul>
+        <li>Any working style. With or without your own restaurant. Chefs who are curious about cooking on the road, or cooking in different regions.</li>
+        <li>Chefs who want to grow through encounters with local ingredients, food cultures, and people.</li>
+        <li>Chefs who, beyond daily practice in their own kitchen, want to face unfamiliar land, ingredients, and guests.</li>
+        <li>Chefs who carry a feeling of always wanting to be travelling.</li>
+        <li>Chefs who want to host travelling chefs in their own restaurant or region.</li>
+        <li>Chefs who want to be inspired by chefs visiting from overseas.</li>
+      </ul>
+      <p style="margin-top:16px; text-align:right; font-size:14px; color:#8a6f5e;">…and more.</p>
+    </div>
+
+    <p class="section-desc" style="margin-top:32px;">
+      We don't care about your résumé, the size of your restaurant, or how well known you are. "Travelling chefs," "regions that welcome them," "the experiences born from those encounters" — if any of these speak to you, please get in touch.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block alt" id="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+
+    <div class="faq">
+      <details>
+        <summary>What happens after I join?</summary>
+        <p>Once you send in the form, we will invite you to a closed Facebook group run by CIRE. We will share updates for Chef Friends in that group from time to time. Direct outreach from CIRE only happens with people who opt in to "OK to reach out to me" on the form.</p>
+      </details>
+      <details>
+        <summary>Are there any registration or membership fees?</summary>
+        <p>No. Chef Friends is a relationship in which CIRE reaches out to chefs as fellow travellers. There are no fees of any kind.</p>
+      </details>
+      <details>
+        <summary>Do you offer job placements or booking services?</summary>
+        <p>CIRE is a non-profit intermediary and does not earn fees for introducing chefs. We are not a staffing agency or registered booking platform. That said, when a request from a region (a kitchen) seems to align with a Friend's interests, we may reach out. Whether or not to move forward is always decided by both the kitchen and the Friend.</p>
+      </details>
+      <details>
+        <summary>How often will I hear from you?</summary>
+        <p>Most of the communication happens in the Facebook group, roughly a few times a month. Direct outreach from CIRE depends on what comes up, and is therefore irregular.</p>
+      </details>
+      <details>
+        <summary>Can I step back at any time?</summary>
+        <p>Of course. Chef Friends is meant to be a loose, no-pressure circle. You are free to pause or leave whenever you wish.</p>
+      </details>
+      <details>
+        <summary>Can chefs based outside Japan apply?</summary>
+        <p>Yes, very welcome. CIRE thinks about "travelling chefs" broadly, and we'd love to hear from chefs who are not based in Japan as well.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Join -->
+<section class="block" id="join">
+  <div class="container">
+    <h2 class="section-title">JOIN</h2>
+    <h3 class="section-sub">Say hello first</h3>
+    <p class="section-desc">
+      Please fill in the form with a short profile.<br>
+      We'll invite you to the CIRE Chef Friends Facebook group, and share updates from time to time.<br>
+      There are no fees to join. We will get back to you in turn.
+    </p>
+
+    <div class="btn-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrQrgcLkzPiJ2UcVC72tp_CtOE6WKCuBn0IAgtW6HE12PLsg/viewform" class="btn" target="_blank" rel="noopener noreferrer">JOIN AS A FRIEND</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <nav class="footer-nav">
+      <a href="https://cire.or.jp/#/about">ABOUT</a>
+      <a href="https://cire.or.jp/?section=mission">MISSION</a>
+      <a href="https://cire.or.jp/?section=award">AWARD</a>
+      <a href="https://cire.or.jp/?section=news">NEWS</a>
+      <a href="https://cire.or.jp/?section=support-us">SUPPORT</a>
+      <a href="https://cire.or.jp/?section=contact">CONTACT</a>
+      <a href="https://cire.or.jp/#/legal">Privacy Policy</a>
+    </nav>
+    <div class="footer-bottom">
+      <span>©2026 Japan Chef-in-Residence Empowerment Association. All rights reserved.</span>
+      <a href="https://note.com/cire" target="_blank" rel="noopener noreferrer" style="color:var(--footer-ink); text-decoration:none;">note →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

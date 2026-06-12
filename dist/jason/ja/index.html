@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Chef-in-Residence — 2026年4月</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Serif+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #1a1714;
+  --paper: #f7f4ef;
+  --paper-warm: #f0ebe3;
+  --muted: #8a8378;
+  --rule: #d4cfc6;
+  --sea-japan: #2c4a6e;
+  --sea-seto: #9e7c4e;
+  --sea-china: #8e4a3a;
+  --ff-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --ff-display-jp: 'Noto Serif JP', serif;
+  --ff-body: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { 
+  font-size: 16px; 
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.9;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== COVER ===== */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(44,74,110,0.15), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(142,74,58,0.1), transparent);
+}
+
+.cover-ornament {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  opacity: 0.3;
+  margin-bottom: 3rem;
+  position: relative;
+  animation: fadeUp 1.2s ease both;
+}
+
+.cover h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.2s both;
+}
+
+.cover h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.cover-sub {
+  font-family: var(--ff-display-jp);
+  font-size: 1.05rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  opacity: 0.55;
+  margin-bottom: 4rem;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.4s both;
+}
+
+.cover-from {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  opacity: 0.35;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.6s both;
+}
+
+.cover-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.25;
+  animation: fadeUp 1.2s ease 0.8s both;
+}
+
+.cover-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 2rem;
+  background: var(--paper);
+  opacity: 0.3;
+  margin: 0.8rem auto 0;
+  animation: scrollPulse 2s ease infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.1; transform: scaleY(0.6); }
+  50% { opacity: 0.4; transform: scaleY(1); }
+}
+
+/* ===== INTRO ===== */
+.intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+.intro p {
+  font-family: var(--ff-display-jp);
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.intro p + p { margin-top: 1.5rem; }
+
+.intro strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ===== SECTION HEADERS ===== */
+.menu-category {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2rem 1rem;
+  text-align: center;
+}
+
+.menu-category-label {
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.menu-category h2 {
+  font-family: var(--ff-display-jp);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.menu-category h2 em {
+  font-family: var(--ff-display);
+  font-style: italic;
+}
+
+.menu-category-desc {
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ===== LOCATION GALLERY ===== */
+/*
+ * 画像ファイルは ./images/ フォルダに配置してください
+ * 推奨サイズ: 横1200px以上、横長（3:2〜16:9）
+ */
+.location-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 2rem;
+}
+
+/* 最初の画像は2列フル幅 */
+@media (max-width: 640px) {
+  .location-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.location-gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+  filter: grayscale(10%) contrast(1.03);
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
+  display: block;
+}
+
+.location-gallery img:first-child {
+  grid-column: 1 / -1;
+  height: 280px;
+  width: 100%;
+}
+
+.location-gallery-img:hover { opacity: 1; }
+
+/* スクロールヒント */
+.gallery-hint {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-align: right;
+  margin-top: -1.6rem;
+  margin-bottom: 1.8rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .location-gallery-img { height: 190px; width: 80%; }
+  .location-gallery-img:first-child { width: 88%; }
+}
+
+/* ===== LOCATION CARDS ===== */
+.location {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.location-card {
+  border-top: 1px solid var(--rule);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.location-number {
+  font-family: var(--ff-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.location-card h3 {
+  font-family: var(--ff-display-jp);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.location-card h3 .en {
+  font-family: var(--ff-display);
+  font-weight: 300;
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+.location-sea {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.sea-japan { background: rgba(44,74,110,0.08); color: var(--sea-japan); }
+.sea-seto { background: rgba(158,124,78,0.08); color: var(--sea-seto); }
+.sea-china { background: rgba(142,74,58,0.08); color: var(--sea-china); }
+
+.map-link {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  background: rgba(0,0,0,0.03);
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+.map-link:hover {
+  background: rgba(0,0,0,0.07);
+  color: var(--ink);
+}
+.map-link::before {
+  content: '📍 ';
+  font-size: 0.7rem;
+}
+
+.menu-c-item .map-link {
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.58rem;
+}
+
+.location-tagline {
+  font-family: var(--ff-display-jp);
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Expandable sections */
+.expand-section { margin-bottom: 1rem; }
+
+.expand-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.6rem 0;
+  border: none;
+  background: none;
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s;
+}
+
+.expand-trigger:hover { color: var(--muted); }
+
+.expand-trigger .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.6rem;
+  opacity: 0.4;
+}
+
+.expand-section.open .arrow { transform: rotate(90deg); }
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 0;
+}
+
+.expand-section.open .expand-content {
+  max-height: 3000px;
+  padding: 1.25rem 0 0.5rem;
+}
+
+.expand-content p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 1rem;
+}
+
+.expand-content p:last-child { margin-bottom: 0; }
+
+.expand-content strong { font-weight: 500; color: var(--ink); }
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.ingredient-item {
+  font-size: 0.85rem;
+  color: #4a4540;
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.ingredient-item .en {
+  font-family: var(--ff-display);
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 0.25rem;
+  font-style: italic;
+}
+
+.nearby-item {
+  margin-bottom: 1rem;
+}
+
+.nearby-item .name {
+  font-family: var(--ff-display-jp);
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.nearby-item .detail {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.meta-item label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.meta-item span {
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+/* ===== CIRE NOTE ===== */
+.cire-note {
+  background: var(--paper-warm);
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--rule);
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.cire-note-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.cire-note p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #4a4540;
+  margin-bottom: 0.5rem;
+}
+
+.cire-note p:last-child { margin-bottom: 0; }
+
+/* ===== MENU B & C ===== */
+.menu-b-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.menu-b-inner {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+}
+
+.menu-b-inner h3 {
+  font-family: var(--ff-display-jp);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.menu-b-inner p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.menu-c-grid {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+}
+
+.menu-c-item {
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  margin: -0.5px;
+}
+
+.menu-c-item h4 {
+  font-family: var(--ff-display-jp);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.menu-c-item .region {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.menu-c-item p {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* ===== VISA SECTION ===== */
+.visa-section {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+}
+
+.visa-section h2 {
+  font-family: var(--ff-display-jp);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.visa-block {
+  margin-bottom: 2rem;
+}
+
+.visa-block h3 {
+  font-family: var(--ff-display-jp);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.visa-block p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 0.75rem;
+}
+
+.visa-honest {
+  background: var(--paper-warm);
+  padding: 1.5rem;
+  border-left: 2px solid var(--sea-japan);
+  margin: 2rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.visa-honest p {
+  font-family: var(--ff-display-jp);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink);
+  font-weight: 300;
+}
+
+/* ===== NEXT STEPS ===== */
+.next-steps {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+  text-align: center;
+}
+
+.next-steps h2 {
+  font-family: var(--ff-display-jp);
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.steps-list {
+  text-align: left;
+  max-width: 440px;
+  margin: 0 auto 3rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.step-num {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 2rem;
+}
+
+.step-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #4a4540;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.footer-name {
+  font-family: var(--ff-display-jp);
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider-line {
+  border: none;
+  border-top: 1px solid var(--rule);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .ingredients-grid { grid-template-columns: 1fr; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .menu-c-grid { grid-template-columns: 1fr; }
+  .cover { padding: 3rem 1.5rem; }
+  .intro, .visa-section, .next-steps { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .location, .menu-b-card, .menu-c-grid { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== LANG SWITCH ===== */
+.lang-switch {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 100;
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+.lang-switch a {
+  color: var(--paper);
+  opacity: 0.4;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(247,244,239,0.15);
+  border-radius: 2px;
+  transition: opacity 0.3s;
+}
+.lang-switch a:hover { opacity: 0.7; }
+.lang-switch.scrolled a {
+  color: var(--muted);
+  border-color: var(--rule);
+}
+</style>
+</head>
+<body>
+
+<!-- LANG SWITCH -->
+<div class="lang-switch" id="langSwitch">
+  <a href="../">English</a>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-ornament">☰</div>
+  <h1>Japan, <em>à la carte</em></h1>
+  <div class="cover-sub">シェフ・イン・レジデンス 提案メニュー — 2026年4月</div>
+  <div class="cover-from">CIRE — 日本シェフ・イン・レジデンス応援協会</div>
+  <div class="cover-scroll">scroll</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro reveal">
+  <p>この資料は、メニューです。<strong>何を注文するかは、あなたが決めてください。</strong></p>
+  <p>日本各地のロケーションを並べました。それぞれが全く異なる食のエコシステム、食材の世界、文化的な体験を提供します。<strong>どこに行くか、どれだけ滞在するかは、すべてあなた次第です。</strong></p>
+  <p><strong>カテゴリーA</strong>の3箇所は、CIREが現地コーディネーション（人の紹介、キッチンや生産者への案内、同行）を行う場所です。<strong>カテゴリーB</strong>は東京での食事の場。<strong>カテゴリーC</strong>はその他の注目すべき地域の情報です。</p>
+  <p>Aの3箇所はいずれも西日本ですが、それぞれ<strong>3つの全く異なる海</strong>に面しています——深く冷たい日本海、浅く穏やかな瀬戸内海、亜熱帯の東シナ海。山脈が気候の壁となり、互いにほとんど共通点のない食文化を生み出しています。</p>
+  <p>CIREのおすすめは<strong>カテゴリーAの3箇所</strong>。それぞれ<strong>少なくとも1週間程度の滞在</strong>を推奨します——食材と生産者を知り、地域との関係を築くには、それだけの時間が必要です。</p>
+</section>
+
+<!-- MENU A -->
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category A</div>
+  <h2><em>Curated by CIRE</em></h2>
+  <p class="menu-category-desc">CIREが現地の人・キッチン・生産者との橋渡しをし、同行します。</p>
+</div>
+
+<!-- LOCATION 1: YUNOTSU -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 01</div>
+    <div class="location-gallery" id="gallery-yunotsu">
+      <img class="location-gallery-img" src="../images/watowa_slider1.jpg" alt="温泉津 WATOWA" loading="lazy">
+
+      <img class="location-gallery-img" src="../images/watowa_slider2.jpg" alt="温泉津の風景" loading="lazy">
+      <img class="location-gallery-img" src="../images/watowa_slider3.jpg" alt="温泉津 港" loading="lazy">
+    </div>
+    <h3>温泉津、島根県 <span class="en">Yunotsu, Shimane</span></h3>
+    <span class="location-sea sea-japan">日本海</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=温泉津,島根県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://watowa.club/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 WATOWA</a>
+    <div class="location-tagline">日本で唯一の確立されたシェフ・イン・レジデンス。まだ外国人シェフは誰も行っていない。</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">CIREにとっての意味</div>
+      <p>WATOWAは夏・秋のレジデンシーの最有力候補地です。4月に創設者の大海昌子さんや地域との関係を築くことが、夏・秋の実現可能性を大きく左右します。Jasonが初の外国人シェフとなることは、「世界中からシェフを」という大海さんの当初ビジョンと合致します。</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> WATOWAと温泉津について
+      </button>
+      <div class="expand-content">
+        <p>WATOWA（わとわ、「人と人がつながる輪」）は2021年5月に創設。1週間〜1ヶ月単位でシェフを受け入れ、中東料理、中華、メキシカン、イタリアン、フレンチなど多様なシェフが滞在し、複数回リピートする人も多数。一人のシェフは温泉津に移住してクラフトビールとハンバーガーの店を開きました。</p>
+        <p>温泉津は人口3,800人未満の町。ユネスコ世界遺産「石見銀山」の構成資産で、16〜17世紀に世界の銀の約3分の1を積み出した港町です。町の区画は1692年の地図とほぼ同一——330年間ほとんど変わっていません。コンビニなし。1,300年の歴史ある2つの公衆浴場（薬師湯・元湯）が町の中心。毎週土曜夜に石見神楽が奉納されます。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 4月の食材
+      </button>
+      <div class="expand-content">
+        <p>4月は年間でもピークシーズン。海の幸と山の幸が同時に最高潮を迎えます。この重なりは日本でも稀です。</p>
+        <div class="ingredients-grid">
+          <div class="ingredient-item">ノドグロ（赤むつ） <span class="en">blackthroat seaperch</span></div>
+          <div class="ingredient-item">岩牡蠣 <span class="en">rock oysters</span></div>
+          <div class="ingredient-item">どんちっちアジ <span class="en">horse mackerel</span></div>
+          <div class="ingredient-item">サワラ <span class="en">Spanish mackerel</span></div>
+          <div class="ingredient-item">桜鯛 <span class="en">cherry blossom bream</span></div>
+          <div class="ingredient-item">筍 <span class="en">bamboo shoots</span></div>
+          <div class="ingredient-item">ワラビ <span class="en">bracken fiddleheads</span></div>
+          <div class="ingredient-item">タラの芽 <span class="en">angelica tree buds</span></div>
+          <div class="ingredient-item">紅ズワイガニ <span class="en">red snow crab</span></div>
+          <div class="ingredient-item">板わかめ <span class="en">dried flat seaweed</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 周辺の食文化
+      </button>
+      <div class="expand-content">
+        <div class="nearby-item">
+          <span class="name">若林酒造（温泉街、1869年創業）</span>
+          <span class="detail">温泉水と地元米で醸す「開春」ブランド。若い杜氏・山口稜馬さんによる実験的なスパークリング日本酒も。</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">他郷阿部家（大森、車20分）</span>
+          <span class="detail">築230年の武家屋敷を改装した宿。シェフ小野寺さんが山菜を採り、かまど炊きご飯と超ローカルな共同夕食を提供。群言堂・MeDu発酵プロダクトの拠点。</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">浜田漁港（車30分）</span>
+          <span class="detail">大規模漁港。WATOWAのシェフは地元漁師と定期的に漁に出て、船から直接仕入れている。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 実務情報
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>東京から</label>
+            <span>4〜5時間（飛行機＋電車）</span>
+          </div>
+          <div class="meta-item">
+            <label>4月の気候</label>
+            <span>7〜17°C（朝は肌寒い）</span>
+          </div>
+          <div class="meta-item">
+            <label>宿泊</label>
+            <span>WATOWAにはドミトリーから一棟貸しまで。また、上部に記載の他郷阿部家もおすすめ。</span>
+          </div>
+          <div class="meta-item">
+            <label>桜</label>
+            <span>4月上旬〜中旬</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION 2: BINGO -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 02</div>
+    <div class="location-gallery">
+      <img class="location-gallery-img" src="../images/bingo_seto_sea.jpg"      alt="尾道・千光寺公園からの眺め" loading="lazy">
+      <img class="location-gallery-img" src="../images/onomichi_view.jpg"       alt="尾道・千光寺公園と瀬戸内海" loading="lazy">
+      <img class="location-gallery-img" src="../images/setoda_lemon.jpg"        alt="生口島・瀬戸田レモンとしまなみ海道" loading="lazy">
+    </div>
+    <h3>備後/福山、広島県 <span class="en">Bingo / Fukuyama</span></h3>
+    <span class="location-sea sea-seto">瀬戸内海</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=福山市,広島県" target="_blank" rel="noopener">Google Maps</a>
+    <div class="location-tagline">日本の「地中海」——地中海の20倍の水産物密度、小ロット多品種の職人漁。</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">CIREにとっての意味</div>
+      <p>Little Setouchi（営業許可付きシェアキッチン）は夏のポップアップ会場として現実的な候補です。地元コーディネーターの谷田さんが生産者や施設とのつなぎ役として動けます。まだ正式なCIRプログラムがないエリア——ここで始めることは開拓的な意味を持ちます。</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> なぜ同じ地域で全く違う食が生まれるのか
+      </button>
+      <div class="expand-content">
+        <p>瀬戸内海の平均水深はわずか38m（日本海の1,350mと比較）。600以上の河川が栄養豊富な淡水を注ぎ込み、4つの狭い海峡が強い潮流を生み出します。結果、<strong>1平方キロあたり地中海の20倍の水産物</strong>を生産。特徴は「小ロット多品種」——強い潮流で鍛えられた身の締まった魚介が少量ずつ獲れます。</p>
+        <p>島根（日本海側）が深海の大型魚と保存食文化なのに対し、備後（瀬戸内側）は<strong>柑橘、オリーブ、塩、繊細な沿岸魚種</strong>の世界。同じ緯度にありながら中国山地が「気候の壁」となり、全く異なる食文化を生んでいます。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 4月の食材
+      </button>
+      <div class="expand-content">
+        <div class="ingredients-grid">
+          <div class="ingredient-item">サワラ <span class="en">Spanish mackerel</span></div>
+          <div class="ingredient-item">桜鯛 <span class="en">cherry blossom bream</span></div>
+          <div class="ingredient-item">メバル <span class="en">rockfish</span></div>
+          <div class="ingredient-item">シャコ <span class="en">mantis shrimp</span></div>
+          <div class="ingredient-item">穴子 <span class="en">conger eel</span></div>
+          <div class="ingredient-item">アサリ <span class="en">clams</span></div>
+          <div class="ingredient-item">広島牡蠣 <span class="en">Hiroshima oysters</span></div>
+          <div class="ingredient-item">瀬戸田レモン <span class="en">Setoda lemons</span></div>
+        </div>
+        <p>広島県は日本の牡蠣生産量の60%を占めます。これはアメリカ全体の年間生産量を上回ります。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 周辺の食文化
+      </button>
+      <div class="expand-content">
+        <div class="nearby-item">
+          <span class="name">尾道（電車20分）</span>
+          <span class="detail">尾道ラーメン（魚介出汁の醤油スープに背脂）、ONOMICHI U2（倉庫リノベ複合施設）、LOG（建築家ビジョイ・ジャインのホテル）。</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">鞆の浦（バス30分）</span>
+          <span class="detail">宮崎駿『崖の上のポニョ』の着想地。380年続く鯛網漁（5月初旬開始）。鯛めし、保命酒。</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">寺岡醤油（福山、1887年創業）</span>
+          <span class="detail">100年以上の木桶で3年熟成のJAS認証有機醤油。自社で大豆と小麦を栽培。</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">瀬戸田/生口島（フェリー40分）</span>
+          <span class="detail">日本のレモン生産量60%を占める産地。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 実務情報
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>東京から</label>
+            <span>新幹線のぞみで3.5時間</span>
+          </div>
+          <div class="meta-item">
+            <label>4月の気候</label>
+            <span>15°C 前後、晴天が多い</span>
+          </div>
+          <div class="meta-item">
+            <label>キッチン</label>
+            <span>Little Setouchi（営業許可付きシェアキッチン）、&Q（デザートピザとシングルオリジンコーヒーのカフェギャラリー）</span>
+          </div>
+          <div class="meta-item">
+            <label>桜</label>
+            <span>4月上旬</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION 3: HIOKI -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 03</div>
+    <div class="location-gallery" id="gallery-hioki">
+      <img class="location-gallery-img" src="../images/sakurajima_sunset.jpg"       alt="桜島・噴煙と鹿児島の夕景"   loading="lazy">
+      <img class="location-gallery-img" src="../images/hioki_scallop.jpg"           alt="日置・月日貝の浜焼き"         loading="lazy">
+      <img class="location-gallery-img" src="../images/kanosuke_distillery.jpg"     alt="嘉之助蒸留所のポットスチル" loading="lazy">
+    </div>
+    <h3>日置、鹿児島県 <span class="en">Hioki, Kagoshima</span></h3>
+    <span class="location-sea sea-china">東シナ海</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=日置市,鹿児島県" target="_blank" rel="noopener">Google Maps</a>
+    <div class="location-tagline">亜熱帯、火山、そして日本のどこにも似ていない——サツマイモが文明をつくった場所。</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">CIREにとっての意味（最も戦略的）</div>
+      <p>小平株式会社の「ウェルビーイングタウン」構想が湯之元温泉を変革しつつあり、シェフ・イン・レジデンスはそのビジョンと自然に合致します。CIREの共同創業者は小平CEOと既に関係があり、全国的な企業ネットワークを持つ小平社とのパートナーシップは、CIRの展開を一つのプログラムを超えた規模に拡大する可能性を秘めています。</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 別の日本
+      </button>
+      <div class="expand-content">
+        <p>鹿児島は<strong>豚肉、牛肉、うなぎ、緑茶の生産量が日本一</strong>。桜島の火山灰土壌（県の50%を覆う）は米に不向きだがサツマイモに最適で、芋焼酎→黒豚の飼料→黒豚の独特の風味という食のエコシステム全体の基盤になっています。</p>
+        <p>琉球王国との交易、東シナ海の漁場、亜熱帯の気候が、日本海や瀬戸内海とは<strong>全く異質の食文化</strong>を形成しています。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 食材と生産者
+      </button>
+      <div class="expand-content">
+        <div class="ingredients-grid">
+          <div class="ingredient-item">黒豚 <span class="en">kurobuta pork</span></div>
+          <div class="ingredient-item">黒牛 <span class="en">Kagoshima wagyu</span></div>
+          <div class="ingredient-item">きびなご <span class="en">silver herring</span></div>
+          <div class="ingredient-item">鶏刺し <span class="en">chicken sashimi</span></div>
+          <div class="ingredient-item">初鰹 <span class="en">first bonito</span></div>
+          <div class="ingredient-item">芋焼酎 <span class="en">imo shochu</span></div>
+          <div class="ingredient-item">月日貝 ※オフシーズン <span class="en">tsukihigai</span></div>
+          <div class="ingredient-item">新茶 <span class="en">first-flush tea</span></div>
+        </div>
+        <p>嘉之助蒸留所（日置市内）はクラフトウイスキーの蒸留所で英語ツアーあり。県内に100以上の焼酎蒸留所、約2,000種類の焼酎が存在します。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 美山の薩摩焼——器と料理の融合
+      </button>
+      <div class="expand-content">
+        <p>1598年、朝鮮から連れてこられた陶工たちが始めた<strong>420年以上続く焼き物の伝統</strong>。白薩摩（1867年パリ万博で大反響）と黒薩摩（庶民の日用品）の2系統。現在も10以上の窯元が稼働し、15代続く沈壽官窯が代表格。</p>
+        <p><strong>料理を地元の手作りの器に盛る</strong>——400年の工芸の伝統と料理が交差する、他にない体験が可能です。</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> 実務情報
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>東京から</label>
+            <span>3.5〜4.5時間（飛行機＋バス/電車）</span>
+          </div>
+          <div class="meta-item">
+            <label>4月の気候</label>
+            <span>最高21°C、温暖な春</span>
+          </div>
+          <div class="meta-item">
+            <label>注意</label>
+            <span>月日貝のシーズンは3月で終了</span>
+          </div>
+          <div class="meta-item">
+            <label>桜</label>
+            <span>すでに終了（日本最早）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU B -->
+<div class="divider"><hr class="divider-line"></div>
+
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category B</div>
+  <h2>東京</h2>
+  <p class="menu-category-desc">CIREメンバーが同行して食事と紹介をアレンジします。</p>
+</div>
+
+<div class="menu-b-card reveal">
+  <div class="menu-b-inner">
+    <h3>青柳 — 鯛料理</h3>
+    <div class="location-gallery" id="gallery-aoyagi">
+      <img class="location-gallery-img" src="../images/aoyagi_exterior.jpg" alt="青柳 麻布台 外観" loading="lazy">
+      <img class="location-gallery-img" src="../images/aoyagi_dish.jpg" alt="青柳 料理" loading="lazy">
+      <img class="location-gallery-img" src="../images/aoyagi_chef.jpg" alt="青柳 小山裕久 — 鯛をさばく" loading="lazy">
+    </div>
+    <p>「鯛の小山」と称されるほど鯛料理に定評のある、明治43年（1910年）創業の日本料理店。料理人・<strong>小山裕久</strong>氏は徳島出身。大阪の老舗料亭「吉兆」で修業後、1990年代にパリのプラザアテネ・リッツで日本料理の祭典を催し、フランス農事功労賞オフィシエを受勲（日本料理人として唯一）。全席個室のみ、徳島・鳴門産の天然鯛を毎日直送。名物「鯛のへぎ造り」は包丁使いで素材の持ち味を引き出す、氏の真骨頂。4月は桜鯛のシーズン。CIREメンバーが同行し、料理人同士の対話の場をセッティングします。</p>
+    <a class="map-link" href="https://aoyagi-group.jp/aoyagi" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;margin-bottom:0;font-size:0.65rem;letter-spacing:0.15em;padding:0.25rem 0.75rem;border-radius:2px;background:rgba(0,0,0,0.03);color:var(--muted);text-decoration:none;">🌐 公式サイト</a>
+  </div>
+</div>
+
+<!-- MENU C -->
+<div class="divider"><hr class="divider-line"></div>
+
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category C</div>
+  <h2>こんな場所もあります</h2>
+  <p class="menu-category-desc">CIREが調査してきた地域の情報です。興味があればいつでもご相談ください。</p>
+</div>
+
+<div class="menu-c-grid reveal">
+  <div class="menu-c-item">
+    <h4>五島列島</h4>
+    <div class="region">長崎県 — 東シナ海</div>
+    <p>152の島々。椿油で延ばす1,000年の歴史のうどん。「幻の和牛」五島牛。椿のクラフトジン。隠れキリシタンの世界遺産。4月はアオリイカの最盛期。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=五島列島,長崎県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://www.serendiphotelgoto.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Serendip Hotel Goto</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>南相馬</h4>
+    <div class="region">福島県 — 太平洋</div>
+    <p>原発から20km。2011年以降、ゼロから食のシステムを再建。菜の花・ヒマワリで土壌修復。現代日本で最も力強い「食のレジリエンス」の物語。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=南相馬市,福島県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://wind-and-soil.jp/inspi_kitchen" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Inspiration Kitchen</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>飛騨/高山</h4>
+    <div class="region">岐阜県 — 山岳</div>
+    <p>冬は-20°C。朴葉味噌、漬物ステーキ、1,300年の鵜飼漁、A5飛騨牛。保存食と発酵の極致。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=高山市,岐阜県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://www.instagram.com/doyana_hida_edohouse/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 食堂喫茶どやな</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>神山</h4>
+    <div class="region">徳島県 — 太平洋</div>
+    <p>Food Hub Projectが2016年からCIRを運営。NYのシェフが1年滞在した実績あり。日本のすだちの24%を生産。既存の国際CIRモデルとして最も参考になる場所。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=神山町,徳島県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://week-kamiyama.jp/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Week神山</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>氷見</h4>
+    <div class="region">富山県 — 日本海（富山湾）</div>
+    <p>能登半島のつけ根、富山湾に面した漁師町。寒ブリ日本一の漁場。海辺の宿兼ギャラリー「HOUSEHOLD」がシェフ・イン・レジデンスを実施した実績あり。立山連峰を望む海越しの絶景。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=氷見市,富山県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://household-bldg.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 HOUSEHOLD</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>安芸</h4>
+    <div class="region">高知県 — 太平洋</div>
+    <p>三菱創業者・岩崎弥太郎の生家や武家屋敷が残る高知東部の城下町。古民家ゲストハウス「東風ノ家」を拠点に、釜揚げしらす、柚子、冬春ナスなど太平洋の食材と出会える。旅人と地元民の交流拠点。</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=安芸市,高知県" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://kochinoya.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 東風ノ家</a>
+  </div>
+</div>
+
+<!-- VISA -->
+<div class="divider reveal"><hr class="divider-line"></div>
+
+<section class="visa-section reveal">
+  <h2>ビザについて</h2>
+
+  <div class="visa-block">
+    <h3>4月の訪問——問題なし</h3>
+    <p>アメリカ国民は90日間ビザなしで日本に入国できます。4月の訪問は文化交流・リサーチとして成立します。料理による営業活動は行わない前提です。</p>
+  </div>
+
+  <div class="visa-block">
+    <h3>夏・秋のレジデンシー——調整中</h3>
+    <p>シェフ用の技能ビザには、10年以上の料理経験、外国料理専門レストランを運営するスポンサー組織、雇用契約が必要で、取得に2〜6ヶ月かかります。</p>
+    <p>CIREがスポンサーになれるかどうか、現在調査を進めています。正直に言って、ハードルは高いです。詳細は直接お話しします。</p>
+  </div>
+
+  <div class="visa-honest">
+    <p>4月の訪問は、ビザの問題とは独立して成立します。まず来て、見て、人と会って、関係を築く。夏のことは、その上で一緒に考えましょう。</p>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="next-steps reveal">
+  <h2>次のステップ</h2>
+  <div class="steps-list">
+    <div class="step-item">
+      <span class="step-num">1</span>
+      <span class="step-text">このメニューを読んで、興味のある場所・滞在期間を教えてください。</span>
+    </div>
+    <div class="step-item">
+      <span class="step-num">2</span>
+      <span class="step-text">ご希望をもとに、CIREが現地との調整を開始します。</span>
+    </div>
+    <div class="step-item">
+      <span class="step-num">3</span>
+      <span class="step-text">Web会議で詳細を一緒に詰めましょう——日程、移動、宿泊、費用分担など。</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-name">CIRE — 日本シェフ・イン・レジデンス応援協会</div>
+</footer>
+
+
+<script>
+function toggle(btn) {
+  const section = btn.parentElement;
+  section.classList.toggle('open');
+}
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// Lang switch: change style when scrolled past cover
+const langSwitch = document.getElementById('langSwitch');
+const coverEl = document.querySelector('.cover');
+const coverObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      langSwitch.classList.add('scrolled');
+    } else {
+      langSwitch.classList.remove('scrolled');
+    }
+  });
+}, { threshold: 0.1 });
+coverObserver.observe(coverEl);
+</script>
+
+</body>
+</html>

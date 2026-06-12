@@ -116,6 +116,31 @@ export const Top = (): JSX.Element => {
   const newsItems = {
     ja: [
       {
+        date: "2026.04.30",
+        title: "テレビ東京「WBS」でシェフ・イン・レジデンスが特集されました",
+        link: "https://note.com/cire/n/nc0b030072d25"
+      },
+      {
+        date: "2026.03.22",
+        title: "The Relay Awards 2025 トークセッション②レポートを公開しました",
+        link: "https://note.com/cire/n/n885c203bdabc"
+      },
+      {
+        date: "2026.02.21",
+        title: "The Relay Awards 2025 トークセッション①レポートを公開しました",
+        link: "https://note.com/cire/n/nef071c7e25e7"
+      },
+      {
+        date: "2026.02.25",
+        title: "連載「五島やってみた」（全9回）をスタートしました",
+        link: "https://note.com/cire/n/n6a4d278d9610"
+      },
+      {
+        date: "2026.01.20",
+        title: "The Relay Awards 2025 開催レポートを公開しました",
+        link: "https://note.com/cire/n/n1634e500fa88"
+      },
+      {
         date: "2025.09.17",
         title: "「The Relay Awards創設のお知らせ」をリリースしました",
         link: "/relay-awards-announcement-2025.pdf"
@@ -131,18 +156,28 @@ export const Top = (): JSX.Element => {
         link: "https://note.com/cire/n/n89a1dba56e5d"
       },
       {
-        date: "2025.02.14", 
+        date: "2025.02.14",
         title: "一般社団法人日本シェフ・イン・レジデンス応援協会設立",
       },
     ],
     en: [
+      {
+        date: "2026.04.30",
+        title: "Chef-in-Residence featured on TV Tokyo's \"WBS\"　（in JAPANESE）",
+        link: "https://note.com/cire/n/nc0b030072d25"
+      },
+      {
+        date: "2026.01.20",
+        title: "Published The Relay Awards 2025 event report　（in JAPANESE）",
+        link: "https://note.com/cire/n/n1634e500fa88"
+      },
       {
         date: "2025.09.17",
         title: "Released 'Announcement of The Relay Awards Establishment'　（in JAPANESE）",
         link: "/relay-awards-announcement-2025.pdf"
       },
       {
-        date: "2025.02.14", 
+        date: "2025.02.14",
         title: "Established Japan Chef-in-Residence Empowerment Association",
       },
     ]
@@ -191,7 +226,7 @@ export const Top = (): JSX.Element => {
             </div>
             
             {/* Navigation Menu */}
-            <div className="hidden min-[1100px]:flex items-center space-x-6">
+            <div className="hidden min-[1100px]:flex items-center space-x-[14px]">
               {navigationItems.map((item, index) => (
                 <React.Fragment key={index}>
                   <Link
@@ -225,6 +260,13 @@ export const Top = (): JSX.Element => {
                   )}
                 </React.Fragment>
               ))}
+              <a
+                href={language === 'ja' ? '/cire-chef-friends/' : '/cire-chef-friends-en/'}
+                className="font-bold text-[#5a3729] text-sm tracking-[0.70px] hover:text-[#71b0ff] transition-colors"
+                data-testid="link-nav-chef-friends"
+              >
+                {language === 'ja' ? '旅するシェフフレンズ' : 'Travelling Chef Friends'}
+              </a>
               <LanguageSwitcher />
             </div>
 
@@ -297,6 +339,14 @@ export const Top = (): JSX.Element => {
                   )}
                 </React.Fragment>
               ))}
+              <a
+                href={language === 'ja' ? '/cire-chef-friends/' : '/cire-chef-friends-en/'}
+                className="block py-3 font-bold text-[#5a3729] text-base tracking-[0.70px] hover:text-[#71b0ff] transition-colors border-b border-[#5a3729]/20"
+                onClick={() => setIsMobileMenuOpen(false)}
+                data-testid="link-mobile-nav-chef-friends"
+              >
+                {language === 'ja' ? '旅するシェフフレンズ' : 'Travelling Chef Friends'}
+              </a>
               <div className="py-4 flex justify-center">
                 <LanguageSwitcher />
               </div>

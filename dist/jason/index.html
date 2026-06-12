@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Chef-in-Residence — April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Serif+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #1a1714;
+  --paper: #f7f4ef;
+  --paper-warm: #f0ebe3;
+  --muted: #8a8378;
+  --rule: #d4cfc6;
+  --sea-japan: #2c4a6e;
+  --sea-seto: #9e7c4e;
+  --sea-china: #8e4a3a;
+  --ff-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --ff-display-jp: 'Noto Serif JP', serif;
+  --ff-body: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.9;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== COVER ===== */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(44,74,110,0.15), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(142,74,58,0.1), transparent);
+}
+
+.cover-ornament {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  opacity: 0.3;
+  margin-bottom: 3rem;
+  position: relative;
+  animation: fadeUp 1.2s ease both;
+}
+
+.cover h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.2s both;
+}
+
+.cover h1 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.cover-sub {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  opacity: 0.55;
+  margin-bottom: 4rem;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.4s both;
+}
+
+.cover-from {
+  font-family: var(--ff-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  opacity: 0.35;
+  position: relative;
+  animation: fadeUp 1.2s ease 0.6s both;
+}
+
+.cover-scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.25;
+  animation: fadeUp 1.2s ease 0.8s both;
+}
+
+.cover-scroll::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 2rem;
+  background: var(--paper);
+  opacity: 0.3;
+  margin: 0.8rem auto 0;
+  animation: scrollPulse 2s ease infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.1; transform: scaleY(0.6); }
+  50% { opacity: 0.4; transform: scaleY(1); }
+}
+
+/* ===== LANG SWITCH ===== */
+.lang-switch {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 100;
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+}
+.lang-switch a {
+  color: var(--paper);
+  opacity: 0.4;
+  text-decoration: none;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(247,244,239,0.15);
+  border-radius: 2px;
+  transition: opacity 0.3s;
+}
+.lang-switch a:hover { opacity: 0.7; }
+.lang-switch.scrolled a {
+  color: var(--muted);
+  border-color: var(--rule);
+}
+
+/* ===== INTRO ===== */
+.intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+.intro p {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  line-height: 2;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.intro p + p { margin-top: 1.5rem; }
+
+.intro strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* ===== SECTION HEADERS ===== */
+.menu-category {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2rem 1rem;
+  text-align: center;
+}
+
+.menu-category-label {
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.menu-category h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.menu-category h2 em {
+  font-family: var(--ff-display);
+  font-style: italic;
+}
+
+.menu-category-desc {
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ===== LOCATION GALLERY ===== */
+.location-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .location-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.location-gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 2px;
+  filter: grayscale(10%) contrast(1.03);
+  opacity: 0.9;
+  transition: opacity 0.4s ease;
+  display: block;
+}
+
+.location-gallery img:first-child {
+  grid-column: 1 / -1;
+  height: 280px;
+  width: 100%;
+}
+
+.location-gallery-img:hover { opacity: 1; }
+
+.gallery-hint {
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-align: right;
+  margin-top: -1.6rem;
+  margin-bottom: 1.8rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .location-gallery-img { height: 190px; width: 80%; }
+  .location-gallery-img:first-child { width: 88%; }
+}
+
+/* ===== LOCATION CARDS ===== */
+.location {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.location-card {
+  border-top: 1px solid var(--rule);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.location-number {
+  font-family: var(--ff-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.location-card h3 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.25rem;
+}
+
+.location-card h3 .jp {
+  font-family: var(--ff-display-jp);
+  font-weight: 300;
+  font-size: 0.85em;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+.location-sea {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.sea-japan { background: rgba(44,74,110,0.08); color: var(--sea-japan); }
+.sea-seto { background: rgba(158,124,78,0.08); color: var(--sea-seto); }
+.sea-china { background: rgba(142,74,58,0.08); color: var(--sea-china); }
+
+.map-link {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  margin-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  background: rgba(0,0,0,0.03);
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+.map-link:hover {
+  background: rgba(0,0,0,0.07);
+  color: var(--ink);
+}
+.map-link::before {
+  content: '📍 ';
+  font-size: 0.7rem;
+}
+
+.menu-c-item .map-link {
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 0.58rem;
+}
+
+.location-tagline {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Expandable sections */
+.expand-section { margin-bottom: 1rem; }
+
+.expand-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.6rem 0;
+  border: none;
+  background: none;
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s;
+}
+
+.expand-trigger:hover { color: var(--muted); }
+
+.expand-trigger .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.6rem;
+  opacity: 0.4;
+}
+
+.expand-section.open .arrow { transform: rotate(90deg); }
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 0;
+}
+
+.expand-section.open .expand-content {
+  max-height: 3000px;
+  padding: 1.25rem 0 0.5rem;
+}
+
+.expand-content p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 1rem;
+}
+
+.expand-content p:last-child { margin-bottom: 0; }
+
+.expand-content strong { font-weight: 500; color: var(--ink); }
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem 2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.ingredient-item {
+  font-size: 0.85rem;
+  color: #4a4540;
+  padding: 0.35rem 0;
+  border-bottom: 1px dotted var(--rule);
+}
+
+.ingredient-item .jp {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-left: 0.25rem;
+}
+.ingredient-item .romaji {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.ingredient-item .kanji {
+  font-family: var(--ff-display-jp);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.nearby-item {
+  margin-bottom: 1rem;
+}
+
+.nearby-item .name {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.nearby-item .detail {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.meta-item label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.meta-item span {
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+/* ===== CIRE NOTE ===== */
+.cire-note {
+  background: var(--paper-warm);
+  padding: 1.25rem 1.5rem;
+  border-left: 2px solid var(--rule);
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.cire-note-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.cire-note p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: #4a4540;
+  margin-bottom: 0.5rem;
+}
+
+.cire-note p:last-child { margin-bottom: 0; }
+
+/* ===== MENU B & C ===== */
+.menu-b-card {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.menu-b-inner {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+}
+
+.menu-b-inner h3 {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.menu-b-inner p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.menu-c-grid {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+}
+
+.menu-c-item {
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  margin: -0.5px;
+}
+
+.menu-c-item h4 {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.menu-c-item .region {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.menu-c-item p {
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+/* ===== VISA SECTION ===== */
+.visa-section {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+}
+
+.visa-section h2 {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.visa-block {
+  margin-bottom: 2rem;
+}
+
+.visa-block h3 {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.visa-block p {
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: #4a4540;
+  margin-bottom: 0.75rem;
+}
+
+.visa-honest {
+  background: var(--paper-warm);
+  padding: 1.5rem;
+  border-left: 2px solid var(--sea-japan);
+  margin: 2rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.visa-honest p {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--ink);
+  font-weight: 300;
+}
+
+/* ===== NEXT STEPS ===== */
+.next-steps {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+  text-align: center;
+}
+
+.next-steps h2 {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.steps-list {
+  text-align: left;
+  max-width: 440px;
+  margin: 0 auto 3rem;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.step-num {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 2rem;
+}
+
+.step-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #4a4540;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.footer-name {
+  font-family: var(--ff-display);
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+/* ===== DIVIDER ===== */
+.divider {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.divider-line {
+  border: none;
+  border-top: 1px solid var(--rule);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .ingredients-grid { grid-template-columns: 1fr; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .menu-c-grid { grid-template-columns: 1fr; }
+  .cover { padding: 3rem 1.5rem; }
+  .intro, .visa-section, .next-steps { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .location, .menu-b-card, .menu-c-grid { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+
+/* ===== SCROLL ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- LANG SWITCH -->
+<div class="lang-switch" id="langSwitch">
+  <a href="./ja/">日本語</a>
+</div>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-ornament">☰</div>
+  <h1>Japan, <em>à la carte</em></h1>
+  <div class="cover-sub">Chef-in-Residence Tasting Menu — April 2026</div>
+  <div class="cover-from">CIRE — Japan Chef-in-Residence Empowerment Association</div>
+  <div class="cover-scroll">scroll</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro reveal">
+  <p>This document is a menu. <strong>What you order is entirely up to you.</strong></p>
+  <p>We've laid out locations across Japan. Each offers a fundamentally different food ecosystem, a different world of ingredients, a different cultural experience. <strong>Where you go, and how long you stay, is your call.</strong></p>
+  <p><strong>Category A</strong> lists three places where CIRE provides on-the-ground coordination — introductions to people, access to kitchens and producers, and accompaniment. <strong>Category B</strong> is a dining experience in Tokyo. <strong>Category C</strong> covers other notable regions worth knowing about.</p>
+  <p>All three Category A locations are in western Japan, yet each faces a <strong>completely different sea</strong> — the deep, cold Sea of Japan; the shallow, calm Seto Inland Sea; and the subtropical East China Sea. Mountain ranges act as climate walls, producing food cultures that share almost nothing in common.</p>
+  <p>CIRE's recommendation: <strong>all three Category A locations</strong>, with <strong>at least a week in each</strong> — that's the minimum to get to know the ingredients, the producers, and to build real relationships with the community.</p>
+</section>
+
+<!-- MENU A -->
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category A</div>
+  <h2><em>Curated by CIRE</em></h2>
+  <p class="menu-category-desc">CIRE bridges you to local people, kitchens, and producers — and comes along for the ride.</p>
+</div>
+
+<!-- LOCATION 1: YUNOTSU -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 01</div>
+    <div class="location-gallery" id="gallery-yunotsu">
+      <img class="location-gallery-img" src="./images/watowa_slider1.jpg" alt="Yunotsu — WATOWA" loading="lazy">
+
+      <img class="location-gallery-img" src="./images/watowa_slider2.jpg" alt="Yunotsu scenery" loading="lazy">
+      <img class="location-gallery-img" src="./images/watowa_slider3.jpg" alt="Yunotsu harbour" loading="lazy">
+    </div>
+    <h3>Yunotsu, Shimane <span class="jp">温泉津、島根県</span></h3>
+    <span class="location-sea sea-japan">SEA OF JAPAN</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=Yunotsu,Shimane" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://watowa.club/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 WATOWA</a>
+    <div class="location-tagline">Japan's only established chef-in-residence. No foreign chef has been there yet.</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">WHAT THIS MEANS FOR CIRE</div>
+      <p>WATOWA is the strongest candidate site for a summer/autumn residency. Building a relationship with founder Masako Oumi and the community in April will significantly affect what's possible later. Jason being the first non-Japanese chef aligns with Oumi-san's original vision of "bringing chefs from around the world."</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> About WATOWA and Yunotsu
+      </button>
+      <div class="expand-content">
+        <p>WATOWA (わとわ, "a circle connecting people") was founded in May 2021. It hosts chefs for one week to one month. Past residents have included chefs specialising in Middle Eastern, Chinese, Mexican, Italian, and French cuisines — many return multiple times. One chef relocated to Yunotsu permanently and opened a craft beer and burger shop.</p>
+        <p>Yunotsu is a town of fewer than 3,800 people. It's a component of the UNESCO World Heritage site "Iwami Ginzan Silver Mine" — the port that once shipped roughly a third of the world's silver in the 16th–17th centuries. The town grid is virtually identical to a 1692 map — almost unchanged for 330 years. No convenience stores. Two public bathhouses with 1,300 years of history (Yakushiyu and Motoyu) anchor the town centre. Every Saturday night, Iwami Kagura sacred dances are performed.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> April ingredients
+      </button>
+      <div class="expand-content">
+        <p>April is peak season — sea and mountain harvests overlap simultaneously. This convergence is rare even within Japan.</p>
+        <div class="ingredients-grid">
+          <div class="ingredient-item">Blackthroat seaperch <span class="jp"><span class="romaji">nodoguro</span> <span class="kanji">ノドグロ</span></span></div>
+          <div class="ingredient-item">Rock oysters <span class="jp"><span class="romaji">iwa-gaki</span> <span class="kanji">岩牡蠣</span></span></div>
+          <div class="ingredient-item">Horse mackerel <span class="jp"><span class="romaji">donchicchi aji</span> <span class="kanji">どんちっちアジ</span></span></div>
+          <div class="ingredient-item">Spanish mackerel <span class="jp"><span class="romaji">sawara</span> <span class="kanji">サワラ</span></span></div>
+          <div class="ingredient-item">Cherry blossom bream <span class="jp"><span class="romaji">sakura-dai</span> <span class="kanji">桜鯛</span></span></div>
+          <div class="ingredient-item">Bamboo shoots <span class="jp"><span class="romaji">takenoko</span> <span class="kanji">筍</span></span></div>
+          <div class="ingredient-item">Bracken fiddleheads <span class="jp"><span class="romaji">warabi</span> <span class="kanji">ワラビ</span></span></div>
+          <div class="ingredient-item">Angelica tree buds <span class="jp"><span class="romaji">tara no me</span> <span class="kanji">タラの芽</span></span></div>
+          <div class="ingredient-item">Red snow crab <span class="jp"><span class="romaji">beni-zuwaigani</span> <span class="kanji">紅ズワイガニ</span></span></div>
+          <div class="ingredient-item">Dried flat seaweed <span class="jp"><span class="romaji">ita-wakame</span> <span class="kanji">板わかめ</span></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Food culture nearby
+      </button>
+      <div class="expand-content">
+        <div class="nearby-item">
+          <span class="name">Wakabayashi Sake Brewery (in the hot-spring town, est. 1869)</span>
+          <span class="detail">Brews "Kaishun" sake using onsen water and local rice. Young head brewer Ryoma Yamaguchi also makes experimental sparkling sake.</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">Takyo Abeke (Omori, 20 min by car)</span>
+          <span class="detail">A 230-year-old samurai residence turned inn. Chef Onodera forages mountain vegetables, cooks rice over a wood-fired kamado, and serves hyper-local communal dinners. Home base for Gungendo and MeDu fermentation products.</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">Hamada Fishing Port (30 min by car)</span>
+          <span class="detail">Major fishing port. WATOWA chefs regularly go out with local fishermen and source directly from the boats.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Practical information
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>FROM TOKYO</label>
+            <span>4–5 hours (flight + train)</span>
+          </div>
+          <div class="meta-item">
+            <label>APRIL WEATHER</label>
+            <span>7–17°C (mornings are cool)</span>
+          </div>
+          <div class="meta-item">
+            <label>ACCOMMODATION</label>
+            <span>WATOWA offers everything from dormitories to a whole house rental. Takyo Abeke (mentioned above) is also recommended.</span>
+          </div>
+          <div class="meta-item">
+            <label>CHERRY BLOSSOM</label>
+            <span>Early to mid April</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION 2: BINGO -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 02</div>
+    <div class="location-gallery">
+      <img class="location-gallery-img" src="./images/bingo_seto_sea.jpg"      alt="View from Senkoji Park, Onomichi" loading="lazy">
+      <img class="location-gallery-img" src="./images/onomichi_view.jpg"       alt="Onomichi and the Seto Inland Sea" loading="lazy">
+      <img class="location-gallery-img" src="./images/setoda_lemon.jpg"        alt="Setoda lemons and the Shimanami Kaido" loading="lazy">
+    </div>
+    <h3>Bingo / Fukuyama, Hiroshima <span class="jp">備後/福山、広島県</span></h3>
+    <span class="location-sea sea-seto">SETO INLAND SEA</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=Fukuyama,Hiroshima" target="_blank" rel="noopener">Google Maps</a>
+    <div class="location-tagline">Japan's "Mediterranean" — 20 times the seafood density of the actual Mediterranean. Small-lot, multi-species artisanal fishing.</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">WHAT THIS MEANS FOR CIRE</div>
+      <p>Little Setouchi (a licensed shared kitchen) is a realistic venue for a summer pop-up. Local coordinator Tanida-san can connect you with producers and facilities. There's no formal CIR programme in this area yet — starting one here would be genuinely pioneering.</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Why the same latitude produces completely different food
+      </button>
+      <div class="expand-content">
+        <p>The Seto Inland Sea averages just 38 metres deep (compare the Sea of Japan's 1,350 m). Over 600 rivers pour nutrient-rich freshwater into it, and four narrow straits create powerful tidal currents. The result: <strong>20 times the seafood per square kilometre of the Mediterranean</strong>. The defining trait is "small-lot, many species" — muscular, tightly textured fish and shellfish caught in modest quantities by artisanal fishermen.</p>
+        <p>Where Shimane (Sea of Japan side) means deep-water large fish and preserved-food culture, Bingo (Seto Inland Sea side) is a world of <strong>citrus, olives, salt, and delicate coastal species</strong>. Same latitude, but the Chugoku Mountains act as a climate wall, producing fundamentally different food traditions.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> April ingredients
+      </button>
+      <div class="expand-content">
+        <div class="ingredients-grid">
+          <div class="ingredient-item">Spanish mackerel <span class="jp"><span class="romaji">sawara</span> <span class="kanji">サワラ</span></span></div>
+          <div class="ingredient-item">Cherry blossom bream <span class="jp"><span class="romaji">sakura-dai</span> <span class="kanji">桜鯛</span></span></div>
+          <div class="ingredient-item">Rockfish <span class="jp"><span class="romaji">mebaru</span> <span class="kanji">メバル</span></span></div>
+          <div class="ingredient-item">Mantis shrimp <span class="jp"><span class="romaji">shako</span> <span class="kanji">シャコ</span></span></div>
+          <div class="ingredient-item">Conger eel <span class="jp"><span class="romaji">anago</span> <span class="kanji">穴子</span></span></div>
+          <div class="ingredient-item">Clams <span class="jp"><span class="romaji">asari</span> <span class="kanji">アサリ</span></span></div>
+          <div class="ingredient-item">Hiroshima oysters <span class="jp"><span class="romaji">hiroshima-gaki</span> <span class="kanji">広島牡蠣</span></span></div>
+          <div class="ingredient-item">Setoda lemons <span class="jp"><span class="romaji">setoda lemon</span> <span class="kanji">瀬戸田レモン</span></span></div>
+        </div>
+        <p>Hiroshima Prefecture produces 60% of Japan's oysters — more than the entire annual output of the United States.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Food culture nearby
+      </button>
+      <div class="expand-content">
+        <div class="nearby-item">
+          <span class="name">Onomichi (20 min by train)</span>
+          <span class="detail">Onomichi ramen (soy-based fish broth with pork back fat), ONOMICHI U2 (warehouse conversion complex), LOG (hotel by architect Bijoy Jain).</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">Tomonoura (30 min by bus)</span>
+          <span class="detail">The inspiration for Miyazaki's Ponyo. A 380-year-old sea bream net fishing tradition (starts early May). Tai-meshi rice, Homeishu medicinal liqueur.</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">Teraoka Soy Sauce (Fukuyama, est. 1887)</span>
+          <span class="detail">JAS-certified organic soy sauce aged three years in century-old wooden barrels. They grow their own soybeans and wheat.</span>
+        </div>
+        <div class="nearby-item">
+          <span class="name">Setoda / Ikuchijima Island (40 min by ferry)</span>
+          <span class="detail">Produces 60% of Japan's lemons.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Practical information
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>FROM TOKYO</label>
+            <span>3.5 hours by Nozomi Shinkansen</span>
+          </div>
+          <div class="meta-item">
+            <label>APRIL WEATHER</label>
+            <span>Around 15°C, mostly sunny</span>
+          </div>
+          <div class="meta-item">
+            <label>KITCHEN</label>
+            <span>Little Setouchi (licensed shared kitchen), &Q (dessert pizza and single-origin coffee café-gallery)</span>
+          </div>
+          <div class="meta-item">
+            <label>CHERRY BLOSSOM</label>
+            <span>Early April</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION 3: HIOKI -->
+<div class="location reveal">
+  <div class="location-card">
+    <div class="location-number">— 03</div>
+    <div class="location-gallery" id="gallery-hioki">
+      <img class="location-gallery-img" src="./images/sakurajima_sunset.jpg"       alt="Sakurajima volcano at sunset" loading="lazy">
+      <img class="location-gallery-img" src="./images/hioki_scallop.jpg"           alt="Hioki — grilled tsukihigai scallops" loading="lazy">
+      <img class="location-gallery-img" src="./images/kanosuke_distillery.jpg"     alt="Kanosuke Distillery pot stills" loading="lazy">
+    </div>
+    <h3>Hioki, Kagoshima <span class="jp">日置、鹿児島県</span></h3>
+    <span class="location-sea sea-china">EAST CHINA SEA</span>
+    <a class="map-link" href="https://maps.google.com/maps?q=Hioki,Kagoshima" target="_blank" rel="noopener">Google Maps</a>
+    <div class="location-tagline">Subtropical, volcanic, and unlike anywhere else in Japan — the place where sweet potatoes built a civilisation.</div>
+
+    <div class="cire-note">
+      <div class="cire-note-label">WHAT THIS MEANS FOR CIRE (MOST STRATEGIC)</div>
+      <p>Kodaira Corporation's "Well-being Town" project is transforming the Yunomoto Onsen area, and a chef-in-residence fits naturally within that vision. CIRE's co-founder already has a relationship with Kodaira's CEO, and Kodaira's nationwide corporate network could scale CIR beyond a single programme.</p>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> A different Japan
+      </button>
+      <div class="expand-content">
+        <p>Kagoshima is <strong>Japan's number-one producer of pork, beef, eel, and green tea</strong>. Sakurajima's volcanic ash soil (covering 50% of the prefecture) is unsuitable for rice but ideal for sweet potatoes — and sweet potatoes form the foundation of the entire food ecosystem: imo shochu distillation → spent shochu mash as kurobuta pig feed → the distinctive flavour of kurobuta pork.</p>
+        <p>Trade with the Ryukyu Kingdom, East China Sea fishing grounds, and a subtropical climate have produced a <strong>food culture fundamentally different from the Sea of Japan or the Seto Inland Sea</strong>.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Ingredients and producers
+      </button>
+      <div class="expand-content">
+        <div class="ingredients-grid">
+          <div class="ingredient-item">Kurobuta pork <span class="jp"><span class="romaji">kurobuta</span> <span class="kanji">黒豚</span></span></div>
+          <div class="ingredient-item">Kagoshima wagyu <span class="jp"><span class="romaji">kuro-ushi</span> <span class="kanji">黒牛</span></span></div>
+          <div class="ingredient-item">Silver-stripe herring <span class="jp"><span class="romaji">kibinago</span> <span class="kanji">きびなご</span></span></div>
+          <div class="ingredient-item">Chicken sashimi <span class="jp"><span class="romaji">tori-sashi</span> <span class="kanji">鶏刺し</span></span></div>
+          <div class="ingredient-item">First bonito of the season <span class="jp"><span class="romaji">hatsu-gatsuo</span> <span class="kanji">初鰹</span></span></div>
+          <div class="ingredient-item">Imo shochu <span class="jp"><span class="romaji">imo-shōchū</span> <span class="kanji">芋焼酎</span></span></div>
+          <div class="ingredient-item">Tsukihigai scallop ※ off-season <span class="jp"><span class="romaji">tsukihi-gai</span> <span class="kanji">月日貝</span></span></div>
+          <div class="ingredient-item">First-flush green tea <span class="jp"><span class="romaji">shincha</span> <span class="kanji">新茶</span></span></div>
+        </div>
+        <p>Kanosuke Distillery (in Hioki) is a craft whisky distillery with English tours. The prefecture has over 100 shochu distilleries producing around 2,000 varieties.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Satsuma pottery in Miyama — where ceramics meet cuisine
+      </button>
+      <div class="expand-content">
+        <p>In 1598, Korean potters brought to Japan by feudal lords began a <strong>ceramic tradition that continues over 420 years later</strong>. Two lineages: white Satsuma (which caused a sensation at the 1867 Paris Exposition) and black Satsuma (everyday ware for common people). More than 10 kilns still operate today, led by the Chin Jukan kiln, now in its 15th generation.</p>
+        <p><strong>Serving food on locally handmade vessels</strong> — an experience where 400 years of craft tradition and cooking intersect. You won't find this anywhere else.</p>
+      </div>
+    </div>
+
+    <div class="expand-section open">
+      <button class="expand-trigger" onclick="toggle(this)">
+        <span class="arrow">▶</span> Practical information
+      </button>
+      <div class="expand-content">
+        <div class="meta-grid">
+          <div class="meta-item">
+            <label>FROM TOKYO</label>
+            <span>3.5–4.5 hours (flight + bus/train)</span>
+          </div>
+          <div class="meta-item">
+            <label>APRIL WEATHER</label>
+            <span>Highs around 21°C, warm spring</span>
+          </div>
+          <div class="meta-item">
+            <label>NOTE</label>
+            <span>Tsukihigai scallop season ends in March</span>
+          </div>
+          <div class="meta-item">
+            <label>CHERRY BLOSSOM</label>
+            <span>Already finished (earliest in Japan)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MENU B -->
+<div class="divider"><hr class="divider-line"></div>
+
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category B</div>
+  <h2><em>Tokyo</em></h2>
+  <p class="menu-category-desc">CIRE members join you for a meal and make the introductions.</p>
+</div>
+
+<div class="menu-b-card reveal">
+  <div class="menu-b-inner">
+    <h3>Aoyagi — The Art of Sea Bream</h3>
+    <div class="location-gallery" id="gallery-aoyagi">
+      <img class="location-gallery-img" src="./images/aoyagi_exterior.jpg" alt="Aoyagi, Azabudai — exterior" loading="lazy">
+      <img class="location-gallery-img" src="./images/aoyagi_dish.jpg" alt="Aoyagi — a dish" loading="lazy">
+      <img class="location-gallery-img" src="./images/aoyagi_chef.jpg" alt="Aoyagi — Chef Koyama filleting sea bream" loading="lazy">
+    </div>
+    <p>A Japanese restaurant founded in 1910, renowned as the definitive destination for sea bream — its chef, <strong>Hirohisa Koyama</strong>, is known simply as "the sea bream master." Originally from Tokushima, Koyama trained at Kitcho, Osaka's most storied kaiseki restaurant, then staged Japanese cuisine festivals at the Plaza Athénée and the Ritz in Paris in the 1990s. He is the only Japanese chef to have been awarded France's Ordre du Mérite Agricole at the rank of Officier. All seating is private rooms. Wild sea bream from the Naruto Straits in Tokushima is flown in daily. His signature "hegi-zukuri" (gossamer-thin sashimi slicing) draws out the essence of each ingredient through knife technique alone. April is cherry blossom bream season. A CIRE member will accompany you and arrange a chef-to-chef conversation.</p>
+    <a class="map-link" href="https://aoyagi-group.jp/aoyagi" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;margin-bottom:0;font-size:0.65rem;letter-spacing:0.15em;padding:0.25rem 0.75rem;border-radius:2px;background:rgba(0,0,0,0.03);color:var(--muted);text-decoration:none;">🌐 Official site</a>
+  </div>
+</div>
+
+<!-- MENU C -->
+<div class="divider"><hr class="divider-line"></div>
+
+<div class="menu-category reveal">
+  <div class="menu-category-label">Category C</div>
+  <h2><em>Also on the Map</em></h2>
+  <p class="menu-category-desc">Regions CIRE has been researching. If any catch your eye, let's talk.</p>
+</div>
+
+<div class="menu-c-grid reveal">
+  <div class="menu-c-item">
+    <h4>Goto Islands</h4>
+    <div class="region">Nagasaki — East China Sea</div>
+    <p>152 islands. Udon with a 1,000-year history, stretched with camellia oil. "Phantom wagyu" Goto beef. Camellia craft gin. Hidden Christian UNESCO sites. April: peak aori-ika squid season.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Goto+Islands,Nagasaki" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://www.serendiphotelgoto.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Serendip Hotel Goto</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>Minamisoma</h4>
+    <div class="region">Fukushima — Pacific Ocean</div>
+    <p>20 km from the nuclear plant. Since 2011, the food system has been rebuilt from zero. Rapeseed and sunflowers for soil remediation. The most powerful story of "food resilience" in modern Japan.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Minamisoma,Fukushima" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://wind-and-soil.jp/inspi_kitchen" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Inspiration Kitchen</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>Hida / Takayama</h4>
+    <div class="region">Gifu — Mountains</div>
+    <p>Winters hit −20°C. Hoba miso (grilled on magnolia leaves), pickled-vegetable steak, 1,300 years of cormorant fishing, A5 Hida beef. The pinnacle of preservation and fermentation culture.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Takayama,Gifu" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://www.instagram.com/doyana_hida_edohouse/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Doyana</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>Kamiyama</h4>
+    <div class="region">Tokushima — Pacific Ocean</div>
+    <p>Food Hub Project has run a CIR since 2016. A New York chef stayed for a full year. Produces 24% of Japan's sudachi citrus. The most established international CIR model in Japan to learn from.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Kamiyama,Tokushima" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://week-kamiyama.jp/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Week Kamiyama</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>Himi</h4>
+    <div class="region">Toyama — Sea of Japan (Toyama Bay)</div>
+    <p>A fishing town at the base of the Noto Peninsula, facing Toyama Bay — Japan's top yellowtail fishing ground. HOUSEHOLD, a seaside inn and gallery, has hosted chef-in-residence programmes. Stunning views of the Tateyama mountain range rising above the sea.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Himi,Toyama" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://household-bldg.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 HOUSEHOLD</a>
+  </div>
+  <div class="menu-c-item">
+    <h4>Aki</h4>
+    <div class="region">Kochi — Pacific Ocean</div>
+    <p>A castle town in eastern Kochi, birthplace of Mitsubishi founder Yataro Iwasaki. The guesthouse Kochinoya serves as a hub for travellers and locals, with access to Pacific ingredients: whitebait, yuzu, and winter-spring eggplant.</p>
+    <a class="map-link" href="https://maps.google.com/maps?q=Aki,Kochi" target="_blank" rel="noopener">Google Maps</a>
+    <a class="map-link" href="https://kochinoya.com/" target="_blank" rel="noopener" style="margin-left:0.25rem;">🌐 Kochinoya</a>
+  </div>
+</div>
+
+<!-- VISA -->
+<div class="divider reveal"><hr class="divider-line"></div>
+
+<section class="visa-section reveal">
+  <h2>On Visas</h2>
+
+  <div class="visa-block">
+    <h3>The April visit — no issue</h3>
+    <p>US citizens can enter Japan visa-free for up to 90 days. An April visit works as cultural exchange and research. The assumption is that you won't be doing commercial cooking activities.</p>
+  </div>
+
+  <div class="visa-block">
+    <h3>Summer/autumn residency — work in progress</h3>
+    <p>A chef skills visa requires 10+ years of culinary experience, a sponsor organisation that operates a foreign-cuisine restaurant, an employment contract, and 2–6 months for processing.</p>
+    <p>CIRE is currently investigating whether it can serve as a sponsor. Honestly, the bar is high. We'll discuss the details in person.</p>
+  </div>
+
+  <div class="visa-honest">
+    <p>The April visit stands on its own, independent of any visa questions. Come, see, meet people, build relationships. We'll figure out the summer together after that.</p>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="next-steps reveal">
+  <h2>Next Steps</h2>
+  <div class="steps-list">
+    <div class="step-item">
+      <span class="step-num">1</span>
+      <span class="step-text">Read this menu and let us know which places interest you and how long you'd like to stay.</span>
+    </div>
+    <div class="step-item">
+      <span class="step-num">2</span>
+      <span class="step-text">Based on your preferences, CIRE will begin coordinating with the local communities.</span>
+    </div>
+    <div class="step-item">
+      <span class="step-num">3</span>
+      <span class="step-text">We'll set up a video call to work through the details together — dates, travel, accommodation, cost-sharing.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-name">CIRE — Japan Chef-in-Residence Empowerment Association</div>
+</footer>
+
+
+<script>
+function toggle(btn) {
+  const section = btn.parentElement;
+  section.classList.toggle('open');
+}
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// Lang switch: change style when scrolled past cover
+const langSwitch = document.getElementById('langSwitch');
+const coverEl = document.querySelector('.cover');
+const coverObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      langSwitch.classList.add('scrolled');
+    } else {
+      langSwitch.classList.remove('scrolled');
+    }
+  });
+}, { threshold: 0.1 });
+coverObserver.observe(coverEl);
+</script>
+
+</body>
+</html>
